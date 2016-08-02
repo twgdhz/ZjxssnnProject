@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zjxfood.delete.list.ScrollLinerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/forward_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/item_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dip"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="123"
+            android:layout_marginLeft="20dip"
+            android:textSize="18dip"
+             />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/delete_action"
+        android:layout_width="@dimen/delete_action_len"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/btndel_selector"
+        android:drawableLeft="@drawable/pop_up_del"
+        android:gravity="center"
+        android:padding="7dip"
+        android:textSize="18dip"
+        android:text="@string/delete"
+        android:textColor="#FFF" />
+
+</com.zjxfood.delete.list.ScrollLinerLayout>

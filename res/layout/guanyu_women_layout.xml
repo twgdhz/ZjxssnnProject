@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@color/main_color16"
+	android:id="@+id/head_layout"
+    android:orientation="vertical" >
+    <include
+        android:id="@+id/guanyu_women_title_id"
+        layout="@layout/title_layout1" />
+    
+    <ScrollView 
+        android:id="@+id/xieyi_scroll_layout"
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+		android:background="@color/my_content_color"
+        >
+        <LinearLayout 
+            android:id="@+id/guanyu_women_scroll_content_layout"
+            android:layout_width="match_parent"
+    		android:layout_height="match_parent"
+    		android:padding="10dp"
+            android:orientation="vertical"
+            >
+            <TextView 
+                android:id="@+id/guanyu_women_title_text"
+                android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+    			android:gravity="center_horizontal"
+    			android:textColor="@color/back"
+    			android:textStyle="bold"
+    			android:textSize="16sp"
+    			android:visibility="gone"
+    			android:text="@string/guanyuwo_title"
+                />
+            <TextView 
+                android:id="@+id/guanyu_women_content_text"
+                android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+    			android:gravity="left"
+    			android:layout_marginTop="10dp"
+    			android:text="@string/guanyuwo_content"
+    			android:textColor="@color/user_name_color"
+    			android:textSize="14sp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

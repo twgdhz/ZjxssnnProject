@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/back"
+    >
+
+    <com.zjxfood.photoview.activity.HackyViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    
+	<RelativeLayout 
+	    android:id="@+id/view_pager_bottom_layout"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_transtion"
+        android:layout_alignParentBottom="true"
+	    >
+	    <Button 
+	        android:id="@+id/view_pager_bottom_back"
+	        android:layout_width="100dp"
+        	android:layout_height="wrap_content"
+        	android:textSize="15sp"
+        	android:layout_alignParentRight="true"
+        	android:text="@string/view_pager_back_btn"
+	        />
+	</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@color/main_color16"
+	android:id="@+id/head_layout" >
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/my_order_view_color" >
+
+    <include
+        android:id="@+id/my_favorite_title_layout"
+        layout="@layout/title_my_favorite_layout" />
+
+    <ListView
+        android:id="@+id/my_favodite_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_favorite_title_layout"
+        android:divider="@color/my_order_view_color"
+        android:dividerHeight="10dp"
+        android:paddingBottom="65dp" >
+    </ListView>
+	<RelativeLayout
+	    android:id="@+id/my_favorite_not_show_image"
+	    android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical"
+	    >
+	    <ImageView 
+	        android:id="@+id/favorite_no_image"
+	        android:layout_width="30dp"
+        	android:layout_height="30dp"
+        	android:layout_centerInParent="true"
+        	android:src="@drawable/iconfont_shuju"
+	        android:contentDescription="@null"/>
+	    <TextView 
+	        android:id="@+id/favorite_no_text"
+	        android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/favorite_no_image"
+        	android:layout_centerHorizontal="true"
+        	android:layout_marginTop="5dp"
+        	android:textColor="@color/my_user_decription"
+        	android:text="@string/my_favorite_no_show"
+	        />
+	</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/my_favorite_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:id="@+id/my_favorite_bottom_all_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" >
+
+            <CheckBox
+                android:id="@+id/favorite_list_check_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:button="@drawable/checkbox4" />
+
+            <TextView
+                android:id="@+id/favorite_list_check_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/favorite_list_check_image"
+                android:text="@string/my_favorite_all_chose"
+                android:textColor="@color/my_user_decription"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/favorite_list_cancel"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/favorite_list_delete"
+            android:background="@color/gray2"
+            android:gravity="center"
+            android:text="@string/my_favorite_title_cancel"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/favorite_list_delete"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/red3"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>

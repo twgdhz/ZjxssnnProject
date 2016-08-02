@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_merchant_settled_id"
+        layout="@layout/title_layout" />
+
+    <ScrollView
+        android:id="@+id/merchant_settled_scroll_layout"
+        android:layout_width="match_parent"
+        android:background="@color/my_view_color"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/merchant_settled_scroll_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:paddingBottom="20dp" >
+
+            <LinearLayout
+                android:id="@+id/merchant_settled_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/my_view_color"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/merchant_settled_view" />
+
+                <TextView
+                    android:id="@+id/merchant_settled_head_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/merchant_settled_text"
+                    android:textColor="@color/merchant_settled_color"
+                    android:textSize="12sp" />
+                <!-- 商户名称 -->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/merchant_settled_view" />
+
+                <RelativeLayout
+                    android:id="@+id/merchant_settled_name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:id="@+id/merchant_settled_name_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/merchant_settled_name"
+                        android:textColor="@color/merchant_settled_color"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/merchant_settled_name_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/merchant_settled_name_required"
+                        android:layout_toRightOf="@+id/merchant_settled_name_text"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:textColor="@color/back"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_name_required"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/merchant_settled_required"
+                        android:textColor="@color/my_user_decription2"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/merchant_settled_view" />
+                <!-- 省份 -->
+
+                <RelativeLayout
+                    android:id="@+id/merchant_settled_province_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:id="@+id/merchant_settled_province_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/merchant_settled_province"
+                        android:textColor="@color/merchant_settled_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_province_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/merchant_settled_province_text"
+                        android:textColor="@color/back"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_province_required"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/merchant_settled_province_required2"
+                        android:text="@string/merchant_settled_required_1"
+                        android:textColor="@color/my_user_decription2"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_province_required2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/merchant_settled_province_gou"
+                        android:text="@string/merchant_settled_required_2"
+                        android:textColor="@color/my_user_decription2"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/merchant_settled_province_gou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/iconfont_xiala2" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/merchant_settled_view" />
+                <!-- 城市 -->
+
+                <RelativeLayout
+                    android:id="@+id/merchant_settled_city_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:id="@+id/merchant_settled_city_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/merchant_settled_city"
+                        android:textColor="@color/merchant_settled_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_city_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/merchant_settled_city_text"
+                        android:textColor="@color/back"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_city_required"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/merchant_settled_city_required2"
+                        android:text="@string/merchant_settled_required_1"
+                        android:textColor="@color/my_user_decription2"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_city_required2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/merchant_settled_city_gou"
+                        android:text="@string/merchant_settled_required_2"
+                        android:textColor="@color/my_user_decription2"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/merchant_settled_city_gou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/iconfont_xiala2" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/merchant_settled_view" />
+                <!-- 区域 -->
+
+                <RelativeLayout
+                    android:id="@+id/merchant_settled_area_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:id="@+id/merchant_settled_area_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/merchant_settled_area"
+                        android:textColor="@color/merchant_settled_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_area_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/merchant_settled_area_text"
+                        android:textColor="@color/back"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_area_required"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/merchant_settled_area_required2"
+                        android:text="@string/merchant_settled_required_1"
+                        android:textColor="@color/my_user_decription2"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_area_required2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/merchant_settled_area_gou"
+                        android:text="@string/merchant_settled_required_2"
+                        android:textColor="@color/my_user_decription2"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/merchant_settled_area_gou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/iconfont_xiala2" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/merchant_settled_view" />
+                <!-- 地址 -->
+
+                <RelativeLayout
+                    android:id="@+id/merchant_settled_address_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:id="@+id/merchant_settled_address_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/merchant_settled_address"
+                        android:textColor="@color/merchant_settled_color"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/merchant_settled_address_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/merchant_settled_address_required"
+                        android:layout_toRightOf="@+id/merchant_settled_address_text"
+                        android:background="@null"
+                        android:textColor="@color/back"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_address_required"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/merchant_settled_required"
+                        android:textColor="@color/my_user_decription2"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/merchant_settled_view" />
+                <!-- 类别 -->
+
+                <RelativeLayout
+                    android:id="@+id/merchant_settled_type_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:id="@+id/merchant_settled_type_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/merchant_settled_type"
+                        android:textColor="@color/merchant_settled_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_type_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/merchant_settled_type_text"
+                        android:textColor="@color/back"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_type_required"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/merchant_settled_type_required2"
+                        android:text="@string/merchant_settled_required_1"
+                        android:textColor="@color/my_user_decription2"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_type_required2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/merchant_settled_type_gou"
+                        android:text="@string/merchant_settled_required_2"
+                        android:textColor="@color/my_user_decription2"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/merchant_settled_type_gou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/iconfont_xiala2" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/merchant_settled_view" />
+                <!-- 联系人电话 -->
+
+                <RelativeLayout
+                    android:id="@+id/merchant_settled_phone_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:id="@+id/merchant_settled_phone_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/merchant_settled_phone"
+                        android:textColor="@color/merchant_settled_color"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/merchant_settled_phone_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/merchant_settled_phone_required"
+                        android:layout_toRightOf="@+id/merchant_settled_phone_text"
+                        android:background="@null"
+                        android:hint="(用户登录名)"
+                        android:textColor="@color/back"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_phone_required"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/merchant_settled_required"
+                        android:textColor="@color/my_user_decription2"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/merchant_settled_view" />
+                <!-- 法人姓名 -->
+
+                <RelativeLayout
+                    android:id="@+id/merchant_settled_legalperson_name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:id="@+id/merchant_settled_legalperson_name_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/merchant_settled_legalperson"
+                        android:textColor="@color/merchant_settled_color"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/merchant_settled_legalperson_name_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/merchant_settled_legalperson_name_required"
+                        android:layout_toRightOf="@+id/merchant_settled_legalperson_name_text"
+                        android:background="@null"
+                        android:textColor="@color/back"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_legalperson_name_required"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/merchant_settled_required"
+                        android:textColor="@color/my_user_decription2"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/merchant_settled_view" />
+                <!-- 法人身份证 -->
+
+                <RelativeLayout
+                    android:id="@+id/merchant_settled_legalperson_card_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:id="@+id/merchant_settled_legalperson_card_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/merchant_settled_legalperson_card"
+                        android:textColor="@color/merchant_settled_color"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/merchant_settled_legalperson_card_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/merchant_settled_legalperson_card_required"
+                        android:layout_toRightOf="@+id/merchant_settled_legalperson_card_text"
+                        android:background="@null"
+                        android:textColor="@color/back"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_legalperson_card_required"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/merchant_settled_required"
+                        android:textColor="@color/my_user_decription2"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:visibility="gone"
+                    android:background="@color/merchant_settled_view" />
+                <!-- 上级推荐码 -->
+
+                <RelativeLayout
+                    android:id="@+id/merchant_settled_superior_recommendation_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:id="@+id/merchant_settled_superior_recommendation_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="推荐码："
+                        android:textColor="@color/merchant_settled_color"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/merchant_settled_superior_recommendation_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/merchant_settled_superior_recommendation_required"
+                        android:layout_toRightOf="@+id/merchant_settled_superior_recommendation_text"
+                        android:background="@null"
+                        android:textColor="@color/back"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_superior_recommendation_required"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/merchant_settled_required"
+                        android:textColor="@color/my_user_decription2"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/merchant_settled_view" />
+
+            <LinearLayout
+                android:id="@+id/merchant_settled_add_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp" >
+
+                <RelativeLayout
+                    android:id="@+id/merchant_settled_add_image1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/merchant_settled_add_image1"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:contentDescription="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/merchan_photo1" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_add_image1_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/merchant_settled_add_image1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/merchant_settled_image1_text"
+                        android:textColor="@color/merchant_settled_text_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/merchant_settled_add_image2_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/merchant_settled_add_image2"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:contentDescription="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/merchan_photo1" />
+
+                    <TextView
+                        android:id="@+id/merchant_settled_add_image2_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/merchant_settled_add_image2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/merchant_settled_image2_text"
+                        android:textColor="@color/merchant_settled_text_color" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/merchant_settled_descript_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/merchant_settled_descript_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/merchant_settled_description_text"
+                    android:textColor="@color/merchant_settled_color" />
+
+                <LinearLayout
+                    android:id="@+id/merchant_settled_qq_content_top_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/merchant_settled_qq_content_layout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/merchant_settled_qq_content_text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/main_qq_text1"
+                            android:textColor="@color/back"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/merchant_settled_qq_content_image1"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/merchant_settled_qq_content_text1"
+                            android:contentDescription="@null"
+                            android:src="@drawable/qq_icon" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/merchant_settled_qq_content_layout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/merchant_settled_qq_content_text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/main_qq_text2"
+                            android:textColor="@color/back"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/merchant_settled_qq_content_image2"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/merchant_settled_qq_content_text2"
+                            android:contentDescription="@null"
+                            android:src="@drawable/qq_icon" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/merchant_settled_btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/login_btn_selector"
+                android:text="@string/sumbit"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_setting_color"
+        android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_order_info_id"
+        layout="@layout/title_order_info_layout" />
+
+    <com.zjxfood.view.RoundImageView
+        android:id="@+id/order_round_image_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/title_order_info_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/order_info_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/order_round_image_view"
+        android:layout_centerHorizontal="true"
+        android:text="@string/my_order_item_name"
+        android:textColor="@color/house_text_color" />
+
+    <ScrollView
+        android:id="@+id/order_info_scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="60dp"
+        android:layout_below="@+id/order_info_name_text" >
+
+        <RelativeLayout
+            android:id="@+id/order_info_content_scroll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/order_info_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/bg_order_info_style"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/order_info_all_price_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_title_color"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/order_info_all_price_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/order_all_price"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/order_info_all_price_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/order_info_all_price_text"
+                        android:text="@string/money_520"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/order_info_pay_way_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/pay_way_2"
+                        android:textColor="@color/order_evaluation_commodity_name_color"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/order_inf_code_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/order_info_code_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/order_code"
+                        android:textColor="@color/order_evaluation_commodity_name_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/order_info_code_number_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        
+                        android:layout_toRightOf="@+id/order_info_code_text"
+                        android:text="@string/order_code_number"
+                        android:textColor="@color/order_evaluation_commodity_name_color"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/order_info_detailed_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_title_color"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/order_info_detailed_all_price_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/order_info_detailed_all_price_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:text="@string/consumption_all_price"
+                            android:textColor="@color/order_evaluation_commodity_name_color"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/order_info_detailed_all_price_number_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal" >
+
+                            <TextView
+                                android:id="@+id/order_info_detailed_all_price_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:text="@string/money_520_1"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/order_info_detailed_all_price_yuan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignBottom="@+id/order_info_detailed_all_price_number"
+                                android:layout_toRightOf="@+id/order_info_detailed_all_price_number"
+                                android:text="@string/yuan"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                    <LinearLayout
+                        android:id="@+id/order_info_detailed_rebate_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/order_info_detailed_rebate_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                                android:ellipsize="end"
+                            android:text="@string/wait_rebate"
+                            android:textColor="@color/order_evaluation_commodity_name_color"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/order_info_detailed_rebate_number_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal" >
+
+                            <TextView
+                                android:id="@+id/order_info_detailed_rebate_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:text="@string/shisan"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/order_info_detailed_rebate_yuan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignBottom="@+id/order_info_detailed_rebate_number"
+                                android:layout_toRightOf="@+id/order_info_detailed_rebate_number"
+                                android:text="@string/yuan"
+                                android:textColor="@color/white"
+                                android:gravity="center_vertical"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                    <LinearLayout
+                        android:id="@+id/order_info_detailed_date_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/order_info_detailed_date_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                                android:ellipsize="end"
+                            android:text="@string/plance_order_date"
+                            android:textColor="@color/order_evaluation_commodity_name_color"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/order_info_detailed_date_number_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal" >
+
+                            <TextView
+                                android:id="@+id/order_info_detailed_date_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="@string/date"
+                                android:maxLines="2"
+                                android:ellipsize="end"
+                                android:textColor="@color/white"
+                                android:textSize="13sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/order_info_view_1"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/order_info_content_layout"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/my_setting_line_color" />
+
+            <TextView
+                android:id="@+id/order_info_pay_success_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_info_view_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/pay_success"
+                android:textColor="@color/main_title_color"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/order_info_pay_success_image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/order_info_pay_success_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/success" />
+        </RelativeLayout>
+    </ScrollView>
+	<RelativeLayout 
+	    android:id="@+id/order_info_bottom_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:layout_alignParentBottom="true"
+	    android:padding="5dp"
+	    android:background="@color/my_setting_line_color"
+	    >
+	    <Button 
+	        android:id="@+id/order_info_comment_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:textColor="@color/white"
+	        android:padding="10dp"
+	        android:textSize="16sp"
+	        android:textStyle="bold"
+	        android:background="@drawable/bg_pay_selector"
+	        android:layout_alignParentRight="true"
+	        android:text="@string/go_to_comment"
+	        />
+	</RelativeLayout>
+	<LinearLayout
+        android:id="@+id/order_info_alert_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+    </LinearLayout>
+        </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/grab_red_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/bg_chaihongb" >
+		<ImageView 
+		    android:id="@+id/grab_red_content_right_x"
+		    android:layout_width="25dp"
+        	android:layout_height="25dp"
+        	android:layout_marginTop="10dp"
+        	android:layout_alignParentRight="true"
+        	android:src="@drawable/icon_guanbi"
+		    android:contentDescription="@null"/>
+        <FrameLayout
+            android:id="@+id/grab_red_content_user"
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/grab_red_content_right_x"
+            android:layout_height="wrap_content" >
+            <com.zjxfood.view.HeadRoundImageView
+                android:id="@+id/grab_user_head_touxiang_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/description"
+                android:src="@drawable/touxiang" />
+        </FrameLayout>
+        <TextView 
+            android:id="@+id/grab_red_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/grab_red_content_user"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="食尚男女"
+            />
+        <TextView 
+            android:id="@+id/grab_red_name_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/grab_red_name"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/red_title_text_color2"
+            android:textSize="16sp"
+            android:text="给你发了一个红包"
+            />
+        <TextView 
+            android:id="@+id/grab_red_msg2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/grab_red_name_msg"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="你猜红包有多大！"
+            />
+        <ImageView 
+            android:id="@+id/grab_red_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/grab_red_msg2"
+            android:src="@drawable/chaihongbao"
+            android:contentDescription="@null"/>
+    </RelativeLayout>
+
+</LinearLayout>

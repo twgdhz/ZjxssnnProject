@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_popup_grabred_style"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/pop_grab_red_cash_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@null"
+        android:src="@drawable/cash" />
+
+    <ImageView
+        android:id="@+id/pop_grab_red_cash_x_image"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@null"
+        android:src="@drawable/x" />
+
+    <TextView
+        android:id="@+id/grab_red_cash_detail_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pop_grab_red_cash_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/grab_red_cash"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/grab_red_cash_detail_show2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grab_red_cash_detail_show"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/grab_red_cash_detail"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+<Button
+        android:id="@+id/grab_red_cash_confirm_btn"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/grab_red_cash_detail_show2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/check_for_details"
+        android:gravity="center"
+        android:text="@string/check_for_details"
+        android:textColor="#823B0C" />
+</RelativeLayout>

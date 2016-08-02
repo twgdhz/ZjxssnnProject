@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <LinearLayout 
+        android:id="@+id/logistics_head_item_content_layout"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        >
+        <LinearLayout 
+            android:id="@+id/logistics_head_item_left_layout"
+            android:layout_width="match_parent"
+    		android:layout_height="match_parent"
+    		android:layout_weight="3"
+    		android:orientation="vertical"
+            >
+            <ImageView 
+                android:id="@+id/logistics_head_item_left_dian_image"
+                android:layout_width="20dp"
+    			android:layout_height="20dp"
+    			android:layout_gravity="center_horizontal"
+    			android:src="@drawable/daoda"
+                android:contentDescription="@null"/>
+            <View 
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/logistics_detail_item_view_color"
+                />
+        </LinearLayout>
+        <TextView 
+            android:id="@+id/logistics_head_item_content_text"
+            android:layout_width="match_parent"
+    		android:layout_height="match_parent"
+    		android:textSize="15sp"
+    		android:layout_weight="1"
+    		android:paddingTop="5dp"
+    		android:paddingBottom="5dp"
+    		android:paddingRight="5dp"
+    		android:gravity="center_vertical"
+    		android:textColor="@color/logistics_text_color"
+    		android:text="@string/logistics_details_test_track"
+            />
+    </LinearLayout>
+
+</LinearLayout>

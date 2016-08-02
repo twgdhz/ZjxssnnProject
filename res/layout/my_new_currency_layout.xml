@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+    <include
+        android:id="@+id/title_currency_bi_layout"
+        layout="@layout/title_currency_bi_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_currency_bi_layout"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/my_new_currency_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/main_color16"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/currency_yue_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="待入账金额（元）"
+                android:textColor="@color/main_color25"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/currency_yue_show_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/currency_yue_text"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/currency_yue_show_text"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/currency_keyong_yue_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="可用余额（元）"
+                    android:textColor="@color/main_color25"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/currency_keyong_yue_show_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/my_color8"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:id="@+id/new_currency_image"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/new_currency_income" />
+
+                    <TextView
+                        android:id="@+id/gross_income_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/new_currency_image"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="总收入"
+                        android:textColor="@color/house_text_color"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/gross_income_show_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/merchant_settled_color"
+                        android:textSize="19sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/my_color10" />
+
+                <com.zjxfood.view.MyScrollListView
+                    android:id="@+id/currency_list_sr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/my_color10"
+                    android:dividerHeight="0.5dp"
+                    android:paddingBottom="10dp"></com.zjxfood.view.MyScrollListView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/my_color10" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/my_color8"
+                    android:padding="15dp">
+                    <ImageView
+                        android:id="@+id/new_currency_image2"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/new_currency_income" />
+                    <TextView
+                        android:id="@+id/gross_out_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/new_currency_image2"
+                        android:layout_marginLeft="10dp"
+                        android:text="总支出"
+                        android:textColor="@color/house_text_color"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/gross_out_show_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/merchant_settled_color"
+                        android:textSize="19sp" />
+                </RelativeLayout>
+
+                <com.zjxfood.view.MyScrollListView
+                    android:id="@+id/currency_list_zc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/my_color10"
+                    android:dividerHeight="0.5dp"
+                    android:paddingBottom="80dp"></com.zjxfood.view.MyScrollListView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/currency_bottom_view"
+        android:background="@color/my_color10" />
+
+    <RelativeLayout
+        android:id="@+id/currency_bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/cz_btn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_my_style2"
+            android:padding="10dp"
+            android:text="去提现" />
+    </RelativeLayout>
+        </RelativeLayout>
+</RelativeLayout>

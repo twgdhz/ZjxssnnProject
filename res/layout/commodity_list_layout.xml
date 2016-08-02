@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/commodity_list_color"
+        android:orientation="vertical" >
+    <include
+        android:id="@+id/commodity_list_title_layout"
+        layout="@layout/title_commodity_list" />
+
+    <LinearLayout
+        android:id="@+id/commodity_list_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/commodity_list_title_layout"
+        android:background="@color/type_color"
+        android:orientation="horizontal" >
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/comodity_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/commodity_list_head_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/commodity_list_type_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:contentDescription="@string/description"
+                android:scaleType="fitEnd"
+                android:src="@drawable/commodity_list_type" />
+
+            <TextView
+                android:id="@+id/commodity_list_type_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/commodity_type"
+                android:textColor="@color/text_selector_style" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/commodity_list_head_nearby"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/commodity_list_nearby_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:contentDescription="@string/description"
+                android:scaleType="fitEnd"
+                android:src="@drawable/commodity_list_setting" />
+
+            <TextView
+                android:id="@+id/commodity_list_nearby_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/commodity_nearby"
+                android:textColor="@color/text_selector_style" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/commodity_list_head_sort"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/commodity_list_sort_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:contentDescription="@string/description"
+                android:scaleType="fitEnd"
+                android:src="@drawable/commodity_list_sort" />
+
+            <TextView
+                android:id="@+id/commodity_list_sort_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/commodity_sort"
+                android:textColor="@color/text_selector_style" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/commodity_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/commodity_list_head_layout"
+        android:divider="#00000000" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/commodity_list_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/commodity_list_title_layout"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/load_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"
+            android:src="@drawable/log_image" />
+
+        <LinearLayout
+            android:id="@+id/commodity_list_progress_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/load_image"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" >
+
+            <ProgressBar
+                android:id="@+id/commodity_list_progress"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:indeterminateDrawable="@drawable/frame_loading" />
+
+            <TextView
+                android:id="@+id/commodity_list_progress_decription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/loading_now"
+                android:gravity="center_vertical"
+                android:textColor="@color/commodity_list_text_type"
+                android:textSize="12sp" />
+
+            <com.zjxfood.view.WaitingView
+                android:id="@+id/waitingBar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                 />
+            
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/commodity_not_resource_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/commodity_list_title_layout"
+        android:gravity="center"
+        android:text="@string/not_data_show"
+        android:textColor="@color/my_user_decription"
+        android:visibility="gone" />
+</RelativeLayout>
+</RelativeLayout>

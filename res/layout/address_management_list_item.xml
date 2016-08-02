@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_content_color"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/address_management_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/my_content_color"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/address_management_content_layouts"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:id="@+id/address_manage_item_user_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/address_manage_item_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address_management_user_name"
+                    android:textColor="@color/order_evaluation_commodity_name_color" />
+
+                <TextView
+                    android:id="@+id/address_manage_item_user_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/address_management_user_phone"
+                    android:textColor="@color/order_evaluation_commodity_name_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/address_manage_detail_default_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address_manage_item_user_layout"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <TextView
+                    android:id="@+id/address_manage_detail_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingRight="10dp"
+                    android:text="@string/address_management_address"
+                    android:textColor="@color/user_name_color" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="20dp"
+                android:background="@color/my_setting_line_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/address_manage_delete_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/exchange_gifts_color"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_weight="4" >
+
+            <TextView
+                android:id="@+id/address_manage_right_delete2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/delete"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/address_manage_ok_image"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:contentDescription="@null"
+            android:src="@drawable/ok"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/address_manage_delete_layout"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:background="@color/exchange_gifts_color"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/address_manage_right_delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

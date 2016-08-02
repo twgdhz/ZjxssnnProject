@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_content_color"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/add_bank_info_title"
+        layout="@layout/title_add_bank_fillin_layout" />
+
+    <LinearLayout
+        android:id="@+id/add_bank_info_head"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/add_bank_info_title"
+        android:background="@color/my_setting_line_color"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/add_bank_info_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/chose_bank_type"
+            android:textColor="@color/chose_bank_type_color"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_bank_fill_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/add_bank_info_head"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg_add_bank_info_style"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/add_bank_fill_type_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/add_bank_info_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/bank_types"
+                android:textColor="@color/back"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/add_bank_info_view"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/add_bank_info_type"
+                android:background="@color/add_bank_view" />
+
+            <TextView
+                android:id="@+id/add_bank_info_type_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/add_bank_info_view"
+                android:text="@string/bank_type"
+                android:textColor="@color/bank_type"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/add_bank_info_type_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/add_bank_info_type_edit"
+                android:text="@string/bank_type_info"
+                android:textColor="@color/bank_type"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/main_title_color" />
+
+        <TextView
+            android:id="@+id/add_bank_info_fill"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/bank_type_fill_info" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/main_title_color" />
+
+        <LinearLayout
+            android:id="@+id/add_bank_fill_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/add_bank_fill_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:gravity="center"
+                android:text="@string/name"
+                android:textColor="@color/back"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/add_bank_info_view2"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/add_bank_view" />
+
+            <TextView
+                android:id="@+id/add_bank_fill_name_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:text="@string/name_zhou"
+                android:textColor="@color/my_order_text_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/main_title_color" />
+
+        <LinearLayout
+            android:id="@+id/add_bank_fill_card_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/add_bank_card_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:text="@string/card_type"
+                android:textColor="@color/back"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/add_bank_info_view3"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/add_bank_view" />
+
+            <TextView
+                android:id="@+id/add_bank_fill_card_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="@string/card_edit"
+                android:textColor="@color/my_order_text_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/main_title_color" />
+
+        <LinearLayout
+            android:id="@+id/add_bank_fill_card_id_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/add_bank_card_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:text="@string/card_id_show"
+                android:textColor="@color/back"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/add_bank_info_view4"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:background="@color/add_bank_view" />
+
+            <TextView
+                android:id="@+id/add_bank_fill_card_id_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="@string/card_id_edit"
+                android:textColor="@color/my_order_text_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/main_title_color" />
+
+        <LinearLayout
+            android:id="@+id/add_bank_fill_phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/add_bank_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:text="@string/phone"
+                android:textColor="@color/back"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/add_bank_info_view5"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:background="@color/add_bank_view" />
+
+            <TextView
+                android:id="@+id/add_bank_fill_phone_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="@string/phone_show"
+                android:textColor="@color/my_order_text_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/add_bank_info_xieyi_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_bank_fill_content_layout"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp" >
+
+        <CheckBox
+            android:id="@+id/add_bank_info_xieyi_check"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="right"
+            android:button="@drawable/checkbox2"
+            android:checked="true" />
+
+        <TextView
+            android:id="@+id/add_bank_info_xieyi_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/add_bank_info_xieyi_check"
+            android:text="@string/add_bank_xieyi_tongyi"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/add_bank_info_xieyi_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/add_bank_info_xieyi_text"
+            android:text="@string/yonghu_xieyi"
+            android:textColor="@color/main_title_color"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/add_bank_info_xieyi_ziliao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/xieyi_ziliao"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/add_bank_fill_next_btn"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_bank_info_xieyi_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/add_bank_next_btn"
+        android:padding="10dp"
+        android:text="@string/next"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/add_bank_alert_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        android:background="@color/transparent"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+</RelativeLayout>

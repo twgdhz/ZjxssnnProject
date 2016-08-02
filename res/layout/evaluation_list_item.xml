@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_content_color"
+    android:padding="10dp"
+    android:orientation="vertical" >
+    
+	<TextView 
+	    android:id="@+id/evaluation_name_text"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentLeft="true"
+    	android:layout_marginLeft="5dp"
+    	android:textSize="14sp"
+    	android:textColor="@color/order_evaluation_commodity_name_color"
+    	android:text="@string/evaluation_name_text"
+	    />
+	<TextView 
+	    android:id="@+id/evaluation_date_text"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentRight="true"
+    	android:textSize="12sp"
+    	
+    	android:textColor="@color/item_color"
+    	android:text="@string/evaluation_name_date"
+	    />
+	<TextView 
+	    android:id="@+id/evaluation_content_text"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_marginLeft="10dp"
+    	android:textSize="14sp"
+    	android:layout_marginTop="10dp"
+    	android:maxLines="3"
+    	android:ellipsize="end"
+    	android:layout_below="@+id/evaluation_date_text"
+    	android:textColor="@color/item_color"
+    	android:text="@string/evaluation_content_text"
+	    />
+	<View 
+	    android:layout_width="match_parent"
+	    android:layout_height="0.5dp"
+	    android:layout_below="@+id/evaluation_content_text"
+	    android:layout_marginTop="10dp"
+	    android:background="@color/my_setting_line_color"
+	    />
+</RelativeLayout>

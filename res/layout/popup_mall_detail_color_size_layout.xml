@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+     >
+
+    <LinearLayout
+        android:id="@+id/popup_mall_detail_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_my_style7"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/popup_mall_detail_color_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/pop_mall_detail_x"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="right"
+                android:contentDescription="@null"
+                android:src="@drawable/iconfont_guanbi" />
+
+            <TextView
+                android:id="@+id/pop_mall_detail_size_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mall_popup_color_size"
+                android:textColor="@color/popup_mall_size_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/popup_mall_size_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/main_view_color" />
+
+        <GridView
+            android:id="@+id/popup_mall_detail_grid"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="5dp"
+            android:columnWidth="90dp"
+            android:horizontalSpacing="10dp"
+            android:listSelector="@color/popup_mall_item_back_color"
+            android:numColumns="auto_fit"
+            android:paddingBottom="40dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp" >
+        </GridView>
+
+        <RelativeLayout
+            android:id="@+id/popup_mall_detail_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/mall_new_detail_back_color" >
+
+            <Button
+                android:id="@+id/popup_mall_bottom_confirm_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_confirm_down"
+                android:paddingBottom="10dp"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:paddingTop="10dp"
+                android:text="@string/confirm_1"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

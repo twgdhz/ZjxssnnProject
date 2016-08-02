@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_my_account_id"
+        layout="@layout/title_my_account_layout" />
+
+    <RelativeLayout
+        android:id="@+id/binding_phone_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@+id/title_my_account_id"
+        android:background="@drawable/bg_user_selector"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/my_account_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/description"
+            android:src="@drawable/binding_phone" />
+
+        <TextView
+            android:id="@+id/my_account_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/my_account_image"
+            android:text="@string/binding_phone"
+            android:textColor="@color/my_user_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/my_user_right_modify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/my_user_right_image"
+            android:text="@string/modify"
+            android:textColor="@color/my_user_color"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/my_user_right_image"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/description"
+            android:src="@drawable/fanye_gray" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/my_user_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/binding_phone_layout"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        android:background="@color/sign_my_user_color" />
+
+    <RelativeLayout
+        android:id="@+id/my_account_log_pwd_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_user_view_1"
+        android:background="@drawable/bg_user_selector"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/my_account_log_pwd_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/description"
+            android:src="@drawable/log_password" />
+
+        <TextView
+            android:id="@+id/my_account_security_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/my_account_log_pwd_image"
+            android:text="@string/log_password"
+            android:textColor="@color/my_user_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/my_account_security_right_modify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/my_account_security_right_image"
+            android:text="@string/modify"
+            android:textColor="@color/my_user_color"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/my_account_security_right_image"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/description"
+            android:src="@drawable/fanye_gray" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/my_user_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/my_account_log_pwd_layout"
+        android:layout_margin="10dp"
+        android:background="@color/sign_my_user_color" />
+
+    <RelativeLayout
+        android:id="@+id/my_pay_pwd_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_user_view_2"
+        android:background="@drawable/bg_user_selector"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/my_pay_pwd_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/description"
+            android:src="@drawable/pay_password" />
+
+        <TextView
+            android:id="@+id/my_pay_pwd_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/my_pay_pwd_image"
+            android:text="@string/pay_pwd"
+            android:textColor="@color/my_user_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/my_account_pay_pwd_modify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/my_pay_pwd_right_image"
+            android:text="@string/modify"
+            android:textColor="@color/my_user_color"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/my_pay_pwd_right_image"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/description"
+            android:src="@drawable/fanye_gray" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/my_user_view_3"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/my_pay_pwd_layout"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        android:background="@color/sign_my_user_color" />
+
+    <RelativeLayout
+        android:id="@+id/my_account_set_security_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_user_view_3"
+        android:background="@drawable/bg_user_selector"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/my_account_set_security_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/description"
+            android:src="@drawable/security" />
+
+        <TextView
+            android:id="@+id/my_account_set_security_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/my_account_set_security_image"
+            android:text="@string/set_security"
+            android:textColor="@color/my_user_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/my_account_set_security_right_modify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/my_account_set_security_right_image"
+            android:text="@string/modify"
+            android:textColor="@color/my_user_color"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/my_account_set_security_right_image"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/description"
+            android:src="@drawable/fanye_gray" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/my_user_view_4"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/my_account_set_security_layout"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        android:background="@color/sign_my_user_color" />
+<!-- 
+    <LinearLayout
+        android:id="@+id/main_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/my_bottom_menu_layout"
+            layout="@layout/my_bottom_menu_layout" />
+    </LinearLayout> -->
+</RelativeLayout>
+</RelativeLayout>

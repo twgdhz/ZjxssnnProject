@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+    <include
+        android:id="@+id/new_jb_title"
+        layout="@layout/title_cash_mall_layout" />
+    <LinearLayout
+        android:id="@+id/new_jb_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/new_jb_title"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/jb_lr_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/new_jb_type1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:singleLine="true"
+                android:enabled="true"
+                android:textSize="14sp"
+                android:textColor="@color/main_color3"
+                android:gravity="center_horizontal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                android:background="@color/main_color16" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/jb_nb_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/new_jb_type2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:singleLine="true"
+                android:enabled="true"
+                android:textSize="14sp"
+                android:textColor="@color/main_color3"
+                android:gravity="center_horizontal"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/main_color16"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/jb_nn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/new_jb_type3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:textColor="@color/main_color3"
+                android:enabled="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/main_color16"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/jb_tc_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/new_jb_type4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:enabled="true"
+                android:textSize="14sp"
+                android:textColor="@color/main_color3" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/main_color16"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16px"
+            android:layout_marginBottom="16px"
+            android:background="@color/main_color17" />
+
+        <ImageView
+            android:id="@+id/new_jb_more_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/new_mall_down" />
+    </LinearLayout>
+    <View
+        android:id="@+id/new_jb_view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/new_jb_top_layout"
+        android:background="@color/my_order_line_color" />
+    <ScrollView
+        android:id="@+id/new_cash_scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/new_jb_view">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+            <com.zjxfood.view.HorizontalListView
+                android:id="@+id/new_jb_mall_horizon_list"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="40dp"></com.zjxfood.view.HorizontalListView>
+
+
+            <!-- banner -->
+            <android.support.v4.view.ViewPager
+                android:id="@+id/new_jb_mall_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!-- 五折特惠 大牌尝鲜 -->
+
+            <LinearLayout
+                android:id="@+id/new_jb_lr_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20px"
+                >
+                <ImageView
+                    android:id="@+id/new_jb_left_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    />
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    />
+                <ImageView
+                    android:id="@+id/new_jb_right_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:background="@color/main_color2" />
+            <!-- 推荐商品 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16px"
+                android:layout_marginTop="30px"
+                android:text="推荐商品"
+                android:textColor="@color/main_color3"
+                android:textSize="16sp" />
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/main_color2"
+                android:layout_marginTop="5dp"
+                android:layout_height="1px"/>
+            <com.zjxfood.view.MyGridViewScroll
+                android:id="@+id/new_jb_mall_grid_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2"
+                android:layout_marginTop="20px"
+                android:stretchMode="columnWidth" />
+        </LinearLayout>
+
+    </ScrollView>
+        </RelativeLayout>
+</RelativeLayout>

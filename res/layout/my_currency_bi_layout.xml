@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_content_color"
+        android:orientation="vertical" >
+    <include
+        android:id="@+id/title_currency_bi_layout"
+        layout="@layout/title_layout" />
+
+    <LinearLayout
+        android:id="@+id/restaurant_bi_surplus_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_currency_bi_layout"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/restaurant_bi_surplus_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/my_currency_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@null"
+                android:src="@drawable/my_currency_icon" />
+
+            <TextView
+                android:id="@+id/currency_bi_now_surplus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/my_currency_image"
+                android:text="@string/restaurant_bi_now_surplus"
+                android:textColor="@color/order_evaluation_commodity_name_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/currency_bi_now_surplus_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/restaurant_bi_now_surplus_number"
+                android:textColor="@color/order_evaluation_commodity_name_color" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/currency_bi_this_month_view"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/my_setting_line_color" />
+
+        <ListView
+            android:id="@+id/my_currency_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+             >
+        </ListView>
+    </LinearLayout>
+<RelativeLayout
+        android:id="@+id/currency_bi_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/commodity_list_color" >
+
+        <View
+            android:id="@+id/restaurant_bi_bottom_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/my_setting_line_color" />
+
+        <Button
+            android:id="@+id/currency_bi_bottom_btn"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_restaurant_buy_style"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/my_currency_chongzhi_text2"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

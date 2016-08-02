@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+    <include
+        android:id="@+id/modify_log_pwd_title"
+        layout="@layout/title_layout" />
+
+    <FrameLayout
+        android:id="@+id/modify_log_pwd_head_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" >
+
+        <ImageView
+            android:id="@+id/modify_log_pwd_head_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/description"
+            android:scaleType="fitXY"
+            android:src="@drawable/user_head_image" />
+
+        <ImageView
+            android:id="@+id/modify_log_pwd_head_xiaoguo_image"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/description"
+            android:src="@drawable/xiaoguo" />
+
+        <com.zjxfood.view.HeadRoundImageView
+            android:id="@+id/modify_log_pwd_head_touxiang_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/description"
+            android:src="@drawable/touxiang" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/modify_log_pwd_log_account_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp" >
+
+        <FrameLayout
+            android:id="@+id/modify_log_pwd_input_logpwd_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp" >
+
+            <EditText
+                android:id="@+id/modify_log_pwd_input_logpwd_edit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_user_loginstyle"
+                android:gravity="center_vertical"
+                android:hint="@string/input_logpwd"
+                android:maxLength="16"
+                android:paddingLeft="70dp"
+                android:singleLine="true"
+                android:password="true"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/modify_log_pwd_input_logpwd_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="@string/log_password"
+                android:textColor="@color/user_name_color"
+                android:textSize="15sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/modify_log_pwd_password_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp" >
+
+            <EditText
+                android:id="@+id/modify_log_pwd_password_edit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_user_loginstyle"
+                android:gravity="center_vertical"
+                android:hint="@string/user_reg_password_hint"
+                android:maxLength="16"
+                android:paddingLeft="85dp"
+                android:singleLine="true"
+                android:password="true"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/modify_log_pwd_password_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="@string/user_reg_new_password"
+                android:textColor="@color/user_name_color"
+                android:textSize="15sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/modify_log_pwd_confirm_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <EditText
+                android:id="@+id/modify_log_pwd_confirm_password_edit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_user_loginstyle"
+                android:gravity="center_vertical"
+                android:hint="@string/user_reg_confirm_password_hint"
+                android:maxLength="16"
+                android:paddingLeft="85dp"
+                android:singleLine="true"
+                android:password="true"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/modify_log_pwd_confirm_password_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="@string/confirm_user_reg_new_password"
+                android:textColor="@color/user_name_color"
+                android:textSize="15sp" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/modify_log_pwd_log_submit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_btn_selector"
+            android:text="@string/modify_log_pwd_complete"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/modify_log_pwd_log_bottom_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|bottom"
+        android:paddingBottom="10dp"
+        android:text="@string/user_log_bottom_introduction" />
+</LinearLayout>
+</LinearLayout>

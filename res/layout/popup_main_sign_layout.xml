@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/popup_bottom_style"
+    android:orientation="vertical"
+    android:paddingBottom="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/popup_sign_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popup_bank_success_style"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/popup_sign_detail_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="10dp"
+            android:text="@string/main_sign_detail"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/popup_sign_detail_x_image"
+            android:layout_width="25dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="2dp"
+            android:visibility="gone"
+            android:contentDescription="@string/description"
+            android:src="@drawable/x" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/popup_sign_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:background="@color/my_content_color"
+        android:orientation="vertical"
+        android:paddingBottom="10dp" >
+
+        <TextView 
+            android:id="@+id/popup_sign_detail_content_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/main_title_color"
+            android:text="@string/main_sign_detail_content"
+            />
+        <TextView 
+            android:id="@+id/popup_sign_detail_date_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/main_title_color"
+            android:text="@string/main_sign_detail_date"
+            />
+        <View 
+            android:id="@+id/popup_sign_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray"
+            />
+        <Button 
+            android:id="@+id/popup_sign_not_btn"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:padding="3dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@drawable/bg_login_on"
+            android:text="@string/not_sign"
+            />
+        <Button 
+            android:id="@+id/popup_sign_btn"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:padding="3dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@drawable/bg_login_on"
+            android:text="@string/main_sign"
+            />
+    </LinearLayout>
+</LinearLayout>

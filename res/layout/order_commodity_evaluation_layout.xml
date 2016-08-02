@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_content_color" >
+
+    <include
+        android:id="@+id/order_commodity_evaluation_title_id"
+        layout="@layout/title_order_evlaution_info_layout" />
+
+    <ScrollView
+        android:id="@+id/order_commodity_evaluation_scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/order_commodity_evaluation_title_id" >
+
+        <LinearLayout
+            android:id="@+id/order_commodity_evaluation_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="70dp" >
+
+            <LinearLayout
+                android:id="@+id/order_commodity_evaluation_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <ImageView
+                    android:id="@+id/order_evalaution_commodity_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/order_item_test" />
+
+                <LinearLayout
+                    android:id="@+id/order_evalaution_commodity_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/order_evalaution_commodity_info_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/my_order_item_name"
+                        android:textColor="@color/order_evaluation_commodity_name_color"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/order_evalaution_commodity_price_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/order_evalaution_commodity_price_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/my_order_item_commodity_money"
+                            android:textColor="@color/my_order_text_color"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/order_evalaution_commodity_price_show"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/my_order_item_commodity_money_show"
+                            android:textColor="@color/my_order_text_color"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/order_evalaution_commodity_address_show"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/order_evaluation_address"
+                        android:textColor="@color/my_order_text_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/order_evaluation_text_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/order_evaluation_text_color" />
+
+            <RelativeLayout
+                android:id="@+id/order_evaluation_commodity_texture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:id="@+id/order_evaluation_commodity_texture_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/order_evalaution_texture"
+                    android:textColor="@color/my_order_text_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/order_evaluation_commodity_grade_image1"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/order_evaluation_commodity_texture_text"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/xingxing1" />
+
+                <ImageView
+                    android:id="@+id/order_evaluation_commodity_grade_image2"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/order_evaluation_commodity_grade_image1"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/xingxing2" />
+
+                <ImageView
+                    android:id="@+id/order_evaluation_commodity_grade_image3"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/order_evaluation_commodity_grade_image2"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/xingxing2" />
+
+                <ImageView
+                    android:id="@+id/order_evaluation_commodity_grade_image4"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/order_evaluation_commodity_grade_image3"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/xingxing2" />
+
+                <ImageView
+                    android:id="@+id/order_evaluation_commodity_grade_image5"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/order_evaluation_commodity_grade_image4"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/xingxing2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/order_evaluation_commodity_service_attitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:id="@+id/order_evaluation_commodity_service_attitude_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/order_evalaution_service_taidu"
+                    android:textColor="@color/my_order_text_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/order_evaluation_service_grade_image1"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/order_evaluation_commodity_service_attitude_text"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/xingxing1" />
+
+                <ImageView
+                    android:id="@+id/order_evaluation_service_grade_image2"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/order_evaluation_service_grade_image1"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/xingxing2" />
+
+                <ImageView
+                    android:id="@+id/order_evaluation_service_grade_image3"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/order_evaluation_service_grade_image2"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/xingxing2" />
+
+                <ImageView
+                    android:id="@+id/order_evaluation_service_grade_image4"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/order_evaluation_service_grade_image3"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/xingxing2" />
+
+                <ImageView
+                    android:id="@+id/order_evaluation_service_grade_image5"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/order_evaluation_service_grade_image4"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/xingxing2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/order_evaluation_commodity_eat_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:id="@+id/order_evaluation_commodity_eat_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/order_evalaution_eat_huanjing"
+                    android:textColor="@color/my_order_text_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/order_evaluation_eat_grade_image1"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/order_evaluation_commodity_eat_text"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/xingxing1" />
+
+                <ImageView
+                    android:id="@+id/order_evaluation_eat_grade_image2"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/order_evaluation_eat_grade_image1"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/xingxing2" />
+
+                <ImageView
+                    android:id="@+id/order_evaluation_eat_grade_image3"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/order_evaluation_eat_grade_image2"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/xingxing2" />
+
+                <ImageView
+                    android:id="@+id/order_evaluation_eat_grade_image4"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/order_evaluation_eat_grade_image3"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/xingxing2" />
+
+                <ImageView
+                    android:id="@+id/order_evaluation_eat_grade_image5"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/order_evaluation_eat_grade_image4"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/xingxing2" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/order_commodity_evaluation_edit"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:maxLength="100"
+                android:textSize="14sp"
+                android:paddingLeft="5dp"
+                android:background="@drawable/bg_evaluation_style"
+                android:hint="@string/order_evalaution_hint"
+                android:textColor="@color/order_evaluation_text_color"
+                 />
+
+            <TextView
+                android:id="@+id/order_commodity_evaluation_edit_alert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/order_evalaution_alert"
+                android:textColor="@color/order_evaluation_text_color"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/order_commodity_evaluation_show_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/slide_show_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/slide_show_text"
+                    android:textColor="@color/my_order_text_color" />
+
+                <ImageView
+                    android:id="@+id/order_evaluation_camera_show_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/camera" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/order_evaluation_text_color" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/order_commodity_evaluation_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/order_evaluation_bottom_layout"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/order_commodity_evaluation_bottom_sumbit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bg_login_on"
+            android:paddingBottom="8dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="8dp"
+            android:text="@string/sumbit"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>

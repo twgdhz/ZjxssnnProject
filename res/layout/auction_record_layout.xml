@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/auction_record_title_layout"
+        layout="@layout/title_layout1" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:id="@+id/auction_record_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/my_order_view_color"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/auction_record_head_type1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:text="状态"
+            android:textColor="@color/my_user_decription"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/auction_record_view" />
+
+        <TextView
+            android:id="@+id/auction_record_head_type2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="帐号"
+            android:textColor="@color/my_user_decription"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/auction_record_view" />
+
+        <TextView
+            android:id="@+id/auction_record_head_type3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="价格"
+            android:textColor="@color/my_user_decription"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/auction_record_view" />
+
+        <TextView
+            android:id="@+id/auction_record_head_type4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="时间"
+            android:textColor="@color/my_user_decription"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/auction_record_view" />
+
+    <ListView
+        android:id="@+id/auction_record_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/auction_record_view"
+        android:dividerHeight="0.5dp" >
+    </ListView>
+ <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/auction_record_view" />
+
+
+</LinearLayout>
+</LinearLayout>

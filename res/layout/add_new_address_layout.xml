@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_content_color"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_add_new_address_id"
+        layout="@layout/title_add_new_address_layout" />
+
+    <LinearLayout
+        android:id="@+id/add_new_address_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_add_new_address_id"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/new_address_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp" >
+
+            <EditText
+                android:id="@+id/consignee_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/consignee_name"
+                android:maxLength="6"
+                android:background="@null"
+                android:singleLine="true"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/consignee_name"
+                android:layout_marginTop="5dp"
+                android:background="@color/main_title_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/new_address_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp" >
+
+            <EditText
+                android:id="@+id/consignee_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/consignee_phone"
+                android:background="@null"
+                android:maxLength="11"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/consignee_phone"
+                android:layout_marginTop="5dp"
+                android:background="@color/main_title_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/new_address_postal_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp" >
+
+            <EditText
+                android:id="@+id/consignee_postal_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:singleLine="true"
+                android:inputType="number"
+                android:maxLength="6"
+                android:hint="@string/postal_code"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/consignee_postal_code"
+                android:layout_marginTop="5dp"
+                android:background="@color/main_title_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/new_address_provincial_urban_areas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp" >
+
+            <TextView
+                android:id="@+id/consignee_provincial_urban_areas_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/provincial_urban_areas"
+                android:background="@null"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="16sp"
+                android:textColor="@color/house_text_color"
+               />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/consignee_provincial_urban_areas_edit"
+                android:layout_marginTop="5dp"
+                android:background="@color/main_title_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/new_address_detailed_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp" >
+
+            <EditText
+                android:id="@+id/consignee_detailed_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/detailed_address"
+                android:background="@null"
+                android:maxLength="50"
+                android:textColor="@color/house_text_color"
+                android:textSize="16sp" />
+
+            
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/consignee_detailed_address"
+                android:layout_marginTop="5dp"
+                android:background="@color/main_title_color" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/add_new_address_save_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_pay_selector"
+            android:padding="5dp"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/new_address_wheel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/new_address_wheel_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.zjxfood.widget.WheelView
+                android:id="@+id/new_address_province"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+            </com.zjxfood.widget.WheelView>
+
+            <com.zjxfood.widget.WheelView
+                android:id="@+id/new_address_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+            </com.zjxfood.widget.WheelView>
+
+            <com.zjxfood.widget.WheelView
+                android:id="@+id/new_address_district"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+            </com.zjxfood.widget.WheelView>
+        </LinearLayout>
+        <Button 
+            android:id="@+id/chose_city_btn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:text="@string/confirm"
+            android:textSize="16sp"
+            android:background="@drawable/bg_pay_selector"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

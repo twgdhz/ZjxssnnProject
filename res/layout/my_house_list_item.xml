@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_setting_color"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:id="@+id/house_list_item_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/house_list_item_content_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/description"
+            android:src="@drawable/order_item_test" />
+
+        <RelativeLayout
+            android:id="@+id/house_item_content_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/house_item_info_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/my_order_item_name"
+                android:textColor="@color/house_text_color"
+                android:textSize="11sp" />
+
+            <RelativeLayout
+                android:id="@+id/house_item_info_order_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                 >
+
+                <TextView
+                    android:id="@+id/house_item_info_order_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/house_order_id"
+                   
+                    android:textColor="@color/house_text_color"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/house_item_info_order_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/house_item_info_order_show"
+                    android:textStyle="bold"
+                    android:text="@string/house_order_id_code"
+                    android:textColor="@color/house_text_color"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/house_item_fanli_date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/house_item_info_fanli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/house_order_fanli"
+                android:gravity="right"
+                android:textColor="@color/main_title_color"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/house_item_info_xiaofei"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/house_order_xiaofei"
+                android:textColor="@color/house_text_color"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/house_item_info_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/house_order_date"
+                android:textColor="@color/house_text_color"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

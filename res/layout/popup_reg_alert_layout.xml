@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/popup_xieyi_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_popup_style"
+        android:layout_centerVertical="true"
+         >
+
+        <RelativeLayout
+            android:id="@+id/popup_sign_head_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/popup_bank_success_style"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/popup_setting_user_head_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="10dp"
+                android:text="@string/reg_alert_xieyi"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/popup_jh_alert_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/popup_sign_head_layout"
+            android:layout_marginTop="-10dp"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+		<ScrollView 
+		    android:id="@+id/popup_jh_alert_scroll_layout"
+		    android:layout_width="match_parent"
+            android:layout_height="match_parent"
+		    >
+           <WebView 
+		    android:id="@+id/change_head_location_webview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+		    />
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/popup_jh_btn_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/popup_jh_alert_layout"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/main_view_color" />
+
+            <LinearLayout
+                android:id="@+id/popup_jh_btn_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/popup_reg_xieyi_to_confirm_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_login_on"
+                    android:text="@string/reg_agree_xieyi"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/popup_reg_xieyi_to_confirm_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="10dp"
+                    android:background="@drawable/xieyi_text_selector"
+                    android:text="@string/reg_agree_xieyi"
+                    android:textColor="@color/head_image_color"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/main_view_color" />
+
+                <TextView
+                    android:id="@+id/popup_reg_xieyi_cancel_cancel_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="10dp"
+                    android:background="@drawable/btn_right_bottom_selector"
+                    android:text="@string/reg_refuse_xieyi"
+                    android:textColor="@color/head_image_color"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/popup_reg_xieyi_cancel_cancel_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_login_on"
+                    android:text="@string/reg_refuse_xieyi"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

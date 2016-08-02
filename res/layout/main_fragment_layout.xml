@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/main_fragment_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="60dp" >
+
+        <fragment
+            android:id="@+id/main_fragement_index"
+            android:name="com.zjxfood.fragment.FirstFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="10" />
+
+        <fragment
+            android:id="@+id/main_fragement_buy"
+            android:name="com.zjxfood.fragment.BuyBillFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="10" />
+
+        <fragment
+            android:id="@+id/main_fragement_mall"
+            android:name="com.zjxfood.fragment.FirstFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="10" />
+        <fragment
+            android:id="@+id/main_fragement_my"
+            android:name="com.zjxfood.fragment.BuyBillFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/main_bottom_menu_layout"
+            layout="@layout/main_bottom_menu_layout" />
+    </LinearLayout>
+
+</RelativeLayout>

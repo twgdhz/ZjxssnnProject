@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp"
+    android:orientation="vertical" >
+    	<TextView 
+    	    android:id="@+id/popup_retrieve_item_text"
+    	    android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:textColor="@color/user_name_color"
+    		android:text="@string/question1_s2"
+    	    />
+
+</LinearLayout>

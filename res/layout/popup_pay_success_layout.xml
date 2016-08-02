@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_popup_grabred_style"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/popup_pay_success_x"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@null"
+        android:src="@drawable/x" />
+
+    <TextView
+        android:id="@+id/popup_pay_success_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/popup_pay_success_x"
+        android:layout_centerHorizontal="true"
+        android:text="@string/pay_success_1"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/popup_pay_success_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/popup_pay_success_text1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/pay_success_2"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/popup_pay_success_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/popup_pay_success_text2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/pay_success_3"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+
+    <Button
+        android:id="@+id/pay_success_order_btn"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/popup_pay_success_text3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/check_for_details"
+        android:gravity="center"
+        android:text="@string/pay_success_order_btn"
+        android:textColor="#823B0C" />
+
+    
+
+</RelativeLayout>

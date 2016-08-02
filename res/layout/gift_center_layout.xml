@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_content_color"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/gift_center_title_layout"
+        layout="@layout/title_gift_center_layout" />
+
+    <ListView
+        android:id="@+id/gift_center_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:layout_below="@+id/gift_center_title_layout"
+         >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/gift_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/gift_bottom_menu_layout"
+            layout="@layout/gift_bottom_menu_layout" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/mall_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/gift_center_title_layout"
+        android:layout_marginBottom="60dp"
+        android:background="@color/white" >
+		<ImageView 
+		    android:id="@+id/mall_load_image"
+		    android:layout_width="40dp"
+        	android:layout_height="40dp"
+        	android:src="@drawable/log_image"
+        	android:layout_centerInParent="true" 
+		    android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/mall_progress_decription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mall_load_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            android:text="@string/loading_now"
+            android:textColor="@color/commodity_list_text_type" />
+        
+    </RelativeLayout>
+</RelativeLayout>

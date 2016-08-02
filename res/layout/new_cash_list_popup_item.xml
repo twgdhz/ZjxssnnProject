@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="40px"
+    android:paddingRight="40px"
+    android:background="@color/white"
+    >
+    <TextView
+        android:id="@+id/new_cash_popup_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+
+        android:paddingTop="22px"
+        android:paddingBottom="22px"
+        android:textColor="@color/main_color3"
+        />
+<ImageView
+    android:id="@+id/new_cash_popup_image"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:paddingTop="22px"
+    android:src="@drawable/new_cash_mall_check"
+    />
+</RelativeLayout>

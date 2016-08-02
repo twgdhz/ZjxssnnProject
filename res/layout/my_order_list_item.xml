@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_setting_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/order_list_item_address_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/order_list_item_address_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/main_title_address"
+            android:textColor="@color/my_order_text_color"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/order_list_item_right_image"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/order_list_item_address_text"
+            android:contentDescription="@string/description"
+            android:src="@drawable/fanye_gray" />
+
+        <TextView
+            android:id="@+id/order_list_item_fanli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/commodity_item_rectangular_type"
+            android:paddingBottom="3dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="3dp"
+            android:textSize="12sp"
+            android:text="@string/my_order_item_fanli_text"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/my_order_item_line" />
+
+    <LinearLayout
+        android:id="@+id/order_item_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/order_item_content_image"
+           android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2.5"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/description" />
+
+        <LinearLayout
+            android:id="@+id/order_item_content_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/order_item_commodity_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                
+                android:text="@string/my_order_item_name"
+                android:textColor="@color/my_order_text_color"
+                android:textSize="13sp" />
+
+            <RelativeLayout
+                android:id="@+id/order_item_money_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/order_item_money_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/my_order_item_commodity_money"
+                    android:textColor="@color/my_order_text_color"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/order_item_money_text_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/order_item_money_text"
+                    android:text="@string/my_order_item_commodity_money_show"
+                    android:textColor="@color/my_order_text_color"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/order_item_commodity_comment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/order_item_all_comment_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="@string/my_order_item_all_comment"
+                    android:textColor="@color/my_order_text_color"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/order_item_all_comment_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/order_comment" />
+
+                <ImageView
+                    android:id="@+id/order_item_click_comment_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/click_comment" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/commodity_list_view_color" />
+
+</LinearLayout>

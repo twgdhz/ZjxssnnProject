@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/red_color8"
+        android:orientation="vertical" >
+
+    <include
+        android:id="@+id/red_issued_list_title_layout"
+        layout="@layout/title_red_issued_list_layout" />
+
+    <LinearLayout
+        android:id="@+id/red_issued_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <FrameLayout
+            android:id="@+id/my_head_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/my_head_xiaoguo_image"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/description"
+                android:src="@drawable/xiaoguo" />
+
+            <com.zjxfood.view.HeadRoundImageView
+                android:id="@+id/red_issued_content_user_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/description"
+                android:src="@drawable/touxiang" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/red_issued_content_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/red_issued_content_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/red_color9"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/red_issued_content_10_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/red_issued_content_text"
+                android:gravity="center_horizontal"
+                android:textColor="@color/red_color10"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/red_issued_content_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/red_issued_content_10_text"
+                android:gravity="center_horizontal"
+                android:text="个红包，共"
+                android:textColor="@color/red_color9"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/red_issued_content_price_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/red_issued_content_price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/red_color10"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/red_issued_content_text2_yuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@+id/red_issued_content_price_text"
+                android:gravity="center_horizontal"
+                android:text="元"
+                android:textColor="@color/back"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/red_win_content_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/red_issued_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:divider="#00000000" >
+        </ListView>
+
+        <ProgressBar
+            android:id="@+id/red_issued_list_progress"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:indeterminateDrawable="@drawable/frame_loading"
+             />
+    </RelativeLayout>
+</LinearLayout>
+</LinearLayout>

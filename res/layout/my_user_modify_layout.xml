@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+    <include
+        android:id="@+id/title_my_user_modify_id"
+        layout="@layout/title_my_user_modify_layout" />
+
+    <RelativeLayout
+        android:id="@+id/user_modify_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_my_user_modify_id"
+        android:padding="15dp" >
+
+        <ImageView
+            android:id="@+id/my_user_modify_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:contentDescription="@null"
+            android:src="@drawable/user" />
+
+        <TextView
+            android:id="@+id/my_user_modify_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/my_user_modify_image"
+            android:text="@string/user_modify_text"
+            android:textColor="@color/my_user_color"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/my_user_modify_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:padding="5dp"
+        android:maxLength="10"
+        android:background="@drawable/bg_modify_user_edit_style"
+        android:layout_below="@+id/user_modify_head_layout"
+        android:hint="@string/app_name" />
+	<TextView
+        android:id="@+id/my_user_modify_edit_decription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textColor="@color/my_user_color"
+        android:layout_below="@+id/my_user_modify_edit"
+        android:text="@string/user_modify_decription" />
+	
+	<Button 
+	    android:id="@+id/my_user_modify_btn"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_user_modify_style"
+        android:layout_below="@+id/my_user_modify_edit_decription"
+        android:text="@string/confirm"
+	    />
+	
+<!--     <LinearLayout
+        android:id="@+id/my_user_modify_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/my_bottom_menu_layout"
+            layout="@layout/my_bottom_menu_layout" />
+    </LinearLayout> -->
+</RelativeLayout>
+</RelativeLayout>

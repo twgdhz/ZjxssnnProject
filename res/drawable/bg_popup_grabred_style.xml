@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+<shape xmlns:android="http://schemas.android.com/apk/res/android">   
+    <solid android:color="@color/grab_red_popup_color" />   
+    <corners android:radius="5dip"/>  
+   
+</shape>  

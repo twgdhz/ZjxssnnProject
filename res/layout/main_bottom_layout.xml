@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/main_color11"
+    android:layout_gravity="bottom"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/new_main_home_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/new_main_home_menu_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/new_main_home_normal" />
+
+        <TextView
+            android:id="@+id/new_main_home_menu_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="@string/main_home_menu"
+            android:textColor="@color/main_color12" />
+        <View
+            android:id="@+id/new_main_main_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_color14"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/new_main_buy_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/new_main_buy_menu_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/new_main_pay_normal" />
+
+        <TextView
+            android:id="@+id/new_main_buy_menu_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10px"
+            android:textSize="14sp"
+            android:textColor="@color/main_color12"
+            android:text="@string/main_buy_menu"
+             />
+        <View
+            android:id="@+id/new_main_main_view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_color14"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/new_my_buy_car"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/new_car_menu_image"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:src="@drawable/shopping_car_normal" />
+
+        <TextView
+            android:id="@+id/bottom_cars_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/main_color12"
+            android:text="购物车" />
+        <View
+            android:id="@+id/new_main_main_view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_color14"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/new_main_my_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/new_main_my_menu_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/description"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/new_main_my_normal" />
+
+        <TextView
+            android:id="@+id/new_main_my_menu_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/main_my_menu"
+            android:layout_marginTop="10px"
+            android:textSize="14sp"
+            android:textColor="@color/main_color12" />
+        <View
+            android:id="@+id/new_main_main_view4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_color14"
+            />
+    </LinearLayout>
+
+</LinearLayout>

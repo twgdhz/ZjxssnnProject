@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_gravity="bottom"
+    android:background="@color/white" >
+	<View 
+	    android:layout_width="match_parent"
+	    android:layout_height="0.5dp"
+	    android:layout_alignParentTop="true"
+	    android:background="@color/gray"
+	    />
+    <TextView 
+        android:id="@+id/reserve_order_bottom_text"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_centerVertical="true"
+    	android:layout_marginLeft="80dp"
+    	android:textSize="15sp"
+    	android:textColor="@color/my_user_decription"
+    	android:text="@string/reserve_order_bottom_text"
+        />
+   	<Button 
+   	    android:id="@+id/reserve_order_bottom_chose_btn"
+   	    android:layout_width="100dp"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentRight="true"
+    	android:layout_centerVertical="true"
+    	android:layout_marginRight="10dp"
+    	android:textColor="@color/white"
+    	android:textSize="16sp"
+    	android:paddingLeft="15dp"
+    	android:paddingRight="15dp"
+    	android:paddingTop="6dp"
+    	android:paddingBottom="6dp"
+    	android:background="@drawable/bg_reserve_order_btn_style"
+    	android:text="@string/reserve_order_bottom_not_chose"
+   	    />
+</RelativeLayout>

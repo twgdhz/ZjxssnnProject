@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_username_back" >
+
+    <include
+        android:id="@+id/title_sign_id"
+        layout="@layout/title_sign_layout" />
+
+    <View
+        android:id="@+id/sign_new_view"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/title_sign_id"
+        android:background="@color/sign_new_view_color" />
+
+    <LinearLayout
+        android:id="@+id/sign_new_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sign_new_view"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/sign_head_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1.5" >
+
+            <ImageView
+                android:id="@+id/sign_new_image1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:src="@drawable/sign3" />
+
+            <LinearLayout
+                android:id="@+id/sign_num_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/signs_num_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.4"
+                    android:gravity="center_horizontal|bottom"
+                    android:text="@string/signs_num"
+                    android:textColor="@color/my_back_add_color"
+                    android:textSize="15sp" />
+
+                <RelativeLayout
+                    android:id="@+id/sign_new_day_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/signs_num_show"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/sign_show"
+                        android:gravity="top"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/main_title_color"
+                        android:textSize="55sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/signs_show_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/signs_num_show"
+                        android:gravity="top"
+                        android:paddingTop="45dp"
+                        android:text="@string/day"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/my_back_add_color" />
+                </RelativeLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/sign_new_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/sign_detail_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/sign_details"
+                android:textSize="15sp"
+                android:textColor="@color/main_title_color" />
+
+            <Button
+                android:id="@+id/sign_new_btn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_sign_new_style"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/sign_new_now"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/sign_new_check_btn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_sign_new_check_style"
+                android:padding="8dp"
+                android:text="@string/sign_check_btn"
+                android:textColor="@color/sign_check_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sign_in_reward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/sign_reward"
+                android:textColor="@color/sign_check_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sign_in_reward_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/sign_reward_show"
+                android:textColor="@color/sign_detail_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sign_in_reward_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/sign_reward_prompt"
+                android:textColor="@color/sign_check_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+</RelativeLayout>

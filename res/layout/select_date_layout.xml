@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:background="@color/my_order_view_color"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/select_date_title_id"
+        layout="@layout/title_select_date_layout" />
+
+    <RelativeLayout
+        android:id="@+id/select_date_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select_date_title_id"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal" >
+
+        <ImageView
+            android:id="@+id/select_title_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@null"
+            android:src="@drawable/time_icon" />
+
+        <TextView
+            android:id="@+id/select_title_text_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/select_title_image"
+            android:text="@string/select_date_order_title"
+            android:textColor="@color/main_merchant_item_title_color"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/select_date_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select_date_head_layout"
+        android:layout_marginTop="20dp" />
+	<Button 
+	    android:id="@+id/select_date_btn"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:background="@drawable/select_date_btn_selector"
+        android:text="@string/confirm_selection"
+	    />
+</RelativeLayout>

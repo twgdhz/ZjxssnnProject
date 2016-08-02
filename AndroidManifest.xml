@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zjxfood.activity"
+    android:versionCode="15"
+    android:versionName="5.4.8" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />.
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--蓝牙权限  -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <permission android:name="android.permission.HARDWARE_TEST" />
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+ 
+    <uses-permission android:name="android.permission.RECEIVE_SMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_SMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 分享 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 推送可选 -->
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <application
+        android:name="com.zjxfood.application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/log_image"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar"  >
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" >
+                </action>
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="PvoCEcpWQuNF5pPAlGRgiyXf" />
+
+
+        <!-- 高德地图key  正式版与发布版不一样 需更改key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="919f0feb4a7b7e1a5598869737143b29" />
+        <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->
+        <service android:name="com.amap.api.location.APSService" >
+        </service>
+        
+        <!-- 友盟统计 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="568e2910e0f55a513c000fb6" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="918db5ac71adc20d7690b51fb5ec96bf" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="ssnv_member" />
+        <!-- 监听通知点击或者忽略处理的广播 -->
+        <receiver
+            android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+            android:exported="false" >
+        </receiver>
+
+        <!-- 监听开机运行、网络连接变化、卸载的广播 -->
+        <receiver
+            android:name="com.umeng.message.SystemReceiver"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <!-- 监听消息到达的广播 -->
+        <receiver
+            android:name="com.umeng.message.MessageReceiver"
+            android:exported="false"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听宿主选举的广播 -->
+        <receiver
+            android:name="com.umeng.message.ElectionReceiver"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.ELECTION_RESULT_V4" />
+
+                <category android:name="umeng" />
+            </intent-filter>
+        </receiver>
+        <!-- 监听注册的广播 -->
+        <!-- 【应用包名】字符串需要替换成本应用的应用包名 -->
+        <receiver
+            android:name="com.umeng.message.RegistrationReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.zjxfood.activity.intent.action.COMMAND" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.umeng.message.UmengMessageBootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!-- Umeng的长连服务，用来建立推送的长连接的 -->
+        <!-- 【应用包名】字符串需要替换成本应用的应用包名 -->
+        <service
+            android:name="com.umeng.message.UmengService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="com.zjxfood.activity.intent.action.START" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.zjxfood.activity.intent.action.COCKROACH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING_V4" />
+
+                <category android:name="umeng" />
+            </intent-filter>
+        </service>
+        <!-- Umeng的消息路由服务 -->
+        <service
+            android:name="com.umeng.message.UmengMessageIntentReceiverService"
+            android:exported="true"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.android.agoo.client.ElectionReceiverService" />
+            </intent-filter>
+        </service>
+
+        <!-- v2.4.1添加的Service，Umeng的消息接收后的处理服务 -->
+        <service
+            android:name="com.umeng.message.UmengMessageCallbackHandlerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.umeng.messge.registercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.unregistercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.message.handler.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.autoupdate.handler.action" />
+            </intent-filter>
+        </service>
+        <!-- V1.3.0添加的service，负责下载通知的资源 -->
+        <service android:name="com.umeng.message.UmengDownloadResourceService" />
+
+        <!-- V2.5.0添加的Service，用于本地通知 -->
+        <!-- 如果不使用本地通知，可以注释掉本地通知服务的配置 -->
+        <service
+            android:name="com.umeng.message.local.UmengLocalNotificationService"
+            android:exported="false" />
+
+        <!-- Umeng的消息接收服务 -->
+        <service
+            android:name="com.umeng.message.UmengIntentService"
+            android:process=":push" />
+
+
+        <!-- 分享 -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <!--
+            	AuthorizeAdapter表示一个继承自cn.sharesdk.framework.authorize.AuthorizeAdapter
+            	的类，这个类可以监听到页面的生命周期，也可以获取授权页面的各种UI控件。
+            	开发者可以通过继承AuthorizeAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
+            -->
+            <meta-data android:name="AuthorizeAdapter" android:value="cn.sharesdk.demo.MyAdapter" />
+
+            <!--
+            	QZoneWebShareAdapter表示一个继承自cn.sharesdk.tencent.qzone.QZoneWebShareAdapter
+            	的类，这个类可以监听到页面的生命周期，也可以获QQ空间网页分享权页面的各种UI控件。
+            	开发者可以通过继承QZoneWebShareAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
+            <meta-data android:name="QZoneWebShareAdapter" android:value="cn.sharesdk.demo.MyQZoneWebShareAdapter" />
+            <meta-data android:name="QQWebShareAdapter" android:value="cn.sharesdk.demo.MyQQWebShareAdapter" />
+            -->
+
+            <!--
+            	Dropbox的SSO功能需要在此处添加一个对ACTION_VIEW事件的过滤器，其中的scheme是
+            	“db-”前缀再开发者应用的加上appKey。如果此过滤器不设置，则不能完成SSO功能授权
+            -->
+            <intent-filter>
+                <data android:scheme="db-7janx53ilz11gbs" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.ShareWXEntryActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true" />
+
+
+
+        <activity
+            android:name="com.zjxfood.activity.MallIndexActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.BiExchangeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.NewMallCreateOrderActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.NewCarsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.NewJbMallActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.NewCashMallActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.StartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx52c57940a775bcba" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.NewMainActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:screenOrientation="portrait" >
+
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.TestActivity"
+            android:screenOrientation="portrait" >
+
+        </activity>
+        <activity
+            android:name="com.zjxfood.location.LocationDemoActivity"
+            android:screenOrientation="portrait" >
+
+
+        </activity>
+         <activity
+            android:name="com.zjxfood.activity.MyNewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zjxfood.activity.NewMallActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zjxfood.activity.NewCashListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+        android:name="com.zjxfood.activity.CreateOrderActivity"
+        android:screenOrientation="portrait" >
+    </activity>
+        <activity
+            android:name="com.zjxfood.activity.MallNewOrderActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".RedListActivity"
+            android:screenOrientation="portrait" >
+            
+        </activity>
+        <activity
+            android:name="com.zjxfood.red.RedAwardActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.red.RedWinInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.zjxfood.red.RedIssuedActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.AppActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".CashIndianaListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.cashindiana.CashPayWayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.cashindiana.CashIndianaItemActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.cashindiana.CashIndianaWinningRecordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.cashindiana.CashIndianaMoreLotteryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.cashindiana.CashIndianRuleActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.cashindiana.CashMyIdaCreateOrderInfo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.cashindiana.CashMyIndianaInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.cashindiana.CashMyIndianaListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.cashindiana.CashMyIndianaNoPayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.cashindiana.CashMyIndianaOrderActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.cashindiana.CashMyIndianaPayedActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.fragment.TestFragmentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.db.Hight_Accuracy_Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.route.LocationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.indiana.MyIndianaListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.indiana.IndianaMoreLotteryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.indiana.IndianRuleActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.indiana.MyIndianaPayedActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.route.RoutePlanningActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.route.GPSNaviActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.route.CustomDriveWayViewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.indiana.MyIndianaNoPayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.indiana.MyIdaCreateOrderInfo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.indiana.MyIndianaOrderActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.indiana.MyIndianaInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.indiana.IndianaWinningRecordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".IndianaListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.indiana.IndianaItemActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MallChoseAddressActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MallNewDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyAuctionOrderNoPayItemActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.AuctionDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.AdActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyAuctionOrderPayInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyAuctionOrderItemActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.zjxfood.activity.MyAuctionActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.AuctionRecordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyJhActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.CurrencyPayWayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.DisplayAuctionItemActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.DisplayAuctionActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyCurrencyActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyFavoriteActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MainDetail1Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MainDetail2Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.reserve.ReserveListChildActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MallContactListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MallListTypeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.reserve.ReserveOrderInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zjxfood.reserve.ReserveDownPaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zjxfood.reserve.SelectionDataActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.NewAddressManageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MerchantSettledActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.zjxfood.reserve.ReserveUserActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.NewAddressActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MallDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.LogisticsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.photoview.activity.ViewPagerActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MallIntroductionActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.ServiceProviderActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MallSearchActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.ChoseCityActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.reserve.ReserveOrderActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.zjxfood.activity.ChoseDateActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.FirstStartActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyUserLogActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyUserRegActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <activity
+            android:name="com.zjxfood.activity.CommodityListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MerchantInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MySettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyOrderActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.OrderEvaluationInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+       <!-- <activity
+            android:name="com.zjxfood.activity.MyHouseKeeperActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyBankCardActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.AddNewBankActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.FillBankActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.BankWithdrawalsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.BankRechargeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.SignActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.ExchangeGiftActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.AddNewAddressActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.AddressManagementActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.ScanningCodeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.ModifyPayPwdActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.route.RouteActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.GiftCenterActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.tencent.sample.DataProviderActivity"
+            android:exported="false"
+            android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="tencent222222.data" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.AddUserFidActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.ShopTest"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyAuctionOrderActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.CutPhotoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MallListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        -->
+        <activity
+            android:name="com.zjxfood.activity.MyBillActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.CheckOutActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.PayWayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.WeixinPayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.OrderInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.zjxfood.activity.MyUserActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyAccountActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyUserModifyActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.RetrievePwdActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.zjxfood.activity.BalancePayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyRestaurantBiActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.AlipayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.GrabRedActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.UseRuleActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.SetSecurityActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.BuyBillActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.AllEvaluationActiviy"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.model.GetKey"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.zjxfood.activity.ModifyLogPwdActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.zjxfood.activity.MerchantTitleImageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.zjxfood.activity.XieyiActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.AboutWeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.CodeGenerationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.geocoder.GeocoderActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.SearchUserActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.BiChongzhiActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.SignNewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            
+            
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyQRcode"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.zjxfood.activity.JHPayWayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.JHAlipayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.WxLogActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.SearchActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.ActivationResultActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MallActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyShmoneyActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.CurrencyDetailedActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyMemberActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MallPayWayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.JHWeixinPayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MallOrderActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MallProActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyQrCodeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyOrderInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyOrderEvaluationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyGoldActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.MyNewCurrencyActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.ZxingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.activity.BalanceWrActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zjxfood.activity.CashMallActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zjxfood.activity.TtActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zjxfood.activity.MainListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zjxfood.activity.WebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zjxfood.activity.SharePoliteActivity"
+            android:screenOrientation="portrait" />
+        <!-- QQ -->
+        <activity android:name="com.zjxfood.qq.ButActivity" >
+        </activity>
+        <activity
+            android:name="com.zjxfood.qq.WPAActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <!-- 应用吧 -->
+        <activity
+            android:name="com.tencent.open.yyb.AppbarActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name="com.tencent.connect.avatar.ImageActivity" />
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent222222" />
+                <!-- 100380359 100381104 222222 -->
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name="com.zjxfood.weixinpay.AppRegister" >
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+        <!-- appkefu-->
+        <!--
+            请到 http://admin.appkefu.com/AppKeFu/admin/ 申请appkey，
+            注意：只需要将从后台获取的appkey替换android:value的值, 不能修改android:name的值
+         -->
+        <meta-data
+            android:name="com.appkefu.lib.appkey"
+            android:value="ee99af1d9196c1d91d3699b4c61e5e71" />
+
+        <!-- 聊天窗口, 可通过修改layout文件appkefu_activity_kfvip_chat.xml自定义窗口UI -->
+        <activity android:name="com.appkefu.lib.ui.activity.KFChatActivity"
+            android:theme="@style/appkefu_theme_no_titlebar"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <!-- 设置页面，点击聊天窗口右上角按钮进入，可清空聊天记录 -->
+        <activity android:name="com.appkefu.lib.ui.activity.KFSettingsActivity"
+            android:theme="@style/appkefu_theme_no_titlebar" />
+        <!-- 常见问题类别页面，点击聊天页面输入框下方扩展面板:常见问题按钮进入 -->
+        <activity android:name="com.appkefu.lib.ui.activity.KFFAQActivity"
+            android:theme="@style/appkefu_theme_no_titlebar"/>
+        <!-- 常见问题详情页面， -->
+        <activity android:name="com.appkefu.lib.ui.activity.KFFAQDetailActivity"
+            android:theme="@style/appkefu_theme_no_titlebar"/>
+        <!-- 满意度评价页面 -->
+        <activity android:name="com.appkefu.lib.ui.activity.KFRateActivity"
+            android:theme="@style/appkefu_theme_no_titlebar"/>
+        <!-- 留言页面 -->
+        <activity android:name="com.appkefu.lib.ui.activity.KFLeaveMessageActivity"
+            android:theme="@style/appkefu_theme_no_titlebar"/>
+        <!-- 内嵌浏览器页面，打开网址 -->
+        <activity android:name="com.appkefu.lib.ui.activity.KFWebBrowserActivity"
+            android:theme="@style/appkefu_theme_no_titlebar"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 此处data的android:scheme请填写您App的包名,保持android:host, 如下所示： -->
+                <data android:scheme="com.zjxfood.activity" android:host="appkefu_url" />
+            </intent-filter>
+        </activity>
+
+        <!-- 发送语音辅助service -->
+        <service
+            android:name="com.appkefu.lib.soundrecorder.KFRecorderService"/>
+
+        <!-- im长连接 主service -->
+        <service
+            android:name="com.appkefu.lib.service.KFMainService">
+            <intent-filter android:priority="1000"> <!-- 可选 android:priority = "1000"这个属性设置最高优先级，1000是最高值，如果数字越小则优先级越低 -->
+                <action android:name="com.appkefu.lib.action.kefu.LOGIN_WITH_OPENUDID"/>
+                <action android:name="com.appkefu.lib.action.DISCONNECT" />
+                <action android:name="com.appkefu.lib.action.TOGGLE" />
+                <action android:name="com.appkefu.lib.action.SEND" />
+                <action android:name="com.appkefu.lib.action.NETWORK_STATUS_CHANGED" />
+                <action android:name="com.appkefu.lib.action.XMPP.MESSAGE_RECEIVED" />
+            </intent-filter>
+        </service>
+
+        <!-- 获取OpenUDID, 用于唯一标示用户 -->
+        <service android:name="com.appkefu.OpenUDID.OpenUDID_service" >
+            <intent-filter>
+                <action android:name="org.openudid.GETUDID" />
+            </intent-filter>
+        </service>
+
+        <!-- 可选：监听网络变化 -->
+        <receiver android:name="com.appkefu.lib.receivers.KFNetworkConnectivityReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <!-- 可选：监听手机重启，方便重连im服务器, 需要配合权限RECEIVE_BOOT_COMPLETED使用-->
+        <receiver android:name="com.appkefu.lib.receivers.KFBootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+        <!-- 可选：监听手机连接电源状态,如果已经连接电源自动尝试重连 -->
+        <receiver android:name="com.appkefu.lib.receivers.KFPowerReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <!-- 监听客服发送过来的消息 -->
+        <receiver android:name="com.appkefu.lib.receivers.KFMessageReceiver">
+            <intent-filter>
+                <action android:name="com.appkefu.lib.action.XMPP.MESSAGE_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <!-- 可选：检测屏幕是否解锁,以便重连服务器 -->
+        <receiver android:name="com.appkefu.lib.receivers.KFScreenReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" /><!-- 监听屏幕解锁 -->
+            </intent-filter>
+        </receiver>
+        <!-- 定时检测是否需要重连im服务器,以便重连服务器 -->
+        <receiver android:name="com.appkefu.lib.receivers.KFAlarmReceiver">
+            <intent-filter>
+                <action android:name="com.appkefu.lib.action.LOGIN_ALARM" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

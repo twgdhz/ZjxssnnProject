@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/popup_mall_list_type_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mall_popup_chose_color1"
+        android:orientation="horizontal" >
+
+		<View
+		    android:id="@+id/popup_mall_list_two_type_view"
+		    android:layout_width="5dp"
+		    android:layout_height="match_parent"
+		    android:visibility="gone"
+		    android:background="@color/main_title_color" />
+
+        <TextView
+            android:id="@+id/pop_comm_type_list_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="13dp"
+            android:gravity="center_horizontal"
+            android:text="@string/commodity_list_item_type_name"
+            android:textColor="@color/back"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

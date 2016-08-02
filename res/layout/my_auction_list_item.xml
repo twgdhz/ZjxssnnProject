@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/my_auction_item_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/my_auction_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_weight="3"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/main_test_image" />
+
+        <LinearLayout
+            android:id="@+id/my_auction_item_content_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/my_auction_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="华为手机AKH10"
+                android:gravity="center_vertical"
+                android:textColor="@color/service_provider_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/my_auction_item_price"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="成交价：2260食尚币"
+                android:textColor="@color/mall_item_shichangjia_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/my_auction_item_order"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:text="订单号："
+                android:textColor="@color/mall_item_shichangjia_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/my_auction_item_right_buy"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:padding="2dp"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/bg_auction_record_no_style"
+            android:textColor="@color/white"
+            android:layout_weight="1.8"
+            android:text="创建订单" />
+
+        <ImageView
+            android:id="@+id/my_auction_item_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:contentDescription="@null"
+            android:src="@drawable/paimai_youla"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

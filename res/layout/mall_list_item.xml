@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_order_line_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/sign_list_item_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/sign_item_new_commodity_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/sign_item_commodity_image"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:contentDescription="@null"
+                android:scaleType="fitXY" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/order_evaluation_text_color" />
+
+            <LinearLayout
+                android:id="@+id/sign_item_commodity_detail_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/my_content_color"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/sign_item_new_commodity_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/user_name_color"
+                    android:textSize="13sp"/>
+
+
+                    <TextView
+                        android:id="@+id/mall_new_list_price_volume"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:gravity="center"
+                        android:textColor="@color/mall_item_shichangjia_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/mall_list_sales_volume"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="销量"
+                        android:visibility="gone"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/user_name_color"
+                        android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/mall_list_kuncun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/sign_item_commodity_bi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/mall_item_shmoney_color"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/sign_item_commodity_stock"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/sign_commodity_stock"
+                    android:textColor="@color/user_name_color"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/sign_item_commodity_see"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/sign_commodity_see"
+                    android:textColor="@color/user_name_color"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/my_order_line_color" />
+
+        <LinearLayout
+            android:id="@+id/sign_item_new_commodity_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/sign_item_commodity_image2"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:contentDescription="@null"
+                android:scaleType="fitXY" />
+
+            <View
+                android:id="@+id/malll_list_view_2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/order_evaluation_text_color" />
+
+            <LinearLayout
+                android:id="@+id/sign_item_commodity_detail_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/my_content_color"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/sign_new_item_commodity_name2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/user_name_color"
+                    android:textSize="13sp"/>
+                <TextView
+                    android:id="@+id/mall_new_list_price_volume2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/mall_item_shichangjia_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/mall_list_sales_volume2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:visibility="gone"
+                    android:textColor="@color/user_name_color"
+                    android:textSize="12sp" />
+                <TextView
+                    android:id="@+id/mall_list_kuncun2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/sign_item_commodity_bi2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/mall_item_shmoney_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/sign_item_commodity_stock2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/user_name_color"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/sign_item_commodity_see2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/sign_commodity_see"
+                    android:textColor="@color/user_name_color"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/sign_item_commodity_layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/sign_item_commodity_image3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:contentDescription="@null"
+                android:scaleType="fitXY" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/order_evaluation_text_color" />
+
+            <LinearLayout
+                android:id="@+id/sign_item_commodity_detail_layout3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/my_content_color"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/sign_item_commodity_name3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/mall_kucun"
+                    android:textColor="@color/user_name_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/mall_list_sales_volume3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/mall_test_sales_volume"
+                    android:textColor="@color/user_name_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/mall_list_kuncun3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/mall_test"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/mall_list_price_volume3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/mall_test_price_volume"
+                    android:textColor="@color/user_name_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/sign_item_commodity_bi3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/mall_shishangbi"
+                    android:textColor="@color/mall_new_text_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/sign_item_commodity_stock3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/sign_commodity_stock"
+                    android:textColor="@color/user_name_color"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/sign_item_commodity_see3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/sign_commodity_see"
+                    android:textColor="@color/user_name_color"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sign_item_commodity_layout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/sign_item_commodity_image4"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/sign_item_image" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/order_evaluation_text_color" />
+
+            <LinearLayout
+                android:id="@+id/sign_item_commodity_detail_layout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/my_content_color"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/sign_item_commodity_name4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/sign_commodity_name"
+                    android:textColor="@color/user_name_color"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/sign_item_commodity_bi4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/sign_commodity_bi"
+                    android:textColor="@color/user_name_color"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/sign_item_commodity_stock4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/sign_commodity_stock"
+                    android:textColor="@color/user_name_color"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/sign_item_commodity_see4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/sign_commodity_see"
+                    android:textColor="@color/user_name_color"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        android:background="@color/my_order_line_color" />
+
+</LinearLayout>

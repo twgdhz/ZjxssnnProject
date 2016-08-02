@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/popup_bottom_style"
+    android:orientation="vertical"
+    android:paddingBottom="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/popup_balance_pay_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/login_btn_selector"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/popup_balance_pay_success_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="10dp"
+            android:text="@string/bi_chongzhi"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/popup_bi_chongzhi_x_image"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="2dp"
+            android:contentDescription="@string/description"
+            android:src="@drawable/x" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/popup_balance_pay_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-10dp"
+        android:layout_weight="1.5"
+        android:background="@color/my_content_color"
+        android:orientation="vertical"
+        android:paddingBottom="10dp" >
+
+        <LinearLayout
+            android:id="@+id/popup_balance_pay_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_gravity="center">
+                <ImageView
+                    android:id="@+id/popup_binding_bank_success_image"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/description"
+                  />
+                <TextView
+                    android:id="@+id/popup_balance_pay_success_money_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/chongzhi_success"
+                    android:textColor="@color/main_color28"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+		<View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/my_setting_line_color" />
+            <TextView
+                android:id="@+id/popup_balance_pay_money_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/chongzhi_success_bi"
+                android:textColor="@color/main_color28"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/my_setting_line_color" />
+
+
+        <LinearLayout
+            android:id="@+id/popup_balance_pay_success_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+
+            <Button
+                android:id="@+id/balance_bi_chongzhi_btn"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:textSize="13sp"
+                android:background="@drawable/login_btn_selector"
+                android:padding="8dp"
+                android:text="@string/chakan_xiangqing"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

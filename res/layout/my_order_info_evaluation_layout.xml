@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+    <include
+        android:id="@+id/my_order_title_layout"
+        layout="@layout/title_layout" />
+
+    <View
+        android:id="@+id/my_order_evaluation_view"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/my_order_title_layout"
+        android:background="@color/my_order_view_color" />
+
+    <ScrollView
+        android:id="@+id/my_order_scroll_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_order_evaluation_view"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/my_order_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/my_order_head_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <ImageView
+                    android:id="@+id/order_info_evaluation_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_weight="2.5"
+                    android:contentDescription="@null"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:id="@+id/my_order__evaluation_head_content_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/order_info_evaluation_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/my_order_title"
+                        android:textColor="@color/my_order_text_color2"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/order_info_evaluation_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/my_order_description"
+                        android:textColor="@color/my_user_decription2"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/order_info_evaluation_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/my_order_price"
+                        android:textColor="@color/my_order_price_color"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/my_order_view_color" />
+
+            <RelativeLayout
+                android:id="@+id/order_info_evaluation_image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/order_info_evaluation_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/order_evaluation_mark"
+                    android:textColor="@color/my_order_evaluation_mark_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/order_info_evaluation_xx_1"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/order_info_evaluation_mark"
+                    android:contentDescription="@null"
+                    android:src="@drawable/evaluation_xx_true" />
+
+                <ImageView
+                    android:id="@+id/order_info_evaluation_xx_2"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/order_info_evaluation_xx_1"
+                    android:contentDescription="@null"
+                    android:src="@drawable/evaluation_xx_not" />
+
+                <ImageView
+                    android:id="@+id/order_info_evaluation_xx_3"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/order_info_evaluation_xx_2"
+                    android:contentDescription="@null"
+                    android:src="@drawable/evaluation_xx_not" />
+
+                <ImageView
+                    android:id="@+id/order_info_evaluation_xx_4"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/order_info_evaluation_xx_3"
+                    android:contentDescription="@null"
+                    android:src="@drawable/evaluation_xx_not" />
+
+                <ImageView
+                    android:id="@+id/order_info_evaluation_xx_5"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/order_info_evaluation_xx_4"
+                    android:contentDescription="@null"
+                    android:src="@drawable/evaluation_xx_not" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/order_info_evaluation_edit"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_evaluation_style"
+                android:hint="@string/order_evaluation_edit_show"
+                android:maxLength="100"
+                android:padding="10dp"
+                android:paddingLeft="5dp"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/my_order_view_color" />
+
+            <TextView
+                android:id="@+id/order_info_evaluation_upload_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/order_evaluation_upload_show"
+                android:textColor="@color/my_order_evaluation_desciption_color"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/order_info_evaluation_upload_image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/order_info_evaluation_upload_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="5dp"
+                    android:contentDescription="@null"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/evaluation_upload_camera_png" />
+                <ImageView
+                    android:id="@+id/order_info_evaluation_upload_image2"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="5dp"
+                    android:contentDescription="@null"
+                    android:scaleType="fitXY"
+                    android:layout_weight="1"
+                    android:src="@drawable/order_evaluation_add_png" />
+                <ImageView
+                    android:id="@+id/order_info_evaluation_upload_image3"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="5dp"
+                    android:contentDescription="@null"
+                    android:scaleType="fitXY"
+                    android:layout_weight="1"
+                    android:src="@drawable/order_evaluation_add_png" />
+            </LinearLayout>
+            <Button 
+                android:id="@+id/order_evaluation_submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_evaluation_btn_style"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:text="@string/sumbit"
+                />
+        </LinearLayout>
+    </ScrollView>
+<LinearLayout
+        android:id="@+id/my_evaluation_alert_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+    </LinearLayout>
+        </RelativeLayout>
+</RelativeLayout>

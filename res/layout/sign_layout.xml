@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sign_back_color"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_sign_id"
+        layout="@layout/title_sign_layout" />
+
+    <FrameLayout
+        android:id="@+id/sign_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/sign_head_image"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/sign_back_image" />
+
+        <ImageView
+            android:id="@+id/sign_head_monitor_image"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/sign_monitor" />
+
+        <RelativeLayout
+            android:id="@+id/sign_num_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="30dp" >
+
+            <TextView
+                android:id="@+id/sign_continuous_num_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/continuous_num"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/sign_num_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sign_continuous_num_text"
+                android:layout_centerHorizontal="true"
+                android:text="@string/sign_num"
+                android:textColor="@color/main_title_color"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/sign_num_ci_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_toRightOf="@+id/sign_num_text"
+                android:text="@string/ci"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/sign_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-25dp" >
+
+        <TextView
+            android:id="@+id/sign_btn_decription1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/sign_btn_image"
+            android:text="@string/sign_decription1"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/sign_btn_image"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@null"
+            android:src="@drawable/sign" />
+
+        <TextView
+            android:id="@+id/sign_btn_decription2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/sign_btn_image"
+            android:text="@string/sign_decription2"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/sign_gift_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:divider="@null"
+         >
+    </ListView>
+	<TextView 
+	    android:id="@+id/sign_bi_text"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:textColor="@color/back"
+	    android:layout_marginTop="10dp"
+	    android:gravity="center_horizontal"
+	    android:text="@string/sign_text"
+	    />
+    <ScrollView
+        android:id="@+id/sign_scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/sign_scroll_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/resever_title_id"
+        layout="@layout/title_resever_order_layout" />
+
+    <ListView
+        android:id="@+id/reserve_order_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        android:layout_below="@+id/resever_title_id"
+        android:divider="@null"
+        android:dividerHeight="0.5dp" >
+    </ListView>
+
+    <FrameLayout
+        android:id="@+id/reserve_order_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true">
+		
+        <include
+            android:id="@+id/reserve_order_bottom_menu_layout"
+            layout="@layout/reserve_order_bottom_menu_layout" />
+        <ImageView 
+		    android:id="@+id/reserve_order_bottom_image"
+		    android:layout_width="60dp"
+        	android:layout_height="60dp"
+        	android:layout_gravity="left"
+        	android:layout_marginLeft="10dp"
+        	android:layout_marginTop="10dp"
+        	android:src="@drawable/empty_list_not"
+		    android:contentDescription="@null"/>
+    </FrameLayout>
+
+</RelativeLayout>

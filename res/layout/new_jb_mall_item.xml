@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pay_pwd_color"
+    android:id="@+id/new_jb_layout"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/new_jb_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_marginTop="30px"
+        android:layout_marginLeft="12px"
+        android:textColor="@color/back"
+        android:textSize="15sp" />
+        <ImageView
+            android:id="@+id/new_jb_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="20px"
+            android:src="@drawable/test_like"
+            android:layout_gravity="center_horizontal"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24px"
+        android:paddingBottom="20px"
+        android:paddingTop="20px"
+        android:layout_gravity="bottom"
+        >
+        <TextView
+            android:id="@+id/new_jb_item_sale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/main_color10" />
+        <TextView
+            android:id="@+id/new_jb_item_zgdk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="金币最高使用"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/new_jb_item_sale"
+            android:textColor="@color/main_color18" />
+        <TextView
+            android:id="@+id/new_jb_item_dk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="-4dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/new_jb_item_zgdk"
+            android:layout_below="@+id/new_jb_item_sale"
+            android:textColor="@color/main_color10" />
+        <TextView
+
+            android:id="@+id/new_jb_item_scj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginTop="10px"
+            android:layout_below="@+id/new_jb_item_zgdk"
+            android:textColor="@color/main_color18"
+            android:text="市场价：" />
+
+        <TextView
+            android:id="@+id/new_jb_item_scj_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            android:textSize="14sp"
+            android:layout_below="@+id/new_jb_item_zgdk"
+            android:layout_toRightOf="@+id/new_jb_item_scj"
+            android:textColor="@color/main_color18"/>
+    </RelativeLayout>
+</LinearLayout>

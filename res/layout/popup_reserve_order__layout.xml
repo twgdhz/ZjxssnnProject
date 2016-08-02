@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/popup_reserve_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+         >
+
+        <RelativeLayout
+            android:id="@+id/reserve_order_image_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/reserve_order_popup_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:contentDescription="@null"
+                android:src="@drawable/after_booking" />
+
+            <ImageView
+                android:id="@+id/reserve_order_triangle_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reserve_order_popup_image"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@null"
+                android:src="@drawable/triangle" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pop_res_order_head_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/reserve_order_image_layout"
+            android:layout_marginTop="-5dp"
+            android:background="@color/white" >
+			<View 
+			    android:layout_width="3dp"
+			    android:layout_height="match_parent"
+			    android:background="@color/gree"
+			    />
+            <TextView
+                android:id="@+id/reserve_order_head_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:text="@string/have_an_appointment"
+                android:textColor="@color/main_merchant_item_title_color"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/reserve_order_head_empty_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/reserve_order_clear_text"
+                android:contentDescription="@null"
+                android:src="@drawable/empty" />
+
+            <TextView
+                android:id="@+id/reserve_order_clear_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/have_an_appointment_clear"
+                android:textColor="@color/main_merchant_item_title_color"
+                android:textSize="14sp" />
+        </RelativeLayout>
+	<View 
+	    android:id="@+id/reserve_order_view1"
+	    android:layout_width="match_parent"
+	    android:layout_height="0.5dp"
+	    android:background="@color/gray"
+	    android:layout_below="@+id/pop_res_order_head_layout"
+	    />
+        <ListView
+            android:id="@+id/reserve_order_popup_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/chose_city_view_color"
+            android:divider="@color/gray"
+            android:dividerHeight="0.5dp"
+            android:layout_below="@+id/reserve_order_view1" >
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/popup_reserve_order_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/reserve_order_popup_list"
+            android:background="@color/white"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/popup_reserve_order_bottom_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/need_to_pay"
+                android:textColor="@color/main_merchant_item_title_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/popup_reserve_order_bottom_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/popup_reserve_order_bottom_text"
+                android:text="@string/reserve_order_bottom_text3"
+                android:textColor="@color/red"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/reserve_order_popup_chose_btn"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_reserve_order_chose_btn_style"
+                android:paddingBottom="6dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="6dp"
+                android:text="@string/confirm_1"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

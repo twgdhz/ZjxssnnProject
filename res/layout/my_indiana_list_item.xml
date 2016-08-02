@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@color/white"
+    android:orientation="vertical" >
+<LinearLayout 
+    android:id="@+id/my_indiana_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal"
+    >
+    <ImageView
+        android:id="@+id/my_indiana_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_weight="2.2"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="10dp"
+        android:contentDescription="@null"/>
+
+    <LinearLayout
+        android:id="@+id/my_indiana_item_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/my_indiana_item_content_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/back"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+        <Button 
+            android:id="@+id/my_indiana_item_content_btn"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:textColor="@color/indiana_item_choujiang_coloe2"
+            android:padding="5dp"
+            android:background="@drawable/shape_indiana_cj_bg"
+            />
+    </LinearLayout>
+    </LinearLayout>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/commodity_list_view_color"
+        />
+
+</LinearLayout>

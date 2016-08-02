@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="10dp"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/auction_item_record_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.6"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@null"
+        android:src="@drawable/lingxian" />
+
+    <TextView
+        android:id="@+id/auction_item_record_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/my_user_decription"
+        android:layout_gravity="center_vertical"
+        android:textSize="14sp"
+        android:gravity="center_horizontal"
+        android:layout_weight="1.2"
+        android:text="18628906730" />
+    <TextView
+        android:id="@+id/auction_item_record_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/my_user_decription"
+        android:textSize="14sp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:text="出价：2632食尚币" />
+
+</LinearLayout>

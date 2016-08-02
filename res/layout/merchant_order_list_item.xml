@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/merchant_item_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/merchant_order_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2.5"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/log" />
+
+        <LinearLayout
+            android:id="@+id/merchant_order_item_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/merchant_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="春之燕饮"
+                android:textColor="@color/mall_name_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/merchant_item_date_show"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="付款时间："
+                android:textSize="12sp"
+                android:textColor="@color/mall_content_color" />
+
+            <TextView
+                android:id="@+id/merchant_item_price"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:gravity="center_vertical"
+                android:text="付款金额："
+                android:textColor="@color/mall_content_color" />
+
+            <TextView
+                android:id="@+id/merchant_item_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="商家地址：成都市温江区青啤大道18号中佳信集团"
+                android:textColor="@color/mall_content_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/pay_pwd_color" />
+
+</LinearLayout>

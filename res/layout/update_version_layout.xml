@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent2"
+    android:orientation="vertical"
+    android:gravity="center"
+     >
+
+    <LinearLayout
+        android:id="@+id/update_version_contents_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+    	android:paddingTop="15dp"
+    	android:layout_margin="20dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/update_version_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/update_version_show"
+            android:textColor="@color/update_version_color"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/update_version_color" />
+
+        <TextView
+            android:id="@+id/update_version_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:textSize="16sp"
+            android:text="@string/update_version_description"
+            android:textColor="@color/back" />
+		<TextView
+            android:id="@+id/update_version_content_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:textSize="16sp"
+            android:maxLines="15"
+            android:scrollbars="vertical"
+            android:textColor="@color/back" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/bottom_back_color" />
+
+        <LinearLayout
+            android:id="@+id/update_version_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/update_version_not_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:textColor="@color/text_update_selector"
+                android:text="@string/update_version__not" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/bottom_back_color" />
+
+            <TextView
+                android:id="@+id/update_version_true_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:text="@string/update_version__true"
+                android:textColor="@color/text_update_selector" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/bottom_back_color" />
+    </LinearLayout>
+
+</LinearLayout>

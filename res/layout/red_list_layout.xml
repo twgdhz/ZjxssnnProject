@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/red_list_backcolor" >
+    <include
+        android:id="@+id/red_list_title_layout"
+        layout="@layout/title_red_list_layout" />
+
+    <com.zjxfood.red.RefreshableView
+        android:id="@+id/crefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/red_list_title_layout" >
+
+        <ListView
+            android:id="@+id/red_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:visibility="gone" />
+    </com.zjxfood.red.RefreshableView>
+
+    <TextView
+        android:id="@+id/red_no_alert_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="暂时没有可领取红包"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/red_content_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/red_list_title_layout" >
+
+        <ProgressBar
+            android:id="@+id/red_issued_list_progress"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/frame_loading" />
+    </RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>

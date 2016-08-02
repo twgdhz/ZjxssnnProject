@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mall_index_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:id="@+id/mall_index_content_layout_child1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:id="@+id/mall_content_fuzhuang_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/mall_fuzhuang_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/sstore_icon1" />
+
+                <TextView
+                    android:id="@+id/mall_content_fuzhuang_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/mall_fuzhuang_image"
+                    android:textColor="@color/mall_index_text_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/mall_content_computer_accessories_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/mall_content_computer_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/sstore_icon2" />
+
+                <TextView
+                    android:id="@+id/mall_content_computer_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/mall_xiemao_image"
+                    android:textColor="@color/mall_index_text_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <!--
+                <LinearLayout
+                    android:id="@+id/mall_content_small_home_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/mall_content_small_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/sy_xiaojiadian" />
+
+                    <TextView
+                        android:id="@+id/mall_content_small_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/mall_small_home_image"
+                        android:textColor="@color/mall_index_text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            -->
+
+            <LinearLayout
+                android:id="@+id/mall_content_electronics_image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/mall_content_electronics_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/huazhuang" />
+
+                <TextView
+                    android:id="@+id/mall_content_electronics_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/mall_gehuhuazhuang_image"
+                    android:textColor="@color/mall_index_text_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mall_content_large_home_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/mall_content_large_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/sstore_icon4" />
+
+                <TextView
+                    android:id="@+id/mall_content_large_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/mall_large_home_image"
+                    android:textColor="@color/mall_index_text_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

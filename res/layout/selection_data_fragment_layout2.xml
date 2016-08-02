@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_order_view_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/select_date_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grid_head_back"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/select_date_head_text6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/select_date_head_week6"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/selection_date_color" />
+
+        <TextView
+            android:id="@+id/select_date_head_text7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/select_date_head_week7"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/selection_date_color" />
+
+        <TextView
+            android:id="@+id/select_date_head_text3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/selection_date_color" />
+
+        <TextView
+            android:id="@+id/select_date_head_text4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/selection_date_color" />
+
+        <TextView
+            android:id="@+id/select_date_head_text5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <com.zjxfood.view.MyGridView
+        android:id="@+id/selection_data_grid_view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/selection_date_color"
+        android:horizontalSpacing="0.5dp"
+        android:listSelector="@color/popup_mall_item_back_color"
+        android:numColumns="5"
+        android:paddingBottom="0.5dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="0.5dp" >
+    </com.zjxfood.view.MyGridView>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <include
+        android:id="@+id/title_order_list_child_id"
+        layout="@layout/title_reserve_list_child_layout" />
+	<ImageView 
+	    android:id="@+id/reserve_order_list_child_image"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+	    android:contentDescription="@null"/>
+	<TextView 
+	    android:id="@+id/reserve_order_list_child_name"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:textSize="15sp"
+    	android:layout_marginTop="10dp"
+    	android:layout_marginLeft="15dp"
+    	android:text="回锅肉"
+    	android:textColor="@color/reserve_order_list_child_color"
+	    />
+	<TextView 
+	    android:id="@+id/reserve_order_list_child_sale"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:textSize="13sp"
+    	android:text="月售：25"
+    	android:layout_marginTop="10dp"
+    	android:layout_marginLeft="15dp"
+    	android:textColor="@color/my_user_decription2"
+	    />
+	<LinearLayout 
+	    android:id="@+id/reserve_order_list_child_price_layout"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+	    ></LinearLayout>
+</LinearLayout>

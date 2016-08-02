@@ -1,0 +1,301 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/mall_title_layout"
+        layout="@layout/main_title_layout" />
+
+    <ScrollView
+        android:id="@+id/main_scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mall_title_layout"
+        android:paddingBottom="60dp">
+
+        <LinearLayout
+            android:id="@+id/main_content_scroll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="2.89"
+                android:maxLines="12"
+                android:scrollbars="vertical"
+                android:text=" "
+                android:textColor="@color/red"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.zjxfood.view.TitleGallery
+                    android:id="@+id/main_top_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/main_title_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/commodity_list_view_color" />
+
+            <LinearLayout
+                android:id="@+id/main_head_guanggao_view_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/main_head_guanggao_view_tuijian_image"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:contentDescription="@null"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/shishangtoutiao" />
+
+                <ImageView
+                    android:id="@+id/main_head_guanggao_view_tuijian_image2"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/remen" />
+
+                <ViewFlipper
+                    android:id="@+id/main_head_guanggao_view_flipper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:flipInterval="4000"
+                    android:padding="5dp"></ViewFlipper>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/main_fragment_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/mViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/main_fragment_dian_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/description"
+                android:src="@drawable/fanye_dian" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/main_view_color" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/commodity_list_view_color" />
+
+            <ImageView
+                android:id="@+id/main_activity_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:layout_marginTop="10dp" />
+            <!-- 拍卖、红包-->
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/commodity_list_view_color" />
+
+            <!-- 商家信息 -->
+
+            <RelativeLayout
+                android:id="@+id/main_merchant_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <View
+                    android:id="@+id/merchant_info_view"
+                    android:layout_width="4dp"
+                    android:layout_height="20dp"
+                    android:background="@color/main_title_color" />
+
+                <TextView
+                    android:id="@+id/merchant_info_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/merchant_info_view"
+                    android:text="@string/main_merchant_info"
+                    android:textColor="@color/main_merchant_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/merchant_info_more_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="更多"
+                    android:textColor="@color/main_merchant_color"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/main_view_color" />
+            <!-- 首页推荐商家 -->
+
+            <com.zjxfood.view.MyScrollListView
+                android:id="@+id/main_recommend_merchant_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:dividerHeight="0.5dp"></com.zjxfood.view.MyScrollListView>
+
+            <LinearLayout
+                android:id="@+id/main_bottom_image_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/main_bottom_image1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/description"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/main_bottom_image2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/description"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/main_bottom_image3"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/description"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/main_bottom_image4"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/description"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/main_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mall_title_layout"
+        android:background="@color/transparent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/main_progress"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/main_progress_decription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_progress"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/get_now_location"
+            android:textColor="@color/gray" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/main_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/main_bottom_menu_layout"
+            layout="@layout/my_bottom_menu_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_not_log_alert_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent2"
+        android:orientation="horizontal"
+        android:visibility="gone"></LinearLayout>
+
+    <ListView
+        android:id="@+id/main_search_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mall_title_layout"
+        android:background="@color/white"
+        android:divider="@color/chose_hot_city_color"
+        android:dividerHeight="0.5dp"
+        android:visibility="gone"></ListView>
+
+</RelativeLayout>

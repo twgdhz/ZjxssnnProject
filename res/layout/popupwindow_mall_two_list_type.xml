@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/popupwindow_commodity_type_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mall_popup_chose_color1"
+        android:divider="@color/merchant_settled_view"
+        android:dividerHeight="0.5dp" >
+    </ListView>
+
+</LinearLayout>

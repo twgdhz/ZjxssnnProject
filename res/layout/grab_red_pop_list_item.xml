@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="1dp"
+    android:background="@drawable/bg_gift_item_style"
+    android:orientation="vertical" >
+    <ImageView 
+        android:id="@+id/gift_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/sign_item_image"
+        android:contentDescription="@null"/>
+	<View 
+	    android:layout_width="match_parent"
+	    android:layout_height="2dp"
+	    android:background="#CCC9C2"
+	    />
+	<TextView 
+	    android:id="@+id/item_gift_market_value"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/market_value"
+	    android:textColor="@color/house_text_color"
+	    android:layout_marginTop="10dp"
+	    android:gravity="center_horizontal"
+	    />
+	<TextView 
+	    android:id="@+id/item_gift_price"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:textColor="#E64F48"
+	    android:layout_marginTop="10dp"
+	    android:gravity="center_horizontal"
+	    android:text="@string/bi_520"
+	    />
+</LinearLayout>

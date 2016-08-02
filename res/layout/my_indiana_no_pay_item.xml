@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@color/white"
+    android:orientation="vertical" >
+<LinearLayout 
+    android:id="@+id/my_indiana_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal"
+    >
+    <ImageView
+        android:id="@+id/my_indiana_no_pay_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_weight="2.3"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="10dp"
+        android:contentDescription="@null"/>
+
+    <LinearLayout
+        android:id="@+id/my_indiana_no_pay_item_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/my_indiana_no_pay_item_content_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/back"
+            android:text="【2期】宝马"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+        <TextView 
+            android:id="@+id/my_indiana_no_pay_item_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="13sp"
+            android:textColor="@color/service_provider_color"
+            android:text="订单号：1055425875555"
+            />
+    </LinearLayout>
+    </LinearLayout>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/commodity_list_view_color"
+        />
+
+</LinearLayout>

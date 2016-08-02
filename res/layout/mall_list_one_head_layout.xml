@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_mall_all_text_selector"
+    android:orientation="vertical" >
+   <TextView 
+        android:id="@+id/mall_popup_one_head_text"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="15dp"
+    	android:textSize="16sp"
+    	android:gravity="center_horizontal"
+    	android:textColor="@color/mall_popup_first_text_color"
+    	android:text="@string/mall_popup_one_head"
+        />
+
+</LinearLayout>

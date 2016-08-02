@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_content_color"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_address_manage_id"
+        layout="@layout/title_address_management_layout" />
+
+    <ScrollView
+        android:id="@+id/address_management_scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_address_manage_id"
+        android:paddingBottom="100dp" >
+
+        <LinearLayout
+            android:id="@+id/address_management_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/address_management_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/address_btn_color"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
+        <View
+            android:id="@+id/address_management_bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/my_setting_line_color" />
+
+        <Button
+            android:id="@+id/address_management_complete_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_address_add_style"
+            android:padding="10dp"
+            android:text="@string/modify_log_pwd_complete"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/address_management_add_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address_management_complete_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_address_add_style2"
+            android:padding="10dp"
+            android:text="@string/address_management_add_new"
+            android:textColor="@color/red"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_popup_grabred_style"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/pop_grab_red_shi_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@null"
+        android:src="@drawable/shi" />
+
+    <ImageView
+        android:id="@+id/pop_grab_red_x_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@null"
+        android:src="@drawable/x" />
+
+    <TextView
+        android:id="@+id/grab_red_winning_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pop_grab_red_shi_image"
+        android:layout_centerHorizontal="true"
+        android:text="@string/winning_detail"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/grab_red_detail_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grab_red_winning_detail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/grab_red_after_detail"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/grab_red_detail_show2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grab_red_detail_show"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/grab_red_after_detail2"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/pop_grab_red_gifts_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grab_red_detail_show2"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/grab_red_gift_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:background="@drawable/bg_gift_item_style"
+            android:orientation="vertical"
+            android:padding="1dp" >
+
+            <ImageView
+                android:id="@+id/gift_item_image"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:contentDescription="@null"
+                android:scaleType="fitXY" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#CCC9C2" />
+
+            <TextView
+                android:id="@+id/item_gift_market_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/market_value1"
+                android:textColor="@color/house_text_color" />
+
+            <TextView
+                android:id="@+id/item_gift_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/bi_5201"
+                android:textColor="#E64F48" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/grab_red_gift_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            android:background="@drawable/bg_gift_item_style"
+            android:orientation="vertical"
+            android:padding="1dp" >
+
+            <ImageView
+                android:id="@+id/gift_item_image2"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#CCC9C2" />
+
+            <TextView
+                android:id="@+id/item_gift_market_value2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/market_value2"
+                android:textColor="@color/house_text_color" />
+
+            <TextView
+                android:id="@+id/item_gift_price2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/bi_5202"
+                android:textSize="10dp"
+                android:textColor="#E64F48" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/grab_red_gift_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:background="@drawable/bg_gift_item_style"
+            android:orientation="vertical"
+            android:padding="1dp" >
+
+            <ImageView
+                android:id="@+id/gift_item_image3"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:contentDescription="@null"
+                android:scaleType="fitXY" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#CCC9C2" />
+
+            <TextView
+                android:id="@+id/item_gift_market_value3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:textSize="10dp"
+                android:text="@string/market_value3"
+                android:textColor="@color/house_text_color" />
+
+            <TextView
+                android:id="@+id/item_gift_price3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="10dp"
+                android:text="@string/bi_5203"
+                android:textColor="#E64F48" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/grab_red_check_for_details_btn"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/pop_grab_red_gifts_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/check_for_details"
+        android:gravity="center"
+        android:text="@string/check_for_details"
+        android:textColor="#823B0C" />
+
+    
+
+</RelativeLayout>

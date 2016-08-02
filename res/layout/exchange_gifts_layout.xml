@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_content_color" >
+
+    <include
+        android:id="@+id/title_exchange_id"
+        layout="@layout/title_exchange_gifts_layout" />
+
+    <ScrollView
+        android:id="@+id/exchange_gifts_scroll_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_exchange_id"
+        android:paddingBottom="50dp" >
+
+        <LinearLayout
+            android:id="@+id/exchange_gifts_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp" >
+
+            <LinearLayout
+                android:id="@+id/exchange_gifts_head_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_exchange_gifts_style"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <ImageView
+                    android:id="@+id/exchange_gifts_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_weight="1.5"
+                    android:contentDescription="@null"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:id="@+id/exchange_gifts_head_detail_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/exchange_gifts_head_detail_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/exchange_gifts_name"
+                        android:textColor="@color/my_user_color"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/exchange_gifts_membership_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/exchange_gifts_membership_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:text="@string/membership_price"
+                            android:textColor="@color/my_user_color"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/exchange_gifts_membership_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@+id/exchange_gifts_membership_price"
+                            android:gravity="center_vertical"
+                            android:text="@string/membership_price_number"
+                            android:textColor="@color/main_title_color"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/exchange_gifts_membership_bi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignBottom="@+id/exchange_gifts_membership_number"
+                            android:layout_toRightOf="@+id/exchange_gifts_membership_number"
+                            android:gravity="center_vertical"
+                            android:text="@string/membership_price_bi"
+                            android:textColor="@color/my_user_color"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/exchange_gifts_sales_volume"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/mall_test_sales_volume"
+                        android:textColor="@color/user_name_color"
+                        android:textSize="14sp" />
+<TextView
+                        android:id="@+id/exchange_gifts_price_volume"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/mall_test_price_volume"
+                        android:textColor="@color/user_name_color"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/exchange_gifts_effect"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/exchange_gifts_effect"
+                        android:textColor="@color/user_name_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/exchange_gifts_product_introduction_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_produce_introduction_style"
+                android:orientation="vertical"
+                android:padding="1dp" >
+
+                <RelativeLayout
+                    android:id="@+id/exchange_product_introduction_head_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/my_setting_line_color"
+                    android:padding="4dp" >
+
+                    <View
+                        android:id="@+id/exchange_product_introduction_view"
+                        android:layout_width="4dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/main_title_color" />
+
+                    <TextView
+                        android:id="@+id/exchange_product_introduction_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/exchange_product_introduction_view"
+                        android:text="@string/product_introduction"
+                        android:textColor="@color/house_text_color"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/exchange_product_introduction_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/my_content_color"
+                    android:padding="9dp"
+                    android:text="@string/product_introduction_detial"
+                    android:textColor="@color/house_text_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/exchange_gifts_user_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_produce_introduction_style"
+                android:orientation="vertical"
+                android:paddingBottom="20dp" >
+
+                <RelativeLayout
+                    android:id="@+id/exchange_gifts_user_info_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:background="@color/my_setting_line_color"
+                    android:padding="4dp" >
+
+                    <View
+                        android:id="@+id/exchange_gifts_user_info_head_view"
+                        android:layout_width="4dp"
+                        android:layout_height="15dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/main_title_color" />
+
+                    <TextView
+                        android:id="@+id/exchange_gifts_user_info_head_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/exchange_gifts_user_info_head_view"
+                        android:text="@string/awarding_information"
+                        android:textColor="@color/house_text_color"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/exchange_gifts_user_info_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_fili_in_style"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="4dp"
+                        android:text="@string/go_to_fill_in"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/exchange_gifts_addressee_name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_addressee_style"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/exchange_gifts_addressee_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/addressee_name"
+                        android:textColor="@color/house_text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/exchange_gifts_addressee_name_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_addressee_edit_style"
+                        android:ellipsize="end"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="2dp"
+                        android:singleLine="true"
+                        android:textColor="@color/my_order_text_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/exchange_gifts_addressee_phone_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_addressee_style"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/exchange_gifts_addressee_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/addressee_phone"
+                        android:textColor="@color/house_text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/exchange_gifts_addressee_phone_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_addressee_edit_style"
+                        android:ellipsize="end"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="2dp"
+                        android:singleLine="true"
+                        android:textColor="@color/my_order_text_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/exchange_gifts_addressee_address_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_addressee_style"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/exchange_gifts_addressee_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/addressee_address"
+                        android:textColor="@color/house_text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/exchange_gifts_addressee_address_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_addressee_edit_style"
+                        android:ellipsize="end"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="2dp"
+                        android:singleLine="true"
+                        android:textColor="@color/my_order_text_color" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/postage_fee_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_postage_fee_style"
+                android:padding="15dp" >
+
+                <TextView
+                    android:id="@+id/postage_fee_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/postage_fee"
+                    android:textColor="@color/house_text_color" />
+
+                <TextView
+                    android:id="@+id/postage_fee_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/postage_fee_text"
+                    android:text=""
+                    android:textColor="@color/main_title_color" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/exchange_giftsuser_information_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_produce_introduction_style"
+                android:orientation="vertical"
+                android:padding="1dp" >
+
+                <RelativeLayout
+                    android:id="@+id/exchange_user_information_head_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/my_setting_line_color"
+                    android:padding="4dp" >
+
+                    <View
+                        android:id="@+id/exchange_user_information_view"
+                        android:layout_width="4dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/main_title_color" />
+
+                    <TextView
+                        android:id="@+id/exchange_user_information_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/exchange_user_information_view"
+                        android:text="@string/user_information"
+                        android:textColor="@color/house_text_color"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/exchange_user_information_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="9dp"
+                    android:text="@string/user_information_detail"
+                    android:textColor="@color/house_text_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/exchange_gifts_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/my_setting_line_color"
+        android:padding="10dp" >
+
+        <Button
+            android:id="@+id/exchange_gifts_confirm_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_pay_selector"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/confirm_exchange"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/exchange_gifts_alert_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+    </LinearLayout>
+
+</RelativeLayout>

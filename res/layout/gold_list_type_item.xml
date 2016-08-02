@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/commodity_list_selector"
+    android:orientation="vertical" >
+    <TextView 
+        android:id="@+id/pop_comm_type_list_name"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:gravity="center_horizontal"
+    	android:textColor="@color/back"
+    	android:textSize="16sp"
+    	android:text="@string/commodity_list_item_type_name"
+        />
+</LinearLayout>

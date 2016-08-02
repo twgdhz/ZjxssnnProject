@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:background="@color/my_view_color"
+     android:orientation="vertical" >
+
+ <include
+        android:id="@+id/title_main_help_id"
+        layout="@layout/title_male_help_layout" />
+ 
+ <ImageView 
+     android:id="@+id/main_help_head_image"
+     android:layout_width="120dp"
+     android:layout_height="120dp"
+     android:layout_gravity="center_horizontal"
+     android:layout_marginTop="15dp"
+     android:src="@drawable/main_help_gongzhong"
+     android:contentDescription="@null"/>
+ <TextView 
+     android:id="@+id/main_help_content_text"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:paddingLeft="10dp"
+     android:paddingRight="10dp"
+     android:layout_marginTop="20dp"
+     android:gravity="left"
+     android:textSize="15sp"
+     android:textColor="@color/order_evaluation_commodity_name_color"
+     android:text="@string/main_help_detail_text1"
+     />
+ <TextView 
+     android:id="@+id/main_help_content_text2"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:padding="10dp"
+     android:gravity="left"
+     android:textSize="15sp"
+     android:textColor="@color/order_evaluation_commodity_name_color"
+     android:text="@string/main_help_detail_text3"
+     />
+  </LinearLayout>
+</LinearLayout>

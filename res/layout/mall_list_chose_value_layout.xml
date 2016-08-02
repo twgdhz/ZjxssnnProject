@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mall_chose_value_color"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/mall_chose_value_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="小米系列"
+        android:textColor="@color/back"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/mall_chose_value_view_color" />
+
+    <GridView
+        android:id="@+id/mall_chose_value_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:numColumns="3" >
+    </GridView>
+
+</LinearLayout>

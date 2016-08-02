@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:padding="10dp"
+    android:background="@color/main_color16"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/commodity_title_left_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/commodity_list_back_image"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_weight="3"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/description"
+            android:scaleType="fitStart"
+            android:src="@drawable/left_white" />
+
+        <TextView
+            android:id="@+id/commodity_title_index_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:text="@string/index"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/commodity_list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/commodity_title_search_image"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitEnd"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/description"
+        android:src="@drawable/search_1" />
+
+</RelativeLayout>

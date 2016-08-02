@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dip"
+    android:layout_marginTop="4dip"
+    android:background="@color/gray"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <EditText
+        android:id="@+id/mEdt_parking_one"
+        android:layout_width="50dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/balance_edit_color"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="1"
+        android:password="true"
+        android:textColor="@color/back"
+        android:padding="2dip" >
+    </EditText>
+
+    <View
+        android:layout_width="1dip"
+        android:layout_height="wrap_content"
+        android:background="@color/pay_pwd_color" />
+
+    <EditText
+        android:id="@+id/mEdt_parking_two"
+        android:layout_width="50dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/balance_edit_color"
+        android:gravity="center"
+        android:password="true"
+        android:textColor="@color/back"
+        android:inputType="number"
+        android:maxLength="1"
+        android:padding="2dip" />
+
+    <View
+        android:layout_width="1dip"
+        android:layout_height="wrap_content"
+        android:background="@color/pay_pwd_color" />
+
+    <EditText
+        android:id="@+id/mEdt_parking_three"
+        android:layout_width="50dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/balance_edit_color"
+        android:gravity="center"
+        android:password="true"
+        android:textColor="@color/back"
+        android:inputType="number"
+        android:maxLength="1"
+        android:padding="2dip" />
+
+    <View
+        android:layout_width="1dip"
+        android:layout_height="wrap_content"
+        android:background="@color/pay_pwd_color" />
+
+    <EditText
+        android:id="@+id/mEdt_parking_four"
+        android:layout_width="50dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textColor="@color/back"
+        android:background="@color/balance_edit_color"
+        android:gravity="center"
+        android:password="true"
+        android:inputType="number"
+        android:maxLength="1" />
+
+    <View
+        android:layout_width="1dip"
+        android:layout_height="wrap_content"
+        android:background="@color/pay_pwd_color" />
+
+    <EditText
+        android:id="@+id/mEdt_parking_five"
+        android:layout_width="50dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textColor="@color/back"
+        android:background="@color/balance_edit_color"
+        android:gravity="center"
+        android:password="true"
+        android:inputType="number"
+        android:maxLength="1" />
+
+    <View
+        android:layout_width="1dip"
+        android:layout_height="wrap_content"
+        android:background="@color/pay_pwd_color" />
+
+    <EditText
+        android:id="@+id/mEdt_parking_six"
+        android:layout_width="50dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textColor="@color/back"
+        android:background="@color/balance_edit_color"
+        android:gravity="center"
+        android:password="true"
+        android:inputType="number"
+        android:maxLength="1" />
+
+</LinearLayout>

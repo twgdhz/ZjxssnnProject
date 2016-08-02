@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_content_color" >
+
+    <include
+        android:id="@+id/balance_now_title_id"
+        layout="@layout/title_balance_now_layout" />
+
+    <View
+        android:id="@+id/balance_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/balance_now_title_id"
+        android:background="@color/my_setting_line_color" />
+
+    <RelativeLayout
+        android:id="@+id/balance_now_bank_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/balance_view_id"
+        android:background="@color/my_setting_color"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/bank_list_item_log"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/description" />
+
+        <LinearLayout
+            android:id="@+id/my_bank_item_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/bank_list_item_log"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/my_bank_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/my_bank_jianshe_text"
+                android:textColor="@color/back"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/my_bank_item_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/my_bank_card_text"
+                android:textColor="@color/my_back_add_color"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/my_setting_line_color" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/my_bank_right_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/description"
+            android:src="@drawable/fanye_3" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/balance_now_price_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/balance_now_bank_layout"
+        android:padding="20dp" >
+
+        <EditText
+            android:id="@+id/balance_now_price_text"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_yue_tixian_style"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:hint="@string/bank_yue_money_hint"
+            android:paddingLeft="50dp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/balance_now_price_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="@string/bank_yue_money"
+            android:textColor="@color/house_text_color"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/balance_now_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_below="@+id/balance_now_price_frame_layout"
+        android:orientation="horizontal" >
+        <TextView 
+            android:id="@+id/balance_now_info_left_text"
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_weight="1"
+        	android:gravity="left"
+        	android:textSize="12sp"
+        	android:text="@string/bank_yue_money_info_left"
+            />
+        <TextView 
+            android:id="@+id/balance_now_info_right_text"
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_weight="1"
+        	android:gravity="right"
+        	android:textSize="12sp"
+        	android:text="@string/bank_yue_money_info_right"
+            />
+    </LinearLayout>
+	<Button 
+	    android:id="@+id/balance_now_turn_on"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal"
+	    android:layout_below="@+id/balance_now_info_layout"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="10dp"
+	    android:paddingLeft="20dp"
+	    android:paddingTop="8dp"
+	    android:paddingRight="20dp"
+	    android:paddingBottom="8dp"
+	    android:textColor="@color/white"
+	    android:background="@drawable/bg_confirm_turn_on_style"
+	    android:text="@string/confirm_the_roll_out"
+	    />
+	<LinearLayout
+        android:id="@+id/balance_alert_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+    </LinearLayout>
+</RelativeLayout>

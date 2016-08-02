@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/indiana_record_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/indiana_record_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="3"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:id="@+id/indiana_record_item_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/indiana_record_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textColor="@color/back"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/indiana_record_item_user"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:gravity="center_vertical"
+                android:textColor="@color/mall_detail_receving_color"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/indiana_record_item_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:gravity="center_vertical"
+                android:textColor="@color/mall_detail_receving_color"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+<View 
+    android:layout_width="match_parent"
+    android:layout_height="10dp"
+    android:background="@color/commodity_list_view_color"
+    />
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/alert_log_style"
+    android:padding="10dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/not_network_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/network_alert"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/back" />
+
+    <TextView
+        android:id="@+id/alert_is_log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:text="@string/not_log_is"
+        android:textColor="@color/alert_is_log" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/alert_view_color" />
+
+    <LinearLayout
+        android:id="@+id/alert_long_reg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/refuse_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/text_selector_notlog_style"
+            android:text="@string/fluse" />
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="match_parent"
+            android:background="@color/alert_view_color" />
+
+        <TextView
+            android:id="@+id/alert_log_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/text_selector_notlog_style"
+            android:layout_weight="1"
+            android:text="@string/exit" />
+    </LinearLayout>
+
+</LinearLayout>

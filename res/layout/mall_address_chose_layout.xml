@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical"
+    android:paddingBottom="20dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+    <include
+        android:id="@+id/mall_address_chose"
+        layout="@layout/title_layout" />
+
+    <ScrollView
+        android:id="@+id/mall_order_scroll_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mall_address_chose">
+
+        <LinearLayout
+            android:id="@+id/mall_order_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/mall_detail_receiving_information_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/mall_detail_receiving_information_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="2.5"
+                    android:contentDescription="@null"
+                    android:src="@drawable/iconfont_kuaidi" />
+
+                <TextView
+                    android:id="@+id/mall_detail_receivint_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/mall_detail_receiving_information"
+                    android:textColor="@color/mall_detail_receving_color"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/mall_detail_receiving_modity_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.2"
+                    android:background="@drawable/mall_modify_address_solid"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="3dp"
+                    android:text="@string/mall_detail_receiving_information_modity"
+                    android:textColor="@color/mall_detail_shmoney_color"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/mall_address_chose_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray" />
+            <!-- 收货人详情 -->
+
+            <LinearLayout
+                android:id="@+id/mall_detail_receiving_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mall_address_chose_view"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/mall_detail_receiving_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/mall_detail_receiving_name"
+                    android:textColor="@color/service_provider_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/mall_detail_receiving_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/mall_detail_receiving_phone"
+                    android:textColor="@color/service_provider_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/mall_detail_receiving_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text="@string/mall_detail_receiving_address"
+                    android:textColor="@color/service_provider_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/mall_address_chose_view2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray" />
+            <!-- 商品详情 -->
+
+            <LinearLayout
+                android:id="@+id/mall_order_detail_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/mall_order_detail_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_weight="2.6"
+                    android:contentDescription="@null"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:id="@+id/mall_order_detail_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/mall_order_detail_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/service_provider_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/mall_order_detail_guige"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="规格："
+                        android:textColor="@color/my_user_decription2"
+                        android:textSize="12sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/mall_order_detail_ssb_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/mall_order_detail_ssb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="购买价："
+                            android:textColor="@color/service_provider_color"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/mall_order_detail_ssb_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@+id/mall_order_detail_ssb"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="@color/mall_detail_shmoney_color"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/mall_order_detail_price_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/mall_order_detail_price_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="快递费及附加费："
+                    android:textColor="@color/service_provider_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/mall_order_detail_price_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/mall_order_detail_price_name"
+                    android:text="￥"
+                    android:textColor="@color/mall_chose_address_price_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/mall_order_detail_price_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="x1"
+                    android:textColor="@color/service_provider_color"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/mall_address_chose_view3"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray" />
+            <RelativeLayout
+                android:id="@+id/mall_order_detail_yue_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/mall_order_detail_yue_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="是否支持余额支付："
+                    android:textColor="@color/service_provider_color"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_yue_btn_login"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:button="@drawable/checkbox"
+                    android:checked="false" />
+
+            </RelativeLayout>
+            <View
+                android:id="@+id/mall_address_chose_view4"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray" />
+            <TextView
+                android:id="@+id/mall_order_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/service_provider_color"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/mall_address_chose_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_login_on"
+        android:padding="8dp"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp" >
+
+    <LinearLayout
+        android:id="@+id/currency_cz_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_popup_style"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/merchant_settled_popup_content_tishi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="16dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="8dp"
+            android:text="提示"
+            android:textColor="@color/back"
+            android:textSize="15sp" />
+	 <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray" />
+        
+        <RelativeLayout
+            android:id="@+id/display_popup_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/display_popup_chujia_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="10dp"
+                android:text="金额："
+                android:layout_marginTop="10dp"
+                android:textColor="@color/service_provider_color"
+                android:textSize="15sp" />
+            <EditText
+                android:id="@+id/merchant_price_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="10dp"
+                android:hint="请输入支付金额"
+                android:layout_marginTop="10dp"
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                android:background="@drawable/bg_display_auction_edit_style"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/back"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:id="@+id/mall_jh_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/merchant_ok_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/xieyi_text_selector"
+                android:gravity="center_horizontal"
+                android:padding="9dp"
+                android:text="@string/jh_tishi_confirm"
+                android:textColor="@color/head_image_color"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/bottom_back_color" />
+
+            <TextView
+                android:id="@+id/merchant_ok_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_right_bottom_selector"
+                android:gravity="center_horizontal"
+                android:padding="9dp"
+                android:text="@string/soft_update_cancel"
+                android:textColor="@color/head_image_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

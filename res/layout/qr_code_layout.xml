@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@color/main_color16"
+	android:id="@+id/head_layout"
+    android:orientation="vertical" >
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/white"
+		android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_qr_code_id"
+        layout="@layout/title_layout" />
+
+    <ImageView
+        android:id="@+id/qr_code_show"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        android:contentDescription="@null" />
+	<TextView 
+	    android:id="@+id/qr_code_text_show"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:textColor="@color/my_color19"
+        android:textSize="14sp"
+        android:layout_margin="10dp"
+    	android:text="@string/qr_code_text5"
+	    />
+	<TextView 
+	    android:id="@+id/qr_code_text_show2"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:textColor="@color/my_color19"
+        android:textSize="14sp"
+        android:layout_margin="10dp"
+    	android:text="@string/qr_code_text6"
+	    />
+	<Button 
+        android:id="@+id/my_code_share_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="16sp"
+        android:padding="8dp"
+		android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_share_style"
+        android:text="@string/my_share_show"
+        />
+		</LinearLayout>
+</LinearLayout>

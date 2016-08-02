@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_activotion_id"
+        layout="@layout/title_activotion_layout" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/my_username_back"
+    android:layout_below="@+id/title_activotion_id"
+    >
+    <View
+        android:id="@+id/my_user_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+
+        android:layout_margin="5dp"
+        android:background="@color/sign_my_user_color" />
+    
+     <LinearLayout
+        android:id="@+id/activation_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_user_view_1"
+        android:background="@drawable/bg_user_selector"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/activation_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textColor="@color/back"
+            android:text="@string/jh_success"
+            android:textSize="16dp" />
+    </LinearLayout>
+     <View
+        android:id="@+id/my_user_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/activation_text_layout"
+        android:layout_margin="5dp"
+        android:background="@color/sign_my_user_color" />
+      <LinearLayout
+        android:id="@+id/activation__back_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_user_view_2"
+        android:background="@drawable/bg_user_selector"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+        <TextView
+            android:id="@+id/activation__back_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textColor="@color/main_title_color"
+            android:textSize="16dp"
+            android:text="返回" />
+    </LinearLayout>
+</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_balance_pay_pwd_back"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/balance_pwd_edit_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/modify_pay_pwd"
+        android:textColor="@color/back"
+        android:textSize="16sp" />
+
+        <com.zjxfood.view.MyEditText
+            android:id="@+id/fixed_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+            
+       </com.zjxfood.view.MyEditText>
+
+    <Button
+        android:id="@+id/balance_pay_pwd_btn"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_confirm_pay_down"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/confirm_pay"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+</LinearLayout>

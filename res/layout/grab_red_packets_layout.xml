@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+        android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/new_grab_bg_color"
+        android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_grab_red_id"
+        layout="@layout/title_layout" />
+
+    <ScrollView
+        android:id="@+id/grab_red_scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_grab_red_id" >
+
+        <LinearLayout
+            android:id="@+id/grab_red_content_back_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@color/grab_red_content_color"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/grab_red_activity_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grab_title_type"
+                android:paddingBottom="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp"
+                android:text="@string/grab_red_date"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/grab_red_date_show_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <ImageView
+                    android:id="@+id/grab_red_date_sanjiao_image"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentTop="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/sanjiao" />
+
+                <TextView
+                    android:id="@+id/grab_red_date_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/grab_red_date_sanjiao_image"
+                    android:text="@string/grab_red_date_show"
+                    android:textColor="@color/grab_red_text_color"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/grab_red_join_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/grab_title_type"
+                android:paddingBottom="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp"
+                android:text="@string/grab_red_join_in_way"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/grab_red_join_in_show_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp" >
+
+                <ImageView
+                    android:id="@+id/grab_red_join_in_show_sanjiao_image"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentTop="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/sanjiao" />
+
+                <TextView
+                    android:id="@+id/grab_red_join_in_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/grab_red_join_in_show_sanjiao_image"
+                    android:paddingRight="10dp"
+                    android:text="@string/grab_red_join_in_way_detail"
+                    android:textColor="@color/grab_red_text_color"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/grab_red_zhuanpan_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/grab_red_back_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_marginTop="20dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/grab_red_back" />
+
+                <ImageView
+                    android:id="@+id/grab_red_zhuanpan_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_marginTop="20dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/zhuanpan" />
+
+                <ImageView
+                    android:id="@+id/grab_red_zhuanpan_start_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/start_grab"
+                    android:contentDescription="@null" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/grab_red_activity_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/grab_title_type"
+                android:paddingBottom="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp"
+                android:text="@string/grab_red_activity_detail"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/grab_red_activity_detail_show_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <ImageView
+                    android:id="@+id/grab_red_activity_detail_show_sanjiao_image"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentTop="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/sanjiao" />
+
+                <TextView
+                    android:id="@+id/grab_red_activity_detail_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/grab_red_activity_detail_show_sanjiao_image"
+                    android:text="@string/grab_red_activity_detail_show1"
+                    android:textColor="@color/grab_red_text_color"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/grab_red_activity_detail_show_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <ImageView
+                    android:id="@+id/grab_red_activity_detail_show_sanjiao_image2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentTop="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/sanjiao" />
+
+                <TextView
+                    android:id="@+id/grab_red_activity_detail_show2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/grab_red_activity_detail_show_sanjiao_image2"
+                    android:text="@string/grab_red_activity_detail_show2"
+                    android:textColor="@color/grab_red_text_color"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/grab_red_activity_detail_show_layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <ImageView
+                    android:id="@+id/grab_red_activity_detail_show_sanjiao_image3"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentTop="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/sanjiao" />
+
+                <TextView
+                    android:id="@+id/grab_red_activity_detail_show3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    
+                    android:layout_toRightOf="@+id/grab_red_activity_detail_show_sanjiao_image3"
+                    android:text="@string/grab_red_activity_detail_show3"
+                    android:textColor="@color/grab_red_text_color"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/grab_red_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/transparent_white"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/grab_red_progress_bar"
+            style="?android:attr/progressBarStyleSmallTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/grab_red_progress_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/grab_red_progress_bar"
+            android:layout_centerHorizontal="true"
+            android:text="@string/in_the_lottery"
+            android:textColor="@color/order_evaluation_commodity_name_color" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/grab_red_alert_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+    </LinearLayout>
+</RelativeLayout>
+</RelativeLayout>

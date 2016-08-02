@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+    <include
+        android:id="@+id/tt_title_layout"
+        layout="@layout/title_layout" />
+
+    <GridView
+        android:id="@+id/tt_tj_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tt_title_layout"
+        android:listSelector="@null"
+        android:numColumns="2"
+        android:stretchMode="columnWidth" >
+    </GridView>
+    <TextView
+        android:id="@+id/tt_alert_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="暂时没有数据！"
+        />
+        </RelativeLayout>
+</RelativeLayout>

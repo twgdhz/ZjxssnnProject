@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_setting_color"
+        android:orientation="vertical" >
+    <include
+        android:id="@+id/title_weixin_pay_id"
+        layout="@layout/title_weixin_pay_way_layout" />
+
+    <com.zjxfood.view.RoundImageView
+        android:id="@+id/round_image_view"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/title_weixin_pay_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="15dp" />
+
+    <FrameLayout
+        android:id="@+id/weixin_pay_rebate_text_layout"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/title_weixin_pay_id"
+        android:background="@drawable/balance_rebate_back_image" >
+
+        <com.zjxfood.view.TiltTextView
+            android:id="@+id/weixin_pay_rebate_text"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:text="@string/my_balance_rebate_text"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/weixin_pay_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/round_image_view"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/house_text_color" />
+
+    <RelativeLayout
+        android:id="@+id/weixin_pay_money_layout"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/weixin_pay_name_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/bg_weixin_pay_money_style"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/weixin_pay_money_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/main_title_color"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/weixin_pay_money_yuan_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/weixin_pay_money_text"
+            android:layout_toRightOf="@+id/weixin_pay_money_text"
+            android:text="@string/yuan"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/main_title_color"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/weixin_zhifu_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/weixin_pay_money_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/my_setting_line_color" />
+
+    <RelativeLayout
+        android:id="@+id/wexin_pay_receivables_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weixin_zhifu_view_1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/wexin_pay_receivables_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/receivables"
+            android:textColor="@color/user_name_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/wexin_pay_shishangnannv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/app_name"
+            android:textColor="@color/order_evaluation_commodity_name_color"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/weixin_zhifu_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/wexin_pay_receivables_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/my_setting_line_color" />
+
+    <Button
+        android:id="@+id/weixin_liji_pay_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weixin_zhifu_view_2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_confirm_pay_selector"
+        android:padding="10dp"
+        android:text="@string/liji_pay"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/weixin_pay_alert_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+    </LinearLayout>
+</RelativeLayout>
+</RelativeLayout>

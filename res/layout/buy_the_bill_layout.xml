@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/main_color16"
+	android:id="@+id/new_buy_bille_layout"
+	android:orientation="vertical" >
+
+
+	<include
+		android:id="@+id/title_buy_bill_id"
+		layout="@layout/title_buy_bill_layout"
+		/>
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/title_buy_bill_id"
+		android:paddingBottom="50dp"
+		>
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+
+		android:background="@color/white"
+		>
+
+	<ImageView
+		android:id="@+id/qr_new_code_image"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:scaleType="fitXY"
+
+		android:src="@drawable/bg_saoma"
+		android:contentDescription="@null"/>
+	<ImageView
+		android:id="@+id/qr_new_code_image2"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:scaleType="fitXY"
+		android:layout_marginTop="220dp"
+		android:src="@drawable/bg_shouji"
+		android:contentDescription="@null"/>
+	<ImageView
+		android:id="@+id/qr_new_code_btn"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:layout_centerHorizontal="true"
+		android:layout_below="@+id/qr_new_code_image2"
+		android:src="@drawable/buy_bill_btn"
+		android:contentDescription="@null"/>
+	<TextView
+		android:id="@+id/buy_bill_enter_payment"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:textSize="16sp"
+		android:visibility="gone"
+		android:textColor="@color/order_evaluation_commodity_name_color"
+		android:layout_centerHorizontal="true"
+		android:layout_below="@+id/qr_new_code_btn"
+		android:text="@string/enter_payment"
+		/>
+	<TextView
+		android:id="@+id/qr_code_way_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:textSize="14sp"
+		android:visibility="gone"
+		android:textColor="@color/order_evaluation_commodity_name_color"
+		android:layout_centerHorizontal="true"
+		android:layout_below="@+id/qr_new_code_image"
+		android:text="@string/qr_code_way"
+		/>
+	<TextView
+		android:id="@+id/qr_code_way_detail_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="20dp"
+		android:textSize="14sp"
+
+		android:textColor="@color/order_evaluation_commodity_name_color"
+		android:layout_centerHorizontal="true"
+		android:layout_below="@+id/qr_new_code_btn"
+		android:text="@string/qr_code_way_detail1"
+		/>
+	</RelativeLayout>
+	</ScrollView>
+        <include
+            android:id="@+id/buy_bill_bottom_menu_layout"
+            layout="@layout/main_bottom_layout" />
+	<!--
+<include
+    android:id="@+id/buy_bill_bottom_menu_layout"
+    layout="@layout/my_bottom_menu_layout" />
+    -->
+</RelativeLayout>

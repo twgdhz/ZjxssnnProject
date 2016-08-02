@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp" >
+
+    <LinearLayout
+        android:id="@+id/mall_service_commitment_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_popup_style"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/mall_service_commoitment_tishi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:text="提示"
+            android:textColor="@color/head_image_color"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/bottom_back_color" />
+
+        <TextView
+            android:id="@+id/mall_service_commoitment_text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="@string/service_commitment_show1"
+            android:textColor="@color/service_provider_color" />
+
+        <!-- <TextView
+            android:id="@+id/mall_service_commoitment_text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="left"
+            android:text="@string/service_commitment_show2"
+            android:textColor="@color/service_provider_color" />
+
+        <TextView
+            android:id="@+id/mall_service_commoitment_text3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="left"
+            android:text="@string/service_commitment_show3"
+            android:textColor="@color/service_provider_color" /> -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/bottom_back_color" />
+
+        <TextView
+            android:id="@+id/mall_service_commoitment_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bottom_leftright_selector"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="确定"
+            android:textColor="@color/head_image_color"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

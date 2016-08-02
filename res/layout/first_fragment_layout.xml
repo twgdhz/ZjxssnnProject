@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:id="@+id/top_image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/zhongcan_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/first_zhongcan_image"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/zhongcan" />
+
+            <TextView
+                android:id="@+id/zhongcan_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="中\t餐"
+                android:textSize="13sp"
+                android:textColor="@color/type_text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/xican_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/first_xican_image"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/xican" />
+
+            <TextView
+                android:id="@+id/xican_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="西\t餐"
+                android:textSize="13sp"
+                android:textColor="@color/type_text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rhll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/first_rihanliaoli_image"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/rihanliaoli" />
+
+            <TextView
+                android:id="@+id/rhll_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/rhll_text"
+                android:textSize="13sp"
+                android:textColor="@color/type_text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/zizhu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/first_zizhu_image"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/zizhu" />
+
+            <TextView
+                android:id="@+id/zizhu_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="自\t助"
+                android:textSize="13sp"
+                android:textColor="@color/type_text_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/huoguo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/first_huoguo_image"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/huoguo" />
+
+            <TextView
+                android:id="@+id/huoguo_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="火\t锅"
+                android:textSize="13sp"
+                android:textColor="@color/type_text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/jbkf_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/first_jiubakafei_image"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/description"
+                android:src="@drawable/jiubakafei" />
+
+            <TextView
+                android:id="@+id/jbkf_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/kafei_text"
+                android:textSize="13sp"
+                android:textColor="@color/type_text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytd_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/first_lengyintiandian_image"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/lengyintiandian" />
+
+            <TextView
+                android:id="@+id/lytd_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/lltd_text"
+                android:textSize="13sp"
+                android:textColor="@color/type_text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/xc_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/first_xiaochi_image"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/xiaochi" />
+
+            <TextView
+                android:id="@+id/xc_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="小\t吃"
+                android:textSize="13sp"
+                android:textColor="@color/type_text_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

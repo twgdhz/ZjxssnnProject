@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/indiana_case_list_title_layout"
+        layout="@layout/title_cash_indiana_layout" />
+
+    <LinearLayout
+        android:id="@+id/auction_content_type_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/indiana_case_list_title_layout"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/auction_type_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/indiana_list_type_current"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/indiana_list_type_current_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="今日夺宝"
+                    android:textColor="@color/back" />
+
+                <View
+                    android:id="@+id/indiana_list_type_current_view"
+                    android:layout_width="80dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:background="@color/main_title_color" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/indiana_list_type_trailer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/indiana_list_type_trailer_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="夺宝预告"
+                    android:textColor="@color/my_user_decription2" />
+
+                <View
+                    android:id="@+id/indiana_list_type_trailer_view"
+                    android:layout_width="80dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/main_title_color"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/indiana_list_type_temporary_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/indiana_list_type_temporary_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="往期夺宝"
+                    android:textColor="@color/my_user_decription2" />
+
+                <View
+                    android:id="@+id/indiana_list_type_temporary_view"
+                    android:layout_width="80dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:background="@color/main_title_color"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/indiana_list_type_rule_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/indiana_list_type_rule_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="活动规则"
+                    android:textColor="@color/my_user_decription2" />
+
+                <View
+                    android:id="@+id/indiana_list_type_rule_view"
+                    android:layout_width="80dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:background="@color/main_title_color"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+        <ListView
+            android:id="@+id/indiana_list_content_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/gray"
+            android:dividerHeight="0.5dp" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

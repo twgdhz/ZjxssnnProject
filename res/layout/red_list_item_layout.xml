@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/red_item_content_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red_list_backcolor"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="10dp" >
+
+    <LinearLayout
+        android:id="@+id/red_list_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_red_item_style"
+        android:orientation="vertical"
+        android:padding="1dp"
+        android:paddingBottom="5dp" >
+
+        <LinearLayout
+            android:id="@+id/red_item_head_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_red_top_style"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp" >
+
+            <ImageView
+                android:id="@+id/red_item_head_image"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="4"
+                android:contentDescription="@null"
+                android:src="@drawable/hongbao_png" />
+
+            <RelativeLayout
+                android:id="@+id/red_item_head_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/red_item_head_content_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/red_item_head_content_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/red_item_head_content_text1"
+                    android:text="领取红包"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/red_item_head_content_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/red_item_head_content_text1"
+                    android:text="(已领取0/0个)"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+                <ImageView
+                android:id="@+id/red_item_no_image"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:scaleType="fitEnd"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@null"/>
+            </RelativeLayout>
+
+            
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/red_item_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/shape_down_red_style" >
+
+            <TextView
+                android:id="@+id/red_item_bottom_content_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="红包发起人："
+                android:textColor="@color/my_order_list_text_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/red_item_bottom_content_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="距离："
+                android:textColor="@color/my_order_list_text_color"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/red_item_bottom_content_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/red_item_bottom_content_user"
+                android:text="发送时间："
+                android:textColor="@color/my_order_list_text_color"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 首页 -->
+    <color name="main_title_color">#ffa800</color>
+     <color name="main_title_color_down">#f5a000</color>
+    
+    <color name="white">#ffffff</color>
+    <color name="back">#000000</color>
+    <color name="black">#000000</color>
+    <color name="main_board_back">#f3da9a</color>
+    <color name="title_search_text_color">#fdc24e</color>
+    <color name="main_menu_back_color">#feeecc</color>
+    <color name="main_menu_chose">#ffaa01</color>
+    <color name="navpage">#FFE1E8EB</color>
+    <color name="main_title_search_color">#FFC473</color>
+    <!-- 登录 -->
+    <color name="user_log_title">#FFA800</color>
+    <color name="user_name_color">#767676</color>
+    <color name="user_code_color">#D0D0D0</color>
+    <color name="resetpsw_color">#242323</color>
+    <!-- 我的 -->
+    <color name="my_username_back">#FFFBF2</color>
+    <color name="my_user_color">#4C4C4C</color>
+    <color name="my_content_color">#FFFBF3</color>
+    <color name="alert_view_color">#DBDBD9</color>
+    <color name="alert_text_color">#0576E1</color>
+    <color name="alert_is_log">#060606</color>
+    <color name="transparent">#e4444444</color>
+   
+    <color name="text_color">#000000</color>
+    <!-- 商品列表 -->
+    <color name="gray">#DEDEDE</color>
+    <color name="commodity_list_color">#FFFBF3</color>
+    <color name="red">#FF0000</color>
+    <color name="commodity_list_text_type">#4C4C4C</color>
+    <color name="popupwindow_shadow_color">#e5555555</color>
+    <color name="type_color">#838383</color>
+    <!-- 商家详情 -->
+    <color name="merchant_info_fanxian">#FF5555</color>
+    <color name="merchant_scroll_content_text_color">#AEAEAE</color>
+    <color name="merchant_scroll_content_test_color">#707070</color>
+    <color name="merchant_scroll_content_background">#F7F7F7</color>
+    <!-- 设置 -->
+    <color name="my_setting_color">#FFFBF3</color>
+    <color name="my_setting_line_color">#FFEAC2</color>
+    <color name="my_order_text_color">#767676</color>
+    <color name="my_order_fanli_color">#FF6C00</color>
+    <color name="my_order_item_line">#D0CDC6</color>
+    <!-- 评价 -->
+    <color name="order_evaluation_commodity_name_color">#323232</color>
+    <color name="order_evaluation_text_color">#CCC9C2</color>
+    <color name="order_evaluation_bottom_layout">#FFEECC</color>
+    <color name="house_text_color">#646464</color>
+    <color name="item_color">#B3B3B2</color>
+    <!-- 我的银行卡 -->
+    <color name="my_back_add_color">#989898</color>
+    <color name="add_bank_view">#ADADAD</color>
+    <color name="chose_bank_type_color">#82807C</color>
+    <color name="bank_type">#576B95</color>
+    <!-- 我要结账 -->
+    <color name="check_out_text_color">#4D4D4D</color>
+    <color name="check_out_line_color">#F9E9C2</color>
+    <color name="check_out_down_color">#BC7C00</color>
+    <color name="confirm_pay_color">#79C471</color>
+    <color name="confirm_pay_color2">#FF6BAC64</color>
+    <!-- 签到 -->
+    <color name="sign_back_color">#FFD4CF</color>
+    <color name="sign_my_user_color">#F8E9C2</color>
+    <!-- 兑换礼品 -->
+    <color name="exchange_gifts_color">#E64F48</color>
+    <color name="province_line_border">#C7C7C7</color>
+    <color name="address_chose_color">#787877</color>
+    <color name="pop_text_color">#E64F48</color>
+    <color name="merchant_text_color">#727171</color>
+    <!-- 余额支付 -->
+    <color name="balance_rebate_color">#E64F48</color>
+    <!-- 抢红包 -->
+    <color name="grab_red_title_backcolor">#E54E48</color>
+    <color name="grab_red_backcolor">#F4A213</color>
+    <color name="grab_red_content_color">#F5E57D</color>
+    <color name="grab_red_text_color">#AA7928</color>
+    <color name="transparent_white">#7fffffff</color>
+    <color name="grab_red_popup_color">#E64F48</color>
+    <color name="bottom_color">#878787</color>
+    
+    
+    
+    <color name="finder_mask">#60000000</color>
+    <color name="grey"> #ebebeb</color>
+    <color name="parking_line">#9DB5C2</color>
+    <color name="pay_pwd_color">#F6F6F6</color>
+    <color name="balance_edit_color">#EDF3F6</color>
+    <!-- 选择区域 -->
+    <color name="chose_city_color">#d0d0d0</color>
+    <color name="chose_city_view_color">#F2F2F2</color>
+    <color name="chose_hot_city_color">#D2D2D2</color>
+    <color name="commodity_list_view_color">#F0F0F0</color>
+    
+    <color name="commodity_list_item_color">#959595</color>
+    <color name="transparent3">#e0999999</color>
+    <color name="transparent4">#e0959595</color>
+    <color name="transparent5">#40999999</color>
+    
+    <color name="shishangbi_chongzhi_color">#FFEAC3</color>
+    <color name="bi_tips_color">#7E7D79</color>
+    <color name="sign_new_view_color">#FFE8BF</color>
+    <color name="sign_check_color">#E3AB3C</color>
+    <color name="sign_detail_color">#8D8A85</color>
+    <!-- 抢红包(改) -->
+    <color name="new_grab_title_color">#F28F16</color>
+    <color name="new_grab_bg_color">#F7E77E</color>
+    <color name="grab_red_back">#F28F16</color>
+    <!-- 商城 -->
+    <color name="mall_new_text_color">#B30005</color>
+    <color name="my_users_color">#FFFBF2</color>
+    <color name="my_user_decription">#666666</color>
+    <color name="my_user_decription2">#999999</color>
+    <color name="my_user_line_color">#FFDA91</color>
+    
+    <color name="mall_name_color">#464646</color>
+    <color name="mall_content_color">#646263</color>
+    <!-- 我的订单(新) -->
+    <color name="my_order_view_color">#F4F4F4</color>
+    <color name="my_order_price_color">#F3670F</color>
+    <color name="my_order_merchant_color">#7D7D7D</color>
+    <color name="my_order_line_color">#E2E2E2</color>
+    <color name="my_order_address_color">#9C9C9C</color>
+    <color name="my_order_text_color2">#414141</color>
+    <color name="my_order_grab_color">#858585</color>
+    <color name="my_order_evaluation_color">#FF4800</color>
+    <color name="my_order_info_color">#9D9D9D</color>
+    <color name="my_order_list_text_color">#797979</color>
+    <!-- 评价 -->
+    <color name="my_order_evaluation_mark_color">#626262</color>
+    <color name="my_order_evaluation_desciption_color">#9A9A9A</color>
+    <!-- 头像上传 -->
+    <color name="head_image_color">#0376F5</color>
+    <color name="head_line_color">#C1C2C4</color>
+    <color name="order_evaluation_not">#b2b2b2</color>
+    <!-- 首页菜单字体 -->
+    <color name="type_text_color">#555555</color>
+    <color name="main_order_title_color">#11BA94</color>
+    <color name="main_order_content_color">#9D9D9D</color>
+    <color name="main_view_color">#DCDCDC</color>
+    <color name="main_reg_color">#E1992E</color>
+    <color name="main_sign_color">#FA7687</color>
+    <color name="main_eval_color">#1EA9CC</color>
+    <color name="main_merchant_color">#353535</color>
+    <color name="main_merchant_item_color">#737373</color>
+    <color name="main_merchant_item_title_color">#444444</color>
+    
+    <color name="bottom_back_color">#EDEDED</color>
+    
+    <color name="my_view_color">#F5F5F5</color>
+    <color name="my_view_color2">#E8E8E8</color>
+    <!-- zxing -->
+    <color name="result_view">#b0000000</color>
+      <color name="viewfinder_mask">#60000000</color>
+      <color name="possible_result_points">#c0ffff00</color>
+      <color name="update_version_color">#31B6E7</color>
+      <color name="transparents">#e0333333</color>
+      <color name="reserve_order_text_color">#FF4E67</color>
+      <color name="reserve_user_line_color">#E4E4E4</color>
+      <color name="main_new_sign_color">#FA7687</color>
+      <color name="transparent_red">#20FF0000</color>
+      <!-- 美容院主页 -->
+      <color name="service_provider_color">#333333</color>
+      <color name="address_btn_color">#F0F0F0</color>
+      <!-- 商品详情 -->
+      <color name="mall_new_detail_back_color">#ECECEC</color>
+      <color name="mall_detail_shmoney_color">#FE4300</color>
+      <color name="mall_detail_receving_color">#777777</color>
+      <color name="mall_receving_view_color">#FF6F6F</color>
+      <color name="popup_mall_size_color">#010101</color>
+      <color name="popup_mall_item_back_color">#FF9393</color>
+      <color name="alert_color">#70333333</color>
+      <color name="logistics_detail_text_color">#B4B4B4</color>
+      <color name="logistics_detail_item_view_color">#BBBBBB</color>
+      <color name="logistics_text_color">#FF6702</color>
+      <color name="mall_item_shmoney_color">#FF4300</color>
+      <color name="mall_item_shichangjia_color">#888888</color>
+      <color name="transparents1">#50333333</color>
+      <color name="check_more_color">#D3611A</color>
+      <color name="mall_index_text_color">#222222</color>
+      <color name="white_transtion">#20ffffff</color>
+      <color name="blue">#1C86EE</color>
+      <color name="white_trans1">#e0ffffff</color>
+      <color name="gray_1">#D6D9D8</color>
+      <color name="add_new_address">#ACACAC</color>
+      <color name="touming">#00000000</color>
+      <color name="merchant_settled_color">#545454</color>
+      <color name="merchant_settled_view">#DDDDDD</color>
+      <color name="merchant_settled_text_color">#676767</color>
+      <color name="transparent6">#e3999999</color>
+       <color name="transparent2">#e3333333</color>
+      <color name="transparent_1">#90333333</color>
+      <color name="selection_date_color">#9FC193</color>
+      <color name="select_time_back_color">#DBF4D3</color>
+      <color name="grid_head_back">#47B222</color>
+      <color name="gree">#65B95C</color>
+      <color name="reserve_order_info_color">#7B7B7B</color>
+      <color name="reserve_order_info_view_color">#E3E3E3</color>
+      <color name="mall_popup_color1">#EFEFEF</color>
+      <color name="mall_popup_chose_color1">#F9F9F9</color>
+      <color name="mall_popup_first_text_color">#FF4600</color>
+      <color name="mall_chose_value_color">#F8F8F8</color>
+      <color name="mall_chose_value_view_color">#FFD27B</color>
+      <color name="mall_parameter_text_color">#343434</color>
+      <color name="reserve_order_list_child_color">#101010</color>
+      <color name="red2">#FE4E67</color>
+      <color name="red3">#FF6363</color>
+      <color name="gray2">#B0B0B0</color>
+      <color name="main_xianshi_paimai">#F87721</color>
+      <color name="main_xianshi_paimai_time_color">#FF2A8E</color>
+      <color name="main_xianshi_paimai_time_people_color">#FF5353</color>
+      <color name="main_xianshi_paimai_time_people_color_more">#F87721</color>
+      <color name="display_auction_text_color">#FF4D73</color>
+      <color name="display_auction_item_view">#FF6623</color>
+      <color name="display_auction_popup_head_color">#F8A748</color>
+      <color name="auction_record_view">#E5E5E5</color>
+      <color name="mall_chose_address_price_color">#FD5001</color>
+      <color name="indiana_item_people_color">#FF641F</color>
+      <color name="indiana_item_choujiang_coloe">#FF5C5C</color>
+      <color name="indiana_item_choujiang_coloe2">#FFB8B8</color>
+      <color name="my_indiana_price_color">#FF7474</color>
+      <color name="my_indiana_text_color">#616161</color>
+      <!-- 抢红包 -->
+      <color name="red_list_backcolor">#FFEFE4</color>
+      <color name="red_list_item_color1">#FA9D3B</color>
+      <color name="red_list_item_text_color1">#8E8E8E</color>
+      <color name="red_list_item_gray_color1">#D4D4D4</color>
+      <color name="red_title_text_color">#FFC949</color>
+      <color name="red_title_text_color2">#FFBCB9</color>
+      <color name="red_title_back_color">#D84E43</color>
+      <color name="red_color1">#FFC949</color>
+      <color name="red_color2">#6D6D6D</color>
+      <color name="red_color3">#6C98C3</color>
+      <color name="red_color4">#F5F5F5</color>
+      <color name="red_color5">#AEAEAE</color>
+      <color name="red_color6">#7C7C7C</color>
+      <color name="red_color7">#FF900E</color>
+      <color name="red_color8">#EFEFF4</color>
+      <color name="red_color9">#9F9F9F</color>
+      <color name="red_color10">#EE5F50</color>
+      <color name="red_color11">#2C2C2B</color>
+      <color name="red_color12">#FA7687</color>
+      <color name="red_color13">#959595</color>
+      <color name="red_color14">#81BF28</color>
+      <color name="red_color15">#939393</color>
+      <color name="red_color16">#FF9600</color>
+      <color name="red_transparent1">#80444444</color>
+      <color name="red_transparent2">#40444444</color>
+      <!-- 我的改版页面 -->
+      <color name="my_color1">#FFA530</color>
+      <color name="my_color2">#292735</color>
+       <color name="my_color3">#E8E8E8</color>
+       <color name="gold">#b89766</color>
+       <color name="my_color4">#F4F4F4</color>
+       <color name="my_color5">#A3A3A3</color>
+       <color name="my_color6">#FFE594</color>
+    <item name="gray_holo_dark" type="color">#ff464646</item>
+    <item name="gray_holo_light" type="color">#ffd0d0d0</item>
+    <!-- 新改动 -->
+    <color name="my_color7">#D94B40</color>
+    <color name="my_color8">#EBEBE9</color>
+    <color name="my_color9">#3399FF</color>
+    <color name="my_color10">#CCCCCC</color>
+    <color name="my_color11">#A9A9A9</color>
+    <color name="my_color12">#F36626</color>
+    <color name="my_color13">#F9B09B</color>
+    <color name="my_color14">#EEEEEB</color>
+    <color name="my_color15">#176600</color>
+    <color name="my_color16">#8F8F94</color>
+    <color name="my_color17">#FF5001</color>
+    <color name="my_color18">#E4E3E6</color>
+    <color name="my_color19">#151514</color>
+    <color name="my_color20">#006600</color>
+    <!-- 新首页-->
+    <color name="main_color1">#90ffffff</color>
+    <color name="main_color2">#f3f3f3</color>
+    <color name="main_color3">#484848</color>
+    <color name="main_color4">#ffb438</color>
+    <color name="main_color5">#EE4A17</color>
+
+    <color name="main_color6">#9CC618</color>
+    <color name="main_color7">#FF9C00</color>
+    <color name="main_color8">#7FD1CA</color>
+    <color name="main_color9">#FA6449</color>
+    <color name="main_color10">#de1500</color>
+    <color name="main_color11">#404042</color>
+    <color name="main_color12">#a7a7a7</color>
+
+    <color name="main_color13">#292929</color>
+    <color name="main_color14">#ee4a17</color>
+    <color name="main_color15">#FFF6E8</color>
+    <color name="main_color16">#B5161A</color>
+    <color name="main_color17">#C8C8C8</color>
+    <color name="main_color18">#929292</color>
+    <color name="main_color19">#c85238</color>
+    <color name="main_color20">#6c6c6c</color>
+    <color name="main_color21">#373737</color>
+    <color name="main_color22">#838383</color>
+    <color name="main_color23">#757575</color>
+    <color name="main_color24">#BD2E31</color>
+    <color name="main_color25">#E6BEBF</color>
+    <color name="main_color26">#E01E2C</color>
+    <color name="main_color27">#F7A300</color>
+    <color name="main_color28">#EB0100</color>
+    <color name="main_color29">#FFB334</color>
+    <color name="main_color30">#FAFAFA</color>
+    <color name="main_color31">#DBDBDA</color>
+    <color name="main_color32">#434343</color>
+    <color name="main_color33">#686868</color>
+    <color name="main_color34">#C2C2C2</color>
+    <color name="main_color35">#D8D8D8</color>
+    <color name="main_color36">#E2605E</color>
+</resources>

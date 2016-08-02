@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color36"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+    <include
+        android:id="@+id/user_log_title"
+        layout="@layout/title_user_log" />
+
+    <FrameLayout
+        android:id="@+id/user_head_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_log_title" >
+
+        <ImageView
+            android:id="@+id/user_head_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/description"
+            android:scaleType="fitXY"
+            android:src="@drawable/new_log_banner" />
+
+        <ImageView
+            android:id="@+id/user_head_xiaoguo_image"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/description"
+            android:src="@drawable/xiaoguo" />
+
+        <ImageView
+            android:id="@+id/user_head_touxiang_image"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/description"
+            android:src="@drawable/touxiang" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/user_log_account_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_head_frame_layout"
+        android:orientation="vertical"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp" >
+
+        <FrameLayout
+            android:id="@+id/user_name_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <EditText
+                android:id="@+id/user_name_edit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_user_loginstyle"
+                android:gravity="center_vertical"
+                android:hint="@string/user_name_hint"
+                android:maxLength="16"
+                android:paddingLeft="50dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/user_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="@string/user_name_text"
+                android:textColor="@color/user_name_color"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/user_pwd_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp" >
+
+            <EditText
+                android:id="@+id/user_pwd_edit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_user_loginstyle"
+                android:gravity="center_vertical"
+                android:hint="@string/user_pwd_hint"
+                android:maxLength="16"
+                android:paddingLeft="50dp"
+                android:password="true"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/user_pwd_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="@string/user_pwd_text"
+                android:textColor="@color/user_name_color"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/user_log_check_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/user_left_check_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/checkBox_remember_btn_login"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:button="@drawable/checkbox"
+                    android:checked="true" />
+
+                <TextView
+                    android:id="@+id/remember_pwd_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_remember_pwd"
+                    android:textColor="@color/user_name_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/user_right_check_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/checkBox_automatic_btn_login"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="right"
+                    android:button="@drawable/checkbox"
+                    android:checked="true" />
+
+                <TextView
+                    android:id="@+id/automcatic_log_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/user_automatic_log"
+                    android:textColor="@color/user_name_color" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/user_log_submit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_btn_selector"
+            android:text="@string/user_log_text"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="horizontal"
+    >
+    <RelativeLayout
+        android:id="@+id/my_log_weixin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        >
+        <ImageView
+            android:id="@+id/weixin_icon_id"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:src="@drawable/weixin_icon"
+            />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_alignBottom="@id/weixin_icon_id"
+            android:textSize="14sp"
+            android:textColor="@color/bg_forget_pwd_selector"
+            android:layout_toRightOf="@+id/weixin_icon_id"
+            android:text="微信快速登录"
+            />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/forget_password_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:layout_gravity="center_vertical"
+        android:text="@string/forget_password"
+        android:textColor="@color/bg_forget_pwd_selector"
+        android:textSize="14sp" />
+</LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/user_log_bottom_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal|bottom"
+        android:paddingBottom="10dp"
+        android:text="@string/user_log_bottom_introduction"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/log_not_log_alert_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent2"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+    </LinearLayout>
+</RelativeLayout>
+</RelativeLayout>

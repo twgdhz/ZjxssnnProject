@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_add_new_address_id"
+        layout="@layout/title_add_new_address_layout" />
+
+    <ScrollView
+        android:id="@+id/new_address_scroll_content_layout"
+        android:layout_width="match_parent"
+        android:background="@color/commodity_list_view_color"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/new_address_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 姓名 -->
+
+            <LinearLayout
+                android:id="@+id/new_address_username_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/new_address_username_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="@string/address_username"
+                    android:textColor="@color/back"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/new_address_username_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_add_new_address_style"
+                    android:hint="@string/address_username_hint"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/back"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <!-- 电话 -->
+
+            <LinearLayout
+                android:id="@+id/new_address_phone_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/new_address_phone_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="@string/address_phone"
+                    android:textColor="@color/back"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/new_address_phone_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_add_new_address_style"
+                    android:hint="@string/address_phone_hint"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/back"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <!-- 省份 -->
+
+            <LinearLayout
+                android:id="@+id/new_address_province_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/new_address_province_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="@string/address_province"
+                    android:textColor="@color/back"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/new_address_province_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_add_new_address_style"
+                    android:drawableRight="@drawable/address_icon1"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/back"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <!-- 城市 -->
+
+            <LinearLayout
+                android:id="@+id/new_address_city_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/new_address_city_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="@string/address_city"
+                    android:textColor="@color/back"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/new_address_city_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_add_new_address_style"
+                    android:drawableRight="@drawable/address_icon1"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/back"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <!-- 地区 -->
+
+            <LinearLayout
+                android:id="@+id/new_address_area_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/new_address_area_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="@string/address_area"
+                    android:textColor="@color/back"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/new_address_area_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_add_new_address_style"
+                    android:drawableRight="@drawable/address_icon1"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/back"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <!-- 详细地址 -->
+
+            <LinearLayout
+                android:id="@+id/new_address_address_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/new_address_address_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="@string/address_address"
+                    android:textColor="@color/back"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/new_address_address_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_add_new_address_style"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/back"
+                    android:textSize="15sp" />
+            </LinearLayout>
+			<RelativeLayout 
+			    android:id="@+id/add_new_address_checkdefault_layout"
+			    android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical|center_horizontal"
+			    >
+			    <CheckBox
+                        android:id="@+id/address_default_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/checkbox3"
+                        android:checked="true" />
+			    <TextView 
+			        android:id="@+id/address_default_text"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textColor="@color/back"
+			        android:textSize="14sp"
+			        android:layout_marginLeft="10dp"
+			        android:layout_toRightOf="@+id/address_default_check"
+			        android:text="@string/address_check_text"
+			        />
+			</RelativeLayout>
+            <Button
+                android:id="@+id/new_address_save_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/bg_pay_selector"
+                android:padding="10dp"
+                android:text="@string/address_save"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

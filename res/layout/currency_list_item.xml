@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/bg_back_selector">
+    <TextView
+        android:id="@+id/currcy_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/service_provider_color"
+        android:textSize="15sp"
+        android:text="注册奖励"
+        />
+    <TextView
+        android:id="@+id/currcy_item_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/my_color9"
+        android:textSize="15sp"
+        android:layout_alignParentRight="true"
+        android:text="70.00"
+        />
+</RelativeLayout>

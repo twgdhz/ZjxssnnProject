@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_restaurant_bi_chongzhi_layout"
+        layout="@layout/title_layout1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_restaurant_bi_chongzhi_layout"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/bi_chongzhi_view"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+
+            android:background="@color/shishangbi_chongzhi_color" />
+
+        <RelativeLayout
+            android:id="@+id/bi_code_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bi_chongzhi_view"
+            android:layout_marginTop="20dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/bi_code_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="兑换金币"
+                android:textColor="@color/back"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/bi_exchange_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/bi_code_text"
+                android:background="@drawable/bg_modify_user_edit_style"
+                android:hint="请输入要兑换的食尚币"
+
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bi_code_pwd_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bi_code_layout"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/bi_code_pwd_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获得金币："
+                android:textColor="@color/back"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/cold_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/red"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bi_exchange_btn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bi_code_pwd_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/login_btn_selector"
+            android:padding="8dp"
+            android:text="立即兑换"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/bi_exchange_alert_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/transparent"
+            android:orientation="horizontal"
+            android:visibility="gone"></LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

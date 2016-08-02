@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/indiana_info_list_title_layout"
+        layout="@layout/title_indana_info_layout" />
+
+	<ScrollView 
+	    android:id="@+id/indiana_info_content_scroll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+        android:background="@color/white"
+            android:paddingBottom="10dp"
+	    >
+        <LinearLayout
+            android:id="@+id/indiana_info_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/indiana_info_head_image"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:contentDescription="@null"
+                android:scaleType="fitXY" />
+
+            <RelativeLayout
+                android:id="@+id/indiana_info_head_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/indiana_info_name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/type_text_color"
+                    android:paddingRight="105dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/indiana_info_jinbi_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/indiana_info_name_text"
+                    android:layout_marginTop="5dp" >
+
+                    <ImageView
+                        android:id="@+id/indiana_info_jinbi_image"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/jinbi" />
+
+                    <TextView
+                        android:id="@+id/indiana_info_price_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/indiana_info_jinbi_image"
+                        android:textColor="@color/mall_item_shmoney_color" />
+                    <TextView
+                        android:id="@+id/indiana_info_numlimit_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/indiana_info_price_text"
+                        android:textColor="@color/main_merchant_item_title_color" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/cash_indiana_info_cj_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_indiana_btn_style"
+                    android:padding="8dp"
+                    android:text="立即抽奖"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/indiana_people_num_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ProgressBar
+                    android:id="@+id/indiana_info_progress_bar"
+                    style="@style/StyleProgressBarMini"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:max="100" />
+
+                <TextView
+                    android:id="@+id/indiana_people_num_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/main_merchant_item_title_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/indiana_people_num_shengyu_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/indiana_item_people_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+           <LinearLayout 
+               android:id="@+id/indiana_info_state_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+               >
+		<TextView
+                    android:id="@+id/indiana_info_state_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:text="开奖结果"
+                    android:textColor="@color/main_merchant_item_title_color"
+                    android:textSize="14sp" />
+		 <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray" />
+		 <TextView
+                    android:id="@+id/indiana_info_state_text_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/main_merchant_item_title_color"
+                    android:textSize="14sp" />
+		 </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray" />
+            <!-- 奖品详情 -->
+
+            <LinearLayout
+                android:id="@+id/indiana_detail_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_mall_selector"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/indiana_detail_name_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/indiana_info_title"
+                    android:textColor="@color/main_merchant_item_title_color"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/indiana_detail_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_weight="10"
+                    android:contentDescription="@null"
+                    android:src="@drawable/iconfont_icoyoula" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray" />
+<LinearLayout
+                android:id="@+id/indiana_detail_rule_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_mall_selector"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/indiana_detail_rule_name_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/activity_rule"
+                    android:textColor="@color/main_merchant_item_title_color"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/indiana_detail_rule_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_weight="10"
+                    android:contentDescription="@null"
+                    android:src="@drawable/iconfont_icoyoula" />
+            </LinearLayout>
+             <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/gray" />
+            <LinearLayout
+                android:id="@+id/indiana_rule_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+				<RelativeLayout 
+				    android:id="@+id/indiana_rule_content_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+				    >
+				    <TextView
+                    android:id="@+id/indiana_rule_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="抽奖号"
+                    android:textColor="@color/main_merchant_item_title_color"
+                    android:textSize="15sp" />
+				    <TextView
+                    android:id="@+id/indiana_rule_more_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="更多"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/main_merchant_item_title_color"
+                    android:textSize="15sp" />
+				</RelativeLayout>
+                
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+                <com.zjxfood.view.MyScrollListView 
+                    android:id="@+id/indiana_info_all_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:dividerHeight="0.5dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+</ScrollView>
+</LinearLayout>

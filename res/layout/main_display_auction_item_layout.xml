@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+    <include
+        android:id="@+id/display_auction_item_title_layout"
+        layout="@layout/title_layout" />
+
+    <ScrollView
+        android:id="@+id/main_display_auction_content_scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/display_auction_item_title_layout" >
+
+        <LinearLayout
+            android:id="@+id/main_display_auction_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="60dp" >
+
+            <RelativeLayout
+                android:id="@+id/display_auction_item_head_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                 >
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="40dp"
+                    android:background="@color/display_auction_item_view" />
+
+                <TextView
+                    android:id="@+id/display_child_head_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/display_auction_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/main_timel_limit_paimai_surplus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:visibility="gone"
+                    android:text="@string/main_timel_limit_paimai_haisheng"
+                    android:textColor="@color/service_provider_color"
+                    android:textSize="16sp" />
+
+                <com.zjxfood.view.TimeDownView
+                    android:id="@+id/main_display_child_timedownview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/main_display_child_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:contentDescription="@null"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/main_display_child_name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/service_provider_color"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:id="@+id/main_display_child_price_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/main_display_child_price_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="起拍价："
+                    android:textColor="@color/service_provider_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/main_display_child_price_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/main_display_child_price_text"
+                    android:text="0食尚币"
+                    android:textColor="@color/mall_item_shmoney_color"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/main_display_child_people_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:text="参与人数："
+                android:textColor="@color/my_user_decription2"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray" />
+
+            <RelativeLayout
+                android:id="@+id/main_display_child_canshu_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_mall_selector"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/main_display_child_canshu_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/display_auction_canshu"
+                    android:textColor="@color/main_merchant_item_title_color" />
+
+                <ImageView
+                    android:id="@+id/main_display_child_canshu_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/iconfont_icoyoula" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray" />
+
+            <RelativeLayout
+                android:id="@+id/main_display_child_bid_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_mall_selector"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/main_display_child_bid_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="出价记录"
+                    android:textColor="@color/main_merchant_item_title_color" />
+
+                <TextView
+                    android:id="@+id/main_display_child_bid_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/main_display_child_bid_image"
+                    android:text="全部"
+                    android:textColor="@color/main_merchant_item_title_color" />
+
+                <ImageView
+                    android:id="@+id/main_display_child_bid_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/iconfont_icoyoula" />
+               
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray" />
+ <LinearLayout
+                    android:id="@+id/main_display_child_bid_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    
+                    android:orientation="vertical"
+                    ></LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/my_order_view_color" />
+
+            <RelativeLayout
+                android:id="@+id/main_display_item_paimaishuoming_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/main_display_item_paimaishuoming_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/paimaishuoming" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/main_display_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/mall_receving_view_color" />
+
+            <TextView
+                android:id="@+id/main_display_item_paimaishuoming_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:padding="10dp"
+                android:text="@string/display_auction_paimaishuoming_text"
+                android:textColor="@color/my_user_decription" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/main_display_item_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/mall_new_detail_back_color"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/main_display_item_btn"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_display_auction_bottom_style"
+            android:gravity="center_horizontal"
+            android:padding="7dp" >
+
+            <ImageView
+                android:id="@+id/main_display_item_btn_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/iconfont_paimai" />
+
+            <TextView
+                android:id="@+id/main_display_item_btn_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/main_display_item_btn_image"
+                android:text="还未开始"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>

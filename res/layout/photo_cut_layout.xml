@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:background="#191919"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <com.zjxfood.view.Crop_Canvas
+        android:id="@+id/my_popup_cut_canvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5px"
+        android:layout_weight="1"
+        android:layout_marginTop="5px"
+        android:background="#313131"
+        android:padding="2dip" >
+    </com.zjxfood.view.Crop_Canvas>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:layout_weight="1"
+        android:background="#191919" >
+
+        <ImageView
+            android:id="@+id/confirm_images"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="#00000000"
+            android:src="@drawable/confirmxml" >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/exit_images"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+           android:background="#00000000"
+            android:src="@drawable/exitxml" >
+        </ImageView>
+    </RelativeLayout>
+
+</LinearLayout>

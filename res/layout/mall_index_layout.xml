@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+    <include
+        android:id="@+id/mall_index_title"
+        layout="@layout/title_mall_index_layout" />
+
+    <ScrollView
+        android:id="@+id/mall_index_scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mall_index_title" >
+
+        <LinearLayout
+            android:id="@+id/mall_index_scroll_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"  
+			android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/merchant_top_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <android.support.v4.view.ViewPager
+                android:id="@+id/mall_index_title_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_horizontal"
+                    android:visibility="gone"
+                    android:paddingBottom="5dp" >
+
+                    <ImageView
+                        android:id="@+id/mall_index_dot_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:contentDescription="@string/description"
+                        android:src="@drawable/ic_dot_true" />
+
+                    <ImageView
+                        android:id="@+id/mall_index_dot_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/mall_index_dot_1"
+                        android:contentDescription="@string/description"
+                        android:src="@drawable/ic_dot_true" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <View
+                android:id="@+id/mall_index_title_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/main_view_color" />
+            <com.zjxfood.view.MyGridViewScroll
+                android:id="@+id/mall_ssb_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="4"
+                android:visibility="gone"
+                android:stretchMode="columnWidth"/>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/mall_ssb_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="180dp" />
+            <LinearLayout
+                android:id="@+id/mall_fanye_image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+                <ImageView
+                android:id="@+id/mall_index_fragment_dian_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/description"
+                android:src="@drawable/fanye_dian" />
+            </LinearLayout>
+<!-- 新春礼包 -->
+            <ImageView 
+                android:id="@+id/mall_xin_chun_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xinchunlibao"
+                android:visibility="gone"
+                android:scaleType="fitXY"
+                android:contentDescription="@null"/>
+<!-- 猜你喜欢 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/main_color2"
+                />
+            <RelativeLayout
+                android:id="@+id/mall_index_guess_like_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp" >
+
+                <ImageView
+                    android:id="@+id/guess_like_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:visibility="gone"
+                    android:src="@drawable/cainixihuan" />
+
+                <TextView
+                    android:id="@+id/guess_like_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/guess_like_image"
+                    android:text="推荐商品"
+                    android:textColor="@color/mall_index_text_color"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/main_color2"
+                />
+            <com.zjxfood.view.MyGridViewScroll
+                android:id="@+id/mall_index_grid_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:numColumns="2"
+                android:stretchMode="columnWidth" >
+            </com.zjxfood.view.MyGridViewScroll>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/mall_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/mall_bottom_menu_layout"
+            layout="@layout/my_bottom_menu_layout" />
+    </LinearLayout>
+</RelativeLayout>
+</RelativeLayout>

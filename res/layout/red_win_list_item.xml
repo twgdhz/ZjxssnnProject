@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <com.zjxfood.view.RoundRedImageView
+        android:id="@+id/red_win_user_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@null" />
+
+    <RelativeLayout
+        android:id="@+id/red_win_user_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/red_win_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="明月如歌"
+            android:textColor="@color/back"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/red_win_user_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/red_win_user_name"
+            android:layout_marginTop="5dp"
+            android:text="6月4日 19:35"
+            android:textColor="@color/red_color6"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/red_win_price_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="right" >
+
+        <TextView
+            android:id="@+id/red_win_price_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="11.4元"
+            android:textColor="@color/back"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/red_win_price_yunqi_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            android:layout_below="@+id/red_win_price_show"
+            android:layout_toLeftOf="@+id/red_win_price_yunqi"
+            android:src="@drawable/icon_yunqiwang" />
+
+        <TextView
+            android:id="@+id/red_win_price_yunqi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/red_win_price_show"
+            android:layout_marginTop="5dp"
+            android:gravity="right"
+            android:text="运气王"
+            android:visibility="gone"
+            android:textColor="@color/red_color7"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

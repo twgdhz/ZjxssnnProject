@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    
+    <TextView 
+        android:id="@+id/time_type_text"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:textColor="@color/main_xianshi_paimai_time_color"
+    	android:textSize="12sp"
+    	android:layout_gravity="center_vertical"
+    	android:layout_marginRight="5dp"
+        />
+    
+    <TextView
+        android:id="@+id/timedown_day"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:background="@android:color/black"
+        android:gravity="center"
+        android:text="00"
+        android:visibility="gone"
+        android:textColor="@android:color/white" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:id="@+id/timedown_hour"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:background="@android:color/black"
+        android:gravity="center"
+        android:text="00"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="："
+        android:gravity="center"
+        android:textColor="@color/back"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:id="@+id/timedown_min"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:background="@android:color/black"
+        android:gravity="center"
+        android:text="00"
+        android:textColor="@android:color/white" />
+
+ <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="："
+        android:gravity="center"
+        android:textColor="@color/back"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:id="@+id/timedown_second"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:background="@android:color/black"
+        android:gravity="center"
+        android:text="00"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

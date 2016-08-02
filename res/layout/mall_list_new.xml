@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/mall_new_title"
+        layout="@layout/title_mall_layout" />
+
+    <LinearLayout
+        android:id="@+id/mall_list_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/mall_new_title"
+        android:background="@color/type_color"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/mall_list_head_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/mall_list_type_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:contentDescription="@string/description"
+                android:scaleType="fitEnd"
+                android:src="@drawable/commodity_list_type" />
+
+            <TextView
+                android:id="@+id/mall_list_type_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/home_department_store"
+                android:textColor="@color/text_selector_style" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mall_list_head_nearby"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/mall_list_nearby_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:contentDescription="@string/description"
+                android:scaleType="fitEnd"
+                android:src="@drawable/commodity_list_sort" />
+
+            <TextView
+                android:id="@+id/mall_list_nearby_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/release_time"
+                android:textColor="@color/text_selector_style" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mall_list_head_sort"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/mall_list_sort_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:contentDescription="@string/description"
+                android:scaleType="fitEnd"
+                android:src="@drawable/commodity_list_sort" />
+
+            <TextView
+                android:id="@+id/mall_list_sort_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/mall_price"
+                android:textColor="@color/text_selector_style" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/mall_new_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:dividerHeight="0.5dp"
+        android:layout_below="@+id/mall_list_head_layout" >
+    </ListView>
+  <LinearLayout
+        android:id="@+id/mall_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/mall_bottom_menu_layout"
+            layout="@layout/gift_bottom_menu_layout" />
+    </LinearLayout>
+</RelativeLayout>

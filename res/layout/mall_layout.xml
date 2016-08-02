@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/head_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_color2"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/gift_center_title_layout"
+            layout="@layout/title_gift_center_layout" />
+        <!-- banner -->
+
+        <com.zjxfood.view.SlideMenu
+            android:id="@+id/mall_silde_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/gift_center_title_layout">
+
+            <include
+                android:id="@+id/mall_menu_left_id"
+                layout="@layout/mall_left_menu_layout" />
+
+            <LinearLayout
+                android:id="@+id/mall_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- <LinearLayout
+                     android:id="@+id/mall_list_head_layout"
+                     android:layout_width="match_parent"
+                     android:layout_height="35dp"
+
+                     android:background="@color/type_color"
+                     android:orientation="horizontal" >
+
+                     <LinearLayout
+                         android:id="@+id/mall_list_head_type"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:layout_weight="1"
+                         android:orientation="horizontal" >
+
+                         <ImageView
+                             android:id="@+id/mall_list_type_image"
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:layout_gravity="center_vertical"
+                             android:layout_margin="6dp"
+                             android:layout_weight="2.5"
+                             android:contentDescription="@string/description"
+                             android:visibility="gone"
+                             android:src="@drawable/mall_list_type_icon" />
+
+                         <TextView
+                             android:id="@+id/mall_list_type_text"
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:layout_weight="1"
+                             android:gravity="center_vertical|center_horizontal"
+                             android:text="@string/home_department_store"
+                             android:textColor="@color/text_selector_style" />
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/mall_list_head_date"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:layout_weight="1"
+                         android:orientation="horizontal"
+                         android:padding="5dp" >
+
+                         <ImageView
+                             android:id="@+id/mall_list_nearby_image"
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:layout_weight="3"
+                             android:contentDescription="@string/description"
+                             android:scaleType="fitEnd"
+                             android:src="@drawable/commodity_list_sort" />
+
+                         <TextView
+                             android:id="@+id/mall_list_date_text"
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:layout_weight="1"
+                             android:gravity="center_vertical|center_horizontal"
+                             android:text="@string/mall_sort"
+                             android:textColor="@color/text_selector_style" />
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/mall_list_head_price_sort"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:layout_weight="1"
+                         android:orientation="horizontal" >
+
+                         <ImageView
+                             android:id="@+id/mall_list_sort_image"
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:layout_margin="5dp"
+                             android:layout_weight="3"
+                             android:contentDescription="@string/description"
+                             android:scaleType="fitEnd"
+                             android:src="@drawable/mall_list_xiaolian_icon" />
+
+                         <TextView
+                             android:id="@+id/mall_list_sort_text"
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:layout_weight="1"
+                             android:gravity="center_vertical|center_horizontal"
+                             android:text="@string/mall_price"
+                             android:textColor="@color/text_selector_style" />
+                     </LinearLayout>
+                 </LinearLayout>
+     -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/mall_qb_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/mall_quanbu_image"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/new_cashmall_menu_hover" />
+
+                        <TextView
+                            android:id="@+id/mall_quanbu_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toLeftOf="@+id/mall_quanbu_image"
+                            android:layout_toRightOf="@+id/new_cash_quanbu_image"
+                            android:text="全部"
+                            android:textColor="@color/main_color16"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:id="@+id/mall_quanbu_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="3px"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5px"
+                            android:layout_marginRight="5px"
+                            android:background="@color/main_color16" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="12px"
+                        android:layout_marginTop="12px"
+                        android:background="@color/main_color17" />
+
+                    <RelativeLayout
+                        android:id="@+id/mall_px_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/mall_px_image"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/new_cashmall_order_normal" />
+
+                        <TextView
+                            android:id="@+id/mall_px_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20px"
+                            android:layout_toLeftOf="@+id/mall_px_image"
+                            android:text="排序"
+                            android:textColor="@color/main_color3"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:id="@+id/mall_px_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="3px"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="5px"
+                            android:layout_marginRight="5px"
+                            android:background="@color/main_color16"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mall_content_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mall_frame_top_layout"
+
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <com.zjxfood.view.MyGridView
+                        android:id="@+id/mall_list_grid_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:listSelector="@null"
+                        android:numColumns="2"
+                        android:stretchMode="columnWidth"></com.zjxfood.view.MyGridView>
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/mall_list_progress_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/mall_frame_top_layout"
+                    android:background="@color/main_color2">
+
+                    <ImageView
+                        android:id="@+id/mall_load_image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/log_image" />
+
+                    <LinearLayout
+                        android:id="@+id/mall_progress_content_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mall_load_image"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:id="@+id/commodity_list_progress"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:indeterminateDrawable="@drawable/frame_loading" />
+
+                        <TextView
+                            android:id="@+id/mall_list_progress_decription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="@string/loading_now"
+                            android:textColor="@color/commodity_list_text_type"
+                            android:textSize="12sp" />
+
+                        <com.zjxfood.view.WaitingView
+                            android:id="@+id/waitingBar1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:gravity="center_vertical"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mall_search_not_alert_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/mall_frame_top_layout"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/mall_search_not_alert_image"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/iconfont_shuju" />
+
+                    <TextView
+                        android:id="@+id/mall_search_not_alert_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mall_search_not_alert_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/mall_search_not_alert"
+                        android:textColor="@color/commodity_list_text_type"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </com.zjxfood.view.SlideMenu>
+
+        <!--  <LinearLayout
+              android:id="@+id/mall_bottom_layout"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true"
+              android:orientation="vertical"
+              android:visibility="gone" >
+
+              <include
+                  android:id="@+id/mall_bottom_menu_layout"
+                  layout="@layout/gift_bottom_menu_layout" />
+          </LinearLayout>
+      -->
+    </RelativeLayout>
+</RelativeLayout>

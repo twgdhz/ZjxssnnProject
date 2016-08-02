@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+<selector xmlns:android="http://schemas.android.com/apk/res/android">  
+  
+    <item android:drawable="@drawable/bg_chose_city_down_style" android:state_pressed="true"/>  
+    <item android:drawable="@drawable/bg_chose_city_undown_style" android:state_focused="false" android:state_pressed="false"/>  
+
+  
+</selector>

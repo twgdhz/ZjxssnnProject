@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp" >
+
+    <LinearLayout
+        android:id="@+id/merchant_settled_popup_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_popup_style"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/merchant_settled_popup_content_tishi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="@string/jh_tishi"
+            android:textColor="@color/back"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/merchant_settled_popup_content_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="@string/tishi_text"
+            android:textColor="@color/back"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray" />
+        <TextView
+            android:id="@+id/merchant_settled_popup_content_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:background="@drawable/xieyi_text_selector"
+            android:text="@string/jh_tishi_confirm"
+            android:textColor="@color/head_image_color"
+            android:textSize="16sp" />
+        
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical"
+    android:paddingBottom="20dp" >
+
+    <include
+        android:id="@+id/ad_web_title"
+        layout="@layout/title_ad_web_layout" />
+
+    <WebView
+        android:id="@+id/ad_web_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ad_web_ruzhu_btn"
+        android:layout_below="@+id/ad_web_title"
+         />
+
+    <Button
+        android:id="@+id/ad_web_ruzhu_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_login_on"
+        android:padding="8dp"
+        android:text="申请入驻"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+</RelativeLayout>

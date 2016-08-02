@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparents1"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/sign_jh_alert_content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/popup_bottom_style2"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/popup_sign_mall_x_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="-1dp"
+            android:layout_marginTop="-1dp"
+            android:contentDescription="@null"
+            android:src="@drawable/shut_down" />
+
+        <LinearLayout
+            android:id="@+id/sign_jh_alert_contents_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/popup_sign_success_alert_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/tishidingdan_tub" />
+
+            <LinearLayout
+                android:id="@+id/popup_sign_success_alert_content_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/popup_sign_success_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_success_alert"
+                    android:textColor="@color/back"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/popup_sign_success_day_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/sign_success_mall_alert"
+                    android:textColor="@color/my_user_decription"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/popup_sign_success_mall_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/guess_you_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/guess_you_like"
+                android:textColor="@color/back"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/guess_you_like_image"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@null"
+                android:src="@drawable/iconfont_icoyoula" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/guess_you_like_content_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/guess_you_like_content_image1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@null"
+                android:src="@drawable/test_like" />
+            <ImageView
+                android:id="@+id/guess_you_like_content_image2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="@null"
+                android:src="@drawable/test_like" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/popup_sign_alert_mall_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            android:background="@drawable/bg_check_more_style"
+            android:paddingBottom="3dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="3dp"
+            android:textColor="@color/check_more_color"
+            android:text="@string/sign_success_alert_mall" />
+    </LinearLayout>
+
+</LinearLayout>

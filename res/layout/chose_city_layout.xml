@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="horizontal" >
+
+    <include
+        android:id="@+id/chose_city_title"
+        layout="@layout/title_layout1" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:layout_below="@+id/chose_city_title"
+        android:orientation="horizontal" >
+    <FrameLayout
+        android:id="@+id/chose_city_head_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_chose_city_undown_style"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/mall_search_image"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_serch2" />
+
+        <EditText
+            android:id="@+id/chose_city_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="40dp"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="@string/chose_city_hint"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:textColor="@color/back"
+            android:textSize="14sp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/chose_location_city_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chose_city_head_search_layout"
+        android:background="@color/chose_city_view_color"
+        android:paddingBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="2dp"
+        android:text="@string/location_now_city"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/chose_location_city_text_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chose_location_city_text"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="成都市"
+        android:textColor="@color/back" />
+
+    <TextView
+        android:id="@+id/chose_hot_city_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chose_location_city_text_show"
+        android:layout_marginTop="10dp"
+        android:background="@color/chose_city_view_color"
+        android:paddingBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="2dp"
+        android:text="@string/hot_city"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:id="@+id/chose_hot_city_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chose_hot_city_text"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <Button
+            android:id="@+id/hot_city_beijing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/chose_city_btn_selector"
+            android:padding="7dp"
+            android:text="@string/beijing"
+            android:textColor="@color/back"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/hot_city_shanghai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/chose_city_btn_selector"
+            android:padding="7dp"
+            android:text="@string/shanghai"
+            android:textColor="@color/back"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/hot_city_tianjing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/chose_city_btn_selector"
+            android:padding="7dp"
+            android:text="@string/tianjing"
+            android:textColor="@color/back"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chose_hot_city_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chose_hot_city_layout"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <Button
+            android:id="@+id/hot_city_shenzhen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/chose_city_btn_selector"
+            android:padding="7dp"
+            android:text="@string/shenzhen"
+            android:textColor="@color/back"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/hot_city_chengdu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/chose_city_btn_selector"
+            android:padding="7dp"
+            android:text="@string/chengdu"
+            android:textColor="@color/back"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/hot_city_chongqing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/chose_city_btn_selector"
+            android:padding="7dp"
+            android:text="@string/chongqing"
+            android:textColor="@color/back"
+            android:textSize="14sp" />
+    </LinearLayout>
+<ListView
+        android:id="@+id/chose_city_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/chose_city_head_search_layout"
+        android:background="@color/white"
+        android:divider="@color/chose_hot_city_color"
+        android:dividerHeight="0.5dp"
+        android:visibility="gone" >
+    </ListView>
+    <ListView
+        android:id="@+id/chose_city_list2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/chose_hot_city_layout2"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:divider="@color/chose_hot_city_color"
+        android:dividerHeight="0.5dp" >
+    </ListView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

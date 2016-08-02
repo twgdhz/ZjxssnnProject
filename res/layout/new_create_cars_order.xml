@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/head_layout"
+    android:background="@color/main_color16"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <include
+            android:id="@+id/title_create_cars_layout"
+            layout="@layout/title_layout1" />
+
+        <ListView
+            android:id="@+id/create_cars_order_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/main_color2"
+            android:dividerHeight="10dp"
+            android:layout_marginBottom="250dp"
+            android:layout_below="@+id/title_create_cars_layout"
+            >
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/create_order_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/new_cars_bottom_zonghui_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_color2"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/new_cars_zonghui_image"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/cars_create_location" />
+
+                <TextView
+                    android:id="@+id/cars_address_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/new_cars_zonghui_image"
+                    android:text="收货信息"
+                    android:textColor="@color/house_text_color"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/new_cars_right_image"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/my_fanye" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/create_order_name_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="收货人姓名："
+                        android:textColor="@color/house_text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/create_order_name_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/create_order_name_text"
+                        android:textColor="@color/back"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/create_order_phone_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="收货人电话："
+                        android:textColor="@color/house_text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/create_order_phone_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/create_order_phone_text"
+                        android:textColor="@color/back"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/create_order_address_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="收货人地址："
+                        android:textColor="@color/house_text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/create_order_address_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/create_order_address_text"
+                        android:textColor="@color/back"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/create_order_price_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="快递等附加费："
+                        android:textColor="@color/house_text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/create_order_price_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/create_order_price_text"
+                        android:text="￥15.00"
+                        android:textColor="@color/main_color10"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/new_cars_bottom_zonghui_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:background="@color/main_color2">
+
+                <ImageView
+                    android:id="@+id/new_cars_feiyong_image"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/new_cars_gather" />
+
+                <TextView
+                    android:id="@+id/cars_all_price_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/new_cars_feiyong_image"
+                    android:text="费用总汇"
+                    android:textColor="@color/house_text_color"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/create_order_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_my_style12"
+                    android:layout_alignParentTop="true"
+                    android:text="创建订单"
+                    />
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/cars_bottom_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:layout_below="@+id/new_cars_bottom_zonghui_layout"
+                >
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:id="@+id/cars_ssb_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_weight="1.1"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/service_provider_color"
+                        android:text="食尚币："
+                        />
+                    <TextView
+                        android:id="@+id/cars_ssb_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/cars_ssb_text"
+                        android:textColor="@color/main_color10"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:id="@+id/cars_ssjb_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_weight="1.1"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/service_provider_color"
+                        android:text="食尚金币："
+                        />
+                    <TextView
+                        android:id="@+id/cars_ssjb_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/cars_ssjb_text"
+                        android:textColor="@color/main_color10"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:layout_below="@+id/cars_bottom_content">
+                <TextView
+                    android:id="@+id/cars_money_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/service_provider_color"
+                    android:text="现金(含运费)："
+                    />
+                <TextView
+                    android:id="@+id/cars_money_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/cars_money_text"
+                    android:textColor="@color/main_color10"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

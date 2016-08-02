@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/main_color16"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/issued_title_back_info_image"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/description"
+        android:scaleType="fitStart"
+        android:src="@drawable/icon_fanhui" />
+
+    <View
+        android:id="@+id/red_title_view"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/issued_title_back_info_image"
+        android:background="@color/red_title_text_color" />
+
+
+        <RelativeLayout
+            android:id="@+id/title_shoudao_layout"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/red_title_view"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2"
+             >
+
+            <TextView
+                android:id="@+id/title_shoudao_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/red_title_text_color"
+                android:text="我收到的"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/issue_view"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/red_title_text_color" />
+        </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/title_issued_layout"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/title_shoudao_layout"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2"
+             >
+
+            <TextView
+                android:id="@+id/title_issued_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="我发出的"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/send_view"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"
+                android:background="@color/red_title_text_color" />
+        </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title_red_list_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:visibility="gone"
+        android:text="红包记录"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</RelativeLayout>

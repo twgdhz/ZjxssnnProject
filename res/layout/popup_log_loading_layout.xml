@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:paddingBottom="30dp"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/popup_log_load_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent_1"
+        android:gravity="center_horizontal"
+         >
+
+        <ProgressBar
+            android:id="@+id/log_load_gress"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:indeterminateDrawable="@drawable/frame_loading" />
+
+        <TextView
+            android:id="@+id/log_load_gress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/log_load_gress"
+            android:text="@string/log_load_ing"
+             />
+    </RelativeLayout>
+
+</RelativeLayout>

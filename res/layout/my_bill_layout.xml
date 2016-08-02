@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_content_color"
+        android:orientation="vertical" >
+
+    <include
+        android:id="@+id/my_bill_title_id"
+        layout="@layout/title_layout" />
+
+    <RelativeLayout
+        android:id="@+id/my_bill_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/my_bill_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@null"
+            android:src="@drawable/my_shishangbi" />
+
+        <TextView
+            android:id="@+id/my_bill_surplus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/my_bill_image"
+            android:text="@string/balance_now_surplus"
+            android:textColor="@color/order_evaluation_commodity_name_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/restaurant_bi_now_surplus_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/balance_now_surplus_money"
+            android:textColor="@color/order_evaluation_commodity_name_color" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/my_bill_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/my_setting_line_color"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/my_bill_head_month_now"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/this_month"
+            android:textColor="@color/order_evaluation_commodity_name_color"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/my_bill_scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/my_bill_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/my_bill_now_month_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/my_bill_head_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/my_setting_line_color"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/my_bill_head_month_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/may"
+                    android:textColor="@color/order_evaluation_commodity_name_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_bill_now_month_list2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/my_bill_head_layout3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/my_setting_line_color"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/my_bill_head_month_next3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/april"
+                    android:textColor="@color/order_evaluation_commodity_name_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_bill_now_month_list3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+</LinearLayout>

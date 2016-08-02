@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/reserve_item_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/reserve_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1.6"
+            android:contentDescription="@null"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:id="@+id/reserve_item_detail_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/reserve_order_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/reserve_order_name_title"
+                android:textColor="@color/main_merchant_item_title_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/reserve_order_item_sold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/reserve_order_sold"
+                android:textColor="@color/my_user_decription2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/reserve_order_item_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:gravity="left"
+                android:text="@string/reserve_order_price"
+                android:textColor="@color/reserve_order_text_color"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/reserve_item_add_jian_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1.5" >
+
+            <ImageView
+                android:id="@+id/reserve_item_jian_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/reserve_item_jian_add_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/service_provider_color"
+                android:textSize="14sp"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/reserve_item_jian_image"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/reserve_item_add_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/reserve_item_jian_add_image"
+                android:contentDescription="@null"
+                android:src="@drawable/increase" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+</LinearLayout>

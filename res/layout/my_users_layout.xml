@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color16"
+    android:id="@+id/head_layout"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_users_color"
+        android:orientation="vertical" >
+
+    <include
+        android:id="@+id/my_users_title_layout"
+        layout="@layout/title_my_users_layout" />
+
+    <LinearLayout
+        android:id="@+id/my_users_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/my_user_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/my_users_title_show"
+            android:textColor="@color/main_color16"
+            android:textSize="15sp" />
+
+        <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:background="@color/main_color17" />
+
+        <TextView
+            android:id="@+id/my_tourist_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/my_tourist_title_show"
+            android:textColor="@color/main_color3"
+            android:textSize="15sp" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/main_color17" />
+
+        <TextView
+            android:id="@+id/my_sh_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="旗下商户"
+            android:textColor="@color/main_color3"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/my_user_line_color" />
+
+    <LinearLayout
+        android:id="@+id/my_users_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/my_users_head_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/my_users_image"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:contentDescription="@null"
+                android:src="@drawable/new_my_users" />
+
+            <TextView
+                android:id="@+id/my_users_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/my_users_image"
+                android:text="当前会员："
+                android:textColor="@color/my_user_decription"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/my_users_number_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="@string/my_users_numbers"
+                android:textColor="@color/main_color32"
+                android:textSize="16sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/jiangli_show_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:padding="10dp"
+            >
+            <ImageView
+                android:id="@+id/my_users_qx_image"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:contentDescription="@null"
+                android:src="@drawable/new_user_present" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="旗下游客激活为会员可奖励"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/my_users_qx_image"
+                android:textColor="@color/my_user_decription"
+                />
+            <TextView
+                android:id="@+id/tourist_jl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+
+                android:textColor="@color/main_color32"
+                />
+        </RelativeLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:background="@color/gray"/>
+        <TextView
+            android:id="@+id/my_users_description_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/my_users_description"
+            android:textColor="@color/my_user_decription"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/my_user_line_color" />
+
+    <ListView
+        android:id="@+id/my_users_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:dividerHeight="0.5dp"
+         >
+    </ListView>
+    <TextView
+        android:id="@+id/users_alert_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/my_color10"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="暂时没有数据！"
+        />
+        </LinearLayout>
+</LinearLayout>
